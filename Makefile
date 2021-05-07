@@ -12,10 +12,14 @@ DOCS_path := $(ROOT_path)/doc
 SAMPLES_path := $(DATA_path)/samples
 SAMPLES_JSON_ext := _sample.json
 SAMPLES_XML_ext := _sample.xml
-SAMPLES_XML_TO_JSON_ext := _converted-xml_sample.json
+SAMPLES_XML_TO_JSON_ext := _sample.xml-json
 CVR_SAMPLES_path := $(SAMPLES_path)/cvr
+CVR_SAMPLES_CONVERTED_path := $(CVR_SAMPLES_path)/converted
+CVR_SAMPLES_JSON_files := $(wildcard $(CVR_SAMPLES_path)/*$(SAMPLES_JSON_ext))
 CVR_SAMPLES_XML_files := $(wildcard $(CVR_SAMPLES_path)/*$(SAMPLES_XML_ext))
 CVR_SAMPLES_XML_TO_JSON_files := $(patsubst %$(SAMPLES_XML_ext),%$(SAMPLES_XML_TO_JSON_ext),$(CVR_SAMPLES_XML_files))
+CVR_SAMPLES_XML_TO_JSON_files := $(notdir $(CVR_SAMPLES_XML_TO_JSON_files))
+CVR_SAMPLES_XML_TO_JSON_files := $(CVR_SAMPLES_XML_TO_JSON_files:%=$(CVR_SAMPLES_CONVERTED_path)/%)
 
 # Schemas
 
@@ -54,14 +58,12 @@ convert-samples: convert-samples-xml-json
 convert-samples-xml-json: $(CVR_SAMPLES_XML_TO_JSON_files)
 
 
-%$(SAMPLES_XML_TO_JSON_ext): %$(SAMPLES_XML_ext)
-	@$(XML_TO_JSON) --schema $(CVR_XMLSCHEMA_file) -o $$(dirname $<) $<
-	@( \
-		from=$$(echo $< | sed -re 's|(.*)$(SAMPLES_XML_ext)|\1$(SAMPLES_JSON_ext)|g'); \
-		to=$$(echo $< | sed -re 's|(.*)$(SAMPLES_XML_ext)|\1$(SAMPLES_XML_TO_JSON_ext)|g'); \
-		jq '.' $$from > $$to; \
-		rm $$from; \
-	)
+$(CVR_SAMPLES_CONVERTED_path)/%.xml-json: $(CVR_SAMPLES_CONVERTED_path)/%.json
+	jq '.' $< > $@
+
+
+$(CVR_SAMPLES_CONVERTED_path)/%.json: $(CVR_SAMPLES_path)/%.xml
+	@$(XML_TO_JSON) --schema $(CVR_XMLSCHEMA_file) $< -o $(CVR_SAMPLES_CONVERTED_path)
 
 
 clean-converted-samples:
