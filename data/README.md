@@ -24,6 +24,16 @@
         - Last changed in version 1.0.3
         - Validates against [XML Schema, 1.0][xml-schema-spec-2001]
 
+### Samples
+
+`nist-cvr-01_sample.xml`
+: Basic example from NIST CVR repository.
+
+`nist-cvr-02_sample.xml`
+: More complex example from NIST CVR repository.
+
+
+
 [nist-cvr-html]: https://pages.nist.gov/CastVoteRecords/
 [nist-cvr-source]: https://github.com/usnistgov/CastVoteRecords
 
