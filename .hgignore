@@ -10,3 +10,7 @@ syntax: glob
 *.pyc
 __pycache__
 .venv
+
+# Data Samples
+
+*_converted-xml_sample.json
