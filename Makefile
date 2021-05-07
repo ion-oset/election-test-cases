@@ -25,9 +25,12 @@ CVR_SAMPLES_XML_TO_JSON_files := $(CVR_SAMPLES_XML_TO_JSON_files:%=$(CVR_SAMPLES
 
 SCHEMAS_path := $(DATA_path)/schemas
 CVR_SCHEMAS_path := $(SCHEMAS_path)/cvr
+CVR_JSONSCHEMA_ext := jsonschema.json
+CVR_JSONSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(CVR_JSONSCHEMA_ext)
 CVR_XMLSCHEMA_ext := xmlschema.xml
 CVR_XMLSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(CVR_XMLSCHEMA_ext)
 
+VALIDATE_JSON := jsonschema
 VALIDATE_XML := xmlschema-validate
 
 XML_TO_JSON := xmlschema-xml2json
@@ -47,6 +50,7 @@ help:
 	@echo "  Validation:"
 	@echo ""
 	@echo "    validate:              Validate all samples"
+	@echo "    validate-json:         Validate JSON samples"
 	@echo "    validate-xml:          Validate XML samples"
 
 
@@ -74,7 +78,18 @@ clean-converted-samples:
 
 # Validation
 
-validate: validate-xml
+validate: validate-xml validate-json
+
+
+validate-json: validate-cvr-json
+
+
+validate-cvr-json: $(CVR_SAMPLES_JSON_files)
+	@for file in $^; do \
+		echo "Validating: $$file..."; \
+		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
+		if [ $$? -eq 0 ]; then echo "Valid schema."; else echo "Invalid schema."; fi; \
+	done
 
 
 validate-xml: validate-cvr-xml
