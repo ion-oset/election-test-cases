@@ -1,0 +1,12 @@
+# General
+syntax: rootglob
+
+.local
+
+# Python
+
+syntax: glob
+
+*.pyc
+__pycache__
+.venv
