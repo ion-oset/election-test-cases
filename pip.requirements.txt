@@ -1,3 +1,7 @@
 # Schema validators
 jsonschema
 xmlschema
+
+# YAML
+PyYAML
+json2yaml
