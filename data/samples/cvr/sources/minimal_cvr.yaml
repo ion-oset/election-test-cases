@@ -1,4 +1,12 @@
 '@type': CVR.CastVoteRecordReport
+CVR:
+- '@type': CVR.CVR
+  CurrentSnapshotId: '#current-snapshot'
+  CVRSnapshot:
+  - '@type': CVR.CVRSnapshot
+    '@id': '#snapshot'
+    Type: 'original'
+  ElectionId: '#election'
 Election:
 - '@type': CVR.Election
   '@id': '#election'
