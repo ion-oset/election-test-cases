@@ -1,0 +1,22 @@
+'@type': CVR.CastVoteRecordReport
+Election:
+- '@type': CVR.Election
+  '@id': '#election'
+  Contest:
+  - '@type': CVR.Contest
+    '@id': '#contest'
+    ContestSelection:
+    - '@type': CVR.ContestSelection
+      '@id': '#contest-selection'
+  ElectionScopeId: '#election-scope'
+GeneratedDate: ''
+GpUnit:
+- '@type': CVR.GpUnit
+  '@id': '#gp-unit'
+  'Type': 'other'
+ReportGeneratingDeviceIds:
+- '#report-generating-device-id'
+ReportingDevice:
+- '@type': CVR.ReportingDevice
+  '@id': '#reporting-device'
+Version: 1.0.0
