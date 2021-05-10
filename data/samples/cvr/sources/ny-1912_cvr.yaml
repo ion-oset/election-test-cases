@@ -1,0 +1,42 @@
+'@type': CVR.CastVoteRecordReport
+Election:
+- '@type': CVR.Election
+  '@id': election-01
+  Contest:
+  - '@type': CVR.Contest
+    '@id': contest-01
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': contest-01-selection-01
+    - '@type': CVR.CandidateSelection
+      '@id': contest-01-selection-02
+    Name: "President of the United States"
+    VoteVariation: majority
+  - '@type': CVR.Contest
+    '@id': contest-02
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': contest-02-selection-01
+    - '@type': CVR.CandidateSelection
+      '@id': contest-02-selection-02
+    Name: "Governor of the State of New York"
+    VoteVariation: plurality
+  ElectionScopeId: local-district-01
+  Name: "New York State General Election of 1912"
+GeneratedDate: '2021-05-10T19:12:11'
+GpUnit:
+- '@type': CVR.GpUnit
+  '@id': local-district-01
+  Type: precinct
+ReportGeneratingDeviceIds:
+- reporting-device-01
+ReportingDevice:
+- '@type': CVR.ReportingDevice
+  '@id': reporting-device-01
+  Application: Ballot Studio
+  Manufacturer: Trust the Vote
+  Model: git-25a73940-20210202
+  SerialNumber: 'AB:CD:EF:01:23:34'
+ReportType:
+- originating-device-export
+Version: 1.0.0
