@@ -21,6 +21,14 @@ CVR_SAMPLES_XML_TO_JSON_files := $(patsubst %$(SAMPLES_XML_ext),%$(SAMPLES_XML_T
 CVR_SAMPLES_XML_TO_JSON_files := $(notdir $(CVR_SAMPLES_XML_TO_JSON_files))
 CVR_SAMPLES_XML_TO_JSON_files := $(CVR_SAMPLES_XML_TO_JSON_files:%=$(CVR_SAMPLES_CONVERTED_path)/%)
 
+# Sources
+
+SOURCES_YAML_ext := _cvr.yaml
+SOURCES_JSON_ext := _cvr.json
+CVR_SOURCES_path := $(CVR_SAMPLES_path)/sources
+CVR_SOURCES_YAML_files := $(wildcard $(CVR_SOURCES_path)/*$(SOURCES_YAML_ext))
+CVR_SOURCES_JSON_files := $(CVR_SOURCES_YAML_files:%$(SOURCES_YAML_ext)=%$(SOURCES_JSON_ext))
+
 # Schemas
 
 SCHEMAS_path := $(DATA_path)/schemas
@@ -35,10 +43,17 @@ VALIDATE_XML := xmlschema-validate
 
 XML_TO_JSON := xmlschema-xml2json
 
+YAML_TO_JSON := yaml2json
+
 # --- Rules
 
 help:
 	@echo "Targets":
+	@echo ""
+	@echo "  Build samples:"
+	@echo ""
+	@echo "    build-samples:         Build JSON samples from YAML"
+	@echo "    clean-build-samples:   Clean built JSON samples from YAML"
 	@echo ""
 	@echo "  Convert samples:"
 	@echo ""
@@ -52,6 +67,24 @@ help:
 	@echo "    validate:              Validate all samples"
 	@echo "    validate-json:         Validate JSON samples"
 	@echo "    validate-xml:          Validate XML samples"
+
+
+# Build JSON samples from YAML
+
+build-samples: build-yaml-sources
+
+
+build-yaml-sources: $(CVR_SOURCES_JSON_files)
+
+
+$(CVR_SOURCES_path)/%_cvr.json: $(CVR_SOURCES_path)/%_cvr.yaml
+	$(YAML_TO_JSON) $< $@
+
+
+clean-build-samples:
+	rm $(CVR_SOURCES_JSON_files)
+
+.PHONY: clean-build-samples
 
 
 # Convert XML samples to JSON
@@ -84,7 +117,7 @@ validate: validate-xml validate-json
 validate-json: validate-cvr-json
 
 
-validate-cvr-json: $(CVR_SAMPLES_JSON_files)
+validate-cvr-json: $(CVR_SAMPLES_JSON_files) $(CVR_SOURCES_JSON_files)
 	@for file in $^; do \
 		echo "Validating: $$file..."; \
 		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \

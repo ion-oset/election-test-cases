@@ -14,3 +14,4 @@ __pycache__
 # Data Samples
 
 *_sample.xml-json
+sources/*_cvr.json
