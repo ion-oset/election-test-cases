@@ -2,23 +2,51 @@
 Election:
 - '@type': CVR.Election
   '@id': election-01
+  Candidate:
+  - '@type': CVR.Candidate
+    '@id': candidate-01
+    Name: Woodrow Wilson
+  - '@type': CVR.Candidate
+    '@id': candidate-02
+    Name: William Howard Taft
+  - '@type': CVR.Candidate
+    '@id': candidate-03
+    Name: Theodore Roosevelt
+  - '@type': CVR.Candidate
+    '@id': candidate-04
+    Name: Eugene Debs
+  - '@type': CVR.Candidate
+    '@id': candidate-05
+    Name: William Sulzer
+  - '@type': CVR.Candidate
+    '@id': candidate-06
+    Name: Job E. Hedges
+  - '@type': CVR.Candidate
+    '@id': candidate-07
+    Name: Oscar S. Straus
   Contest:
   - '@type': CVR.Contest
     '@id': contest-01
     ContestSelection:
     - '@type': CVR.CandidateSelection
-      '@id': contest-01-selection-01
+      '@id': contest-01-candidate-01
     - '@type': CVR.CandidateSelection
-      '@id': contest-01-selection-02
+      '@id': contest-01-candidate-02
+    - '@type': CVR.CandidateSelection
+      '@id': contest-01-candidate-03
+    - '@type': CVR.CandidateSelection
+      '@id': contest-01-candidate-04
     Name: "President of the United States"
     VoteVariation: majority
   - '@type': CVR.Contest
     '@id': contest-02
     ContestSelection:
     - '@type': CVR.CandidateSelection
-      '@id': contest-02-selection-01
+      '@id': contest-02-candidate-05
     - '@type': CVR.CandidateSelection
-      '@id': contest-02-selection-02
+      '@id': contest-02-candidate-06
+    - '@type': CVR.CandidateSelection
+      '@id': contest-02-candidate-07
     Name: "Governor of the State of New York"
     VoteVariation: plurality
   ElectionScopeId: local-district-01
