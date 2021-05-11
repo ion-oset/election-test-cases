@@ -202,6 +202,50 @@ CVR:
     Type: original
   ElectionId: election-ny-1912
   UniqueId: '4'
+# Voted twice for President and not for Governor.
+# This is both an overvote and an undervote.
+# It very similar to the overvote example.
+- '@type': CVR.CVR
+  CurrentSnapshotId: snapshot-01
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-01
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-01-candidate-02
+        OptionPosition: 2
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # Mark is clear but not valid because of the overvote
+          IsAllocable: 'no'
+          # There was vote, but as noted below it won't count towards the total
+          NumberVotes: 1
+        # Though marked the vote is not counted
+        TotalNumberVotes: 0
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-01-candidate-03
+        OptionPosition: 3
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # Mark is clear but not valid because of the overvote
+          IsAllocable: 'no'
+          # There was vote, but as noted below it won't count towards the total
+          NumberVotes: 1
+        # Though marked the vote is not counted
+        TotalNumberVotes: 0
+      # Overvotes are actual count - expected/allowed count.
+      Overvotes: 1
+      Undervotes: 1
+    Type: original
+  ElectionId: election-ny-1912
+  UniqueId: '5'
 Election:
 - '@type': CVR.Election
   '@id': election-01
