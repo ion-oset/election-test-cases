@@ -1,7 +1,18 @@
+# A fictional CVR report representing votes for President of the U.S. and
+# Governor of New York as conducted in a New York state precinct in 1912. The
+# report is describes an election in which votes are cast on paper ballots and
+# "scanned". It assumes that BallotStudio is doing the "scanning".
 '@type': CVR.CastVoteRecordReport
+# Election definition.
+# Records here will be referenced by their '@id' in the CVR records.
 Election:
 - '@type': CVR.Election
   '@id': election-01
+  # Candidate IDs are irrespective of contest or party.
+  # The order doesn't necessarily correspond to how they appear on the ballot
+  # though this would a reasonable default.
+  # (They actually are in the order they appear in the Wikipedia pages for the
+  # national and state elections in 1912, because this was easy to remember.)
   Candidate:
   - '@type': CVR.Candidate
     '@id': candidate-01
@@ -31,6 +42,9 @@ Election:
     '@id': candidate-07
     Name: Oscar S. Straus
     PartyId: party-05
+  # These are specifically 'CandidateContest'. There are other kinds.
+  # It's helpful for contest selection IDs to identify the contest and the
+  # candidate.
   Contest:
   - '@type': CVR.Contest
     '@id': contest-01
@@ -44,6 +58,7 @@ Election:
     - '@type': CVR.CandidateSelection
       '@id': contest-01-candidate-04
     Name: "President of the United States"
+    # Each voter casts only one vote.
     VoteVariation: majority
   - '@type': CVR.Contest
     '@id': contest-02
@@ -55,6 +70,7 @@ Election:
     - '@type': CVR.CandidateSelection
       '@id': contest-02-candidate-07
     Name: "Governor of the State of New York"
+    # Each voter casts only one vote.
     VoteVariation: plurality
   ElectionScopeId: local-district-01
   Name: "New York State General Election of 1912"
@@ -76,6 +92,10 @@ Party:
 - '@type': CVR.Party
   '@id': party-04
   Name: Socialist
+  # There's no such party as "Progressive/Independent". Oscar S. Straus was
+  # actually the candidate for both the Progressive and the Independent
+  # parties. CVR doesn't support multiple 'PartyId' values so the parties
+  # get combined here.
 - '@type': CVR.Party
   '@id': party-05
   Name: Progressive/Independent
@@ -86,7 +106,13 @@ ReportingDevice:
   '@id': reporting-device-01
   Application: Ballot Studio
   Manufacturer: Trust the Vote
+  # Git commit hash + commit date of the version of Ballot Studio
   Model: git-25a73940-20210202
+  Notes:
+    - >
+      A scanner in a real election should be hardware for security reasons.
+      A demo scanner could be software, so that's what this one is.
+  # An (imaginary) MAC address
   SerialNumber: 'AB:CD:EF:01:23:34'
 ReportType:
 - originating-device-export
