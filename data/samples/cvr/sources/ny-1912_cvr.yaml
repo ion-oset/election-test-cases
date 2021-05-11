@@ -6,24 +6,31 @@ Election:
   - '@type': CVR.Candidate
     '@id': candidate-01
     Name: Woodrow Wilson
+    PartyId: party-01
   - '@type': CVR.Candidate
     '@id': candidate-02
     Name: William Howard Taft
+    PartyId: party-02
   - '@type': CVR.Candidate
     '@id': candidate-03
     Name: Theodore Roosevelt
+    PartyId: party-03
   - '@type': CVR.Candidate
     '@id': candidate-04
     Name: Eugene Debs
+    PartyId: party-04
   - '@type': CVR.Candidate
     '@id': candidate-05
     Name: William Sulzer
+    PartyId: party-01
   - '@type': CVR.Candidate
     '@id': candidate-06
     Name: Job E. Hedges
+    PartyId: party-02
   - '@type': CVR.Candidate
     '@id': candidate-07
     Name: Oscar S. Straus
+    PartyId: party-05
   Contest:
   - '@type': CVR.Contest
     '@id': contest-01
@@ -56,6 +63,22 @@ GpUnit:
 - '@type': CVR.GpUnit
   '@id': local-district-01
   Type: precinct
+Party:
+- '@type': CVR.Party
+  '@id': party-01
+  Name: Democratic
+- '@type': CVR.Party
+  '@id': party-02
+  Name: Republican
+- '@type': CVR.Party
+  '@id': party-03
+  Name: Progressive
+- '@type': CVR.Party
+  '@id': party-04
+  Name: Socialist
+- '@type': CVR.Party
+  '@id': party-05
+  Name: Progressive/Independent
 ReportGeneratingDeviceIds:
 - reporting-device-01
 ReportingDevice:
