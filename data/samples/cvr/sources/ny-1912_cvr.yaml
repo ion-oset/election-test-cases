@@ -5,6 +5,99 @@
 '@type': CVR.CastVoteRecordReport
 # Election definition.
 # Records here will be referenced by their '@id' in the CVR records.
+# Cast Vote Records track the actual decisions made by a voter during an election.
+#
+# - The record types all begin with 'CVR'. When the rest of the name matches to
+#   an election definition type (e.g. 'Contest' and 'CVRContest') then the CVR
+#   record is referring to the election definition record by ID.
+# - All these CVRs represent the original marked ballot, so each of them has
+#   only one snapshot. 'CurrentSnapshotId' is always 'snapshot-01'.
+# - Many of the fields of a CVR don't matter for plurality/majority voting
+#   be cause thecan only be one vote per contest selection.
+# - 'CVR records don't have an '@id'. They have 'UniqueId' which is unique for
+#   each CVR in the report.
+# - Pay particular attention to 'SelectionPosition'. This is where most of the
+#   complexity of CVRs is.
+CVR:
+# Voted Democratic for President, and Democratic for Governor.
+- '@type': CVR.CVR
+  BallotStyleId: ballotstyle-01
+  CurrentSnapshotId: snapshot-01
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-01
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-01-candidate-01
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # The mark is clearly valid
+          IsAllocable: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: contest-02
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-02-candidate-05
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # The mark is clearly valid
+          IsAllocable: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    Type: original
+  ElectionId: election-01
+  UniqueId: '1'
+# Voted Progressive for President, and Republican for Governor.
+# It otherwise very similar to the record above.
+- '@type': CVR.CVR
+  BallotStyleId: ballotstyle-01
+  CurrentSnapshotId: snapshot-01
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-01
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-01-candidate-03
+        OptionPosition: 3
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # The mark is clearly valid
+          IsAllocable: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: contest-02
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-02-candidate-06
+        OptionPosition: 2
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # The mark is clearly valid
+          IsAllocable: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    Type: original
+  ElectionId: election-01
+  UniqueId: '2'
 Election:
 - '@type': CVR.Election
   '@id': election-01
