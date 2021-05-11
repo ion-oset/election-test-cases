@@ -246,6 +246,70 @@ CVR:
     Type: original
   ElectionId: election-ny-1912
   UniqueId: '5'
+# Voted twice for President and once for Governor.
+# At least one of the marks for President was unclear or ambiguous.
+# This requires evaluation by a scanner or an adjudicator.
+# In this case the scanner could not decide and adjudication is needed.
+#
+# Neither selections in the first contest has a vote total.
+# Neither selections in the first contest is considered an overvote yet.
+# Both selections have indications but it is not known if they are allocable.
+# Status is marked as 'needs-adju'
+- '@type': CVR.CVR
+  CurrentSnapshotId: snapshot-01
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-01
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-01-candidate-02
+        OptionPosition: 2
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # Mark is unclear
+          IsAllocable: 'unknown'
+          NumberVotes: 1
+        # Though marked the vote is not counted.
+        # It may change to be counted after adjudication.
+        TotalNumberVotes: 0
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-01-candidate-03
+        OptionPosition: 3
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # Mark is clear but not valid because of the overvote
+          IsAllocable: 'unknown'
+          # There was a vote, but as noted below it won't count towards the total
+          NumberVotes: 1
+        # 'TotalNumberVotes' is not defined.
+        # This not counted as 'Overvotes'
+        Status:
+          - 'needs-adjudication'
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-02
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-02-candidate-06
+        OptionPosition: 2
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # The mark is clearly valid
+          IsAllocable: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    Type: original
+  ElectionId: election-ny-1912
+  UniqueId: '6'
 Election:
 - '@type': CVR.Election
   '@id': election-01
