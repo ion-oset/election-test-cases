@@ -98,6 +98,46 @@ CVR:
     Type: original
   ElectionId: election-01
   UniqueId: '2'
+# Voted Socialist for President, with no vote for Governor.
+# The second contest is a marked as undervote.
+# It has no contest selection (since a mark is required for a selection).
+- '@type': CVR.CVR
+  BallotStyleId: ballotstyle-01
+  CurrentSnapshotId: snapshot-01
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-01
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-01-candidate-04
+        OptionPosition: 4
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # The mark is clearly valid
+          IsAllocable: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: contest-01
+      # No 'ContestSelection' is present.
+      # Status. In the case of undervotes it's a little unclear what value to use.
+      # - 'not-indicated' means no mark. 'undervote' means fewer than expected
+      #   vote -- so also no mark. For plurality votes these may be equivalent.
+      # - It may be that it's correct to infer it from the fact that there are
+      #   undervotes. The NIST long example doesn't have Status when Undervotes
+      #   exists.
+      Status:
+        - not-indicated
+      # The count of the undervotes. In a plurality contest this is always 1.
+      Undervotes: 1
+    Type: original
+  ElectionId: election-01
+  UniqueId: '3'
 Election:
 - '@type': CVR.Election
   '@id': election-01
