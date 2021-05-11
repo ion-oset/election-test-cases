@@ -310,6 +310,49 @@ CVR:
     Type: original
   ElectionId: election-ny-1912
   UniqueId: '6'
+# Voted write-in for President, Democratic vote for governor.
+# Write-ins need adjudication.
+# Write-ins have no contest selection ID.
+- '@type': CVR.CVR
+  CurrentSnapshotId: snapshot-01
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-01
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        OptionPosition: 5
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          CVRWriteIn:
+            '@type': CVR.CVRWriteIn
+            Text: William Jennings Bryan
+          HasIndication: 'yes'
+          IsAllocable: 'unknown'
+          NumberVotes: 1
+        Status:
+          - needs-adjudication
+        # Unadjudicated vote, so not counted
+        TotalNumberVotes: 0
+    - '@type': CVR.CVRContest
+      ContestId: contest-02
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-02-candidate-05
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          # The ballot was marked
+          HasIndication: 'yes'
+          # The mark is clearly valid
+          IsAllocable: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    Type: original
+  ElectionId: election-ny-1912
+  UniqueId: '7'
 Election:
 - '@type': CVR.Election
   '@id': election-01
