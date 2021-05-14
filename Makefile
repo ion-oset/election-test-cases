@@ -45,6 +45,17 @@ XML_TO_JSON := xmlschema-xml2json
 
 YAML_TO_JSON := yaml2json
 
+# Documentation
+
+NOTES_MARKDOWN_ext := md
+NOTES_HTML_ext := html
+NOTES_DOCS_path := $(DOCS_path)/notes
+NOTES_MARKDOWN_files := $(wildcard $(NOTES_DOCS_path)/*.$(NOTES_MARKDOWN_ext))
+NOTES_HTML_files := $(NOTES_MARKDOWN_files:%.$(NOTES_MARKDOWN_ext)=%.$(NOTES_HTML_ext))
+
+PANDOC := pandoc
+PANDOC_NOTES_flags := --standalone
+
 # --- Rules
 
 help:
@@ -62,6 +73,13 @@ help:
 	@echo "       Generated JSON is NOT valid. Use it for comparison."
 	@echo "    clean-converted-samples:  Cleanup converted samples"
 	@echo ""
+	@echo "  Documentation:"
+	@echo ""
+	@echo "    notes:                 Generate all notes"
+	@echo "    html-notes:            Generate HTML notes"
+	@echo "    clean-notes:           Cleanup all generated notes"
+	@echo "    clean-html-notes:      Cleanup generated HTML notes"
+	@echo ""
 	@echo "  Validation:"
 	@echo ""
 	@echo "    validate:              Validate all samples"
@@ -71,7 +89,7 @@ help:
 build: build-samples convert-samples
 
 
-clean: clean-build-samples clean-converted-samples
+clean: clean-build-samples clean-converted-samples clean-notes
 
 
 # Build JSON samples from YAML
@@ -112,6 +130,28 @@ clean-converted-samples:
 	rm $(CVR_SAMPLES_XML_TO_JSON_files)
 
 .PHONY: clean-converted-samples
+
+
+# Documentation
+
+notes: html-notes
+
+
+html-notes: $(NOTES_HTML_files)
+
+
+$(NOTES_DOCS_path)/%.html: $(NOTES_DOCS_path)/%.md
+	$(PANDOC) $(PANDOC_NOTES_flags) $< -o $@
+
+
+clean-notes: clean-html-notes
+
+
+clean-html-notes:
+	rm -f $(NOTES_HTML_files)
+
+
+.PHONY: clean-notes clean-html-notes
 
 
 # Validation
