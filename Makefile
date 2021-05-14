@@ -60,13 +60,18 @@ help:
 	@echo "    convert-samples:          Generate all converted samples"
 	@echo "    convert-samples-xml-json: Generate converted JSON samples from XML samples"
 	@echo "       Generated JSON is NOT valid. Use it for comparison."
-	@echo "    clean-convert-samples:    Cleanup converted samples"
+	@echo "    clean-converted-samples:  Cleanup converted samples"
 	@echo ""
 	@echo "  Validation:"
 	@echo ""
 	@echo "    validate:              Validate all samples"
 	@echo "    validate-json:         Validate JSON samples"
 	@echo "    validate-xml:          Validate XML samples"
+
+build: build-samples convert-samples
+
+
+clean: clean-build-samples clean-converted-samples
 
 
 # Build JSON samples from YAML
