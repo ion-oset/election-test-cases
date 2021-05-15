@@ -12,3 +12,7 @@ __pycache__
 
 *_sample.xml-json
 sources/*_cvr.json
+
+# Documentation
+
+docs/notes/*.html

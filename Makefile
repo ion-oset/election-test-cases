@@ -5,7 +5,7 @@
 ROOT_path := $(dir $(abspath $(MAKEFILE_LIST)))
 ROOT_path := $(ROOT_path:%/=%)
 DATA_path := $(ROOT_path)/data
-DOCS_path := $(ROOT_path)/doc
+DOCS_path := $(ROOT_path)/docs
 
 # Samples
 
