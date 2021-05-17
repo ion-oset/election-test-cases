@@ -19,6 +19,8 @@
 # - Pay particular attention to 'SelectionPosition'. This is where most of the
 #   complexity of CVRs is.
 CVR:
+# ## Valid ballot
+#
 # Voted Democratic for President, and Democratic for Governor.
 - '@type': CVR.CVR
   BallotStyleId: ballotstyle-01
@@ -58,6 +60,8 @@ CVR:
     Type: original
   ElectionId: election-01
   UniqueId: '1'
+# ## Valid ballot
+#
 # Voted Progressive for President, and Republican for Governor.
 # It otherwise very similar to the record above.
 - '@type': CVR.CVR
@@ -98,6 +102,8 @@ CVR:
     Type: original
   ElectionId: election-01
   UniqueId: '2'
+# ## Undervote (valid)
+#
 # Voted Socialist for President, with no vote for Governor.
 # The second contest is a marked as undervote.
 # It has no contest selection (since a mark is required for a selection).
@@ -138,6 +144,8 @@ CVR:
     Type: original
   ElectionId: election-01
   UniqueId: '3'
+# ## Overvote (invalid)
+#
 # Voted twice for President and once for Governor.
 # Both marks for President were clear and unambiguous.
 # This requires evaluation by the scanner or an adjudicator.
@@ -202,6 +210,8 @@ CVR:
     Type: original
   ElectionId: election-ny-1912
   UniqueId: '4'
+# ## Overvote + Undervote (invalid)
+#
 # Voted twice for President and not for Governor.
 # This is both an overvote and an undervote.
 # It very similar to the overvote example.
@@ -246,6 +256,8 @@ CVR:
     Type: original
   ElectionId: election-ny-1912
   UniqueId: '5'
+# ## Overvote (ambiguous)
+#
 # Voted twice for President and once for Governor.
 # At least one of the marks for President was unclear or ambiguous.
 # This requires evaluation by a scanner or an adjudicator.
@@ -310,6 +322,8 @@ CVR:
     Type: original
   ElectionId: election-ny-1912
   UniqueId: '6'
+# ## Write-in
+#
 # Voted write-in for President, Democratic vote for governor.
 # Write-ins need adjudication.
 # Write-ins have no contest selection ID.
@@ -353,6 +367,8 @@ CVR:
     Type: original
   ElectionId: election-ny-1912
   UniqueId: '7'
+# ## Write-in with adjudication
+#
 # Voted write-in for President, Democratic vote for governor.
 # Adjudicated version of previous write-in ballot to accept the vote.
 # Has two CVR snapshots, the second of which has the adjudication results.
