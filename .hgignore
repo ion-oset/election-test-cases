@@ -18,4 +18,5 @@ sources/*_cvr.json
 
 # Documentation
 
+docs/annotated/**
 docs/notes/*.html

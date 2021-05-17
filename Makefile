@@ -56,6 +56,21 @@ NOTES_HTML_files := $(NOTES_MARKDOWN_files:%.$(NOTES_MARKDOWN_ext)=%.$(NOTES_HTM
 PANDOC := pandoc
 PANDOC_NOTES_flags := --standalone
 
+# Documentation - Annotations
+
+ANNOTATIONS_HTML_ext := html
+ANNOTATIONS_DOCS_path := $(DOCS_path)/annotated
+ANNOTATIONS_HTML_files := $(patsubst %$(SOURCES_YAML_ext),%.$(ANNOTATIONS_HTML_ext),$(CVR_SOURCES_YAML_files))
+ANNOTATIONS_HTML_files := $(notdir $(ANNOTATIONS_HTML_files))
+ANNOTATIONS_HTML_files := $(ANNOTATIONS_HTML_files:%=$(ANNOTATIONS_DOCS_path)/%)
+
+DOCCO := docco
+# One of: parallel, linear, classic
+DOCCO_LAYOUT := parallel
+DOCCO_STYLES :=
+DOCCO_TEMPLATES :=
+DOCCO_flags := $(DOCCO_LAYOUT:%= -l %)$(DOCCO_STYLES:%= -c %)$(DOCCO_TEMPLATES:%= -t %)
+
 # --- Rules
 
 help:
@@ -80,6 +95,12 @@ help:
 	@echo "    clean-notes:           Cleanup all generated notes"
 	@echo "    clean-html-notes:      Cleanup generated HTML notes"
 	@echo ""
+	@echo "    annotate:              Generate all annotations from samples"
+	@echo "    annotate-docco:        Generate Docco annotations from all samples"
+	@echo "    annotate-docco-yaml:   Generate Docco annotations from YAML samples"
+	@echo "    clean-annotations:     Cleanup all annotations"
+	@echo "    clean-docco-annotations: Cleanup all Docco annotations"
+	@echo ""
 	@echo "  Validation:"
 	@echo ""
 	@echo "    validate:              Validate all samples"
@@ -89,7 +110,7 @@ help:
 build: build-samples convert-samples
 
 
-clean: clean-build-samples clean-converted-samples clean-notes
+clean: clean-build-samples clean-converted-samples clean-notes clean-annotations
 
 
 # Build JSON samples from YAML
@@ -130,6 +151,40 @@ clean-converted-samples:
 	rm $(CVR_SAMPLES_XML_TO_JSON_files)
 
 .PHONY: clean-converted-samples
+
+
+# Documentation - Annotations
+
+annotate: annotate-docco
+
+
+annotate-docco: annotate-docco-yaml
+
+
+annotate-docco-yaml: $(ANNOTATIONS_HTML_files)
+
+
+$(ANNOTATIONS_DOCS_path)/%.html: $(ANNOTATIONS_DOCS_path)/%.yaml
+	( \
+		cd $(ANNOTATIONS_DOCS_path); \
+		$(DOCCO) $(DOCCO_flags) $$(basename $<) -o $$PWD; \
+	)
+
+
+$(ANNOTATIONS_DOCS_path)/%.yaml: $(CVR_SOURCES_path)/%_cvr.yaml
+	cp -af $< $@
+
+
+clean-annotations: clean-docco-annotations
+
+
+clean-docco-annotations:
+	rm -f $(ANNOTATIONS_DOCS_path)/*.html
+	rm -f $(ANNOTATIONS_DOCS_path)/*.css
+	rm -rf $(ANNOTATIONS_DOCS_path)/public
+
+
+.PHONY: clean-annotations clean-docco-annotations
 
 
 # Documentation
