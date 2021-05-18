@@ -1,3 +1,5 @@
+# Minimal CVR example that validates under JSON schema
+# Everything that's not here is technically optional.
 '@type': CVR.CastVoteRecordReport
 CVR:
 - '@type': CVR.CVR
