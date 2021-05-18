@@ -7,62 +7,64 @@ ROOT_path := $(ROOT_path:%/=%)
 DATA_path := $(ROOT_path)/data
 DOCS_path := $(ROOT_path)/docs
 
-# Samples
+CVR_SAMPLES_path := $(DATA_path)/cvr/samples
+CVR_SCHEMAS_path := $(DATA_path)/cvr/schemas
 
-SAMPLES_path := $(DATA_path)/samples
-SAMPLES_JSON_ext := _sample.json
-SAMPLES_XML_ext := _sample.xml
-SAMPLES_XML_TO_JSON_ext := _sample.xml-json
-CVR_SAMPLES_path := $(SAMPLES_path)/cvr
-CVR_SAMPLES_CONVERTED_path := $(CVR_SAMPLES_path)/converted
-CVR_SAMPLES_JSON_files := $(wildcard $(CVR_SAMPLES_path)/*$(SAMPLES_JSON_ext))
-CVR_SAMPLES_XML_files := $(wildcard $(CVR_SAMPLES_path)/*$(SAMPLES_XML_ext))
-CVR_SAMPLES_XML_TO_JSON_files := $(patsubst %$(SAMPLES_XML_ext),%$(SAMPLES_XML_TO_JSON_ext),$(CVR_SAMPLES_XML_files))
-CVR_SAMPLES_XML_TO_JSON_files := $(notdir $(CVR_SAMPLES_XML_TO_JSON_files))
-CVR_SAMPLES_XML_TO_JSON_files := $(CVR_SAMPLES_XML_TO_JSON_files:%=$(CVR_SAMPLES_CONVERTED_path)/%)
+NOTES_DOCS_path := $(DOCS_path)/notes
+ANNOTATIONS_DOCS_path := $(DOCS_path)/annotated
 
-# Sources
+# File types
 
-SOURCES_YAML_ext := _cvr.yaml
-SOURCES_JSON_ext := _cvr.json
-CVR_SOURCES_path := $(CVR_SAMPLES_path)/sources
-CVR_SOURCES_YAML_files := $(wildcard $(CVR_SOURCES_path)/*$(SOURCES_YAML_ext))
-CVR_SOURCES_JSON_files := $(CVR_SOURCES_YAML_files:%$(SOURCES_YAML_ext)=%$(SOURCES_JSON_ext))
+XML_ext := .xml
+JSON_ext := .json
+YAML_ext := .yaml
+JSON_PORTED_ext := _ported.json
+JSON_CONVERTED_ext := _converted.json
+
+JSONSCHEMA_ext := jsonschema.json
+XMLSCHEMA_ext := xmlschema.xml
+
+NOTES_MARKDOWN_ext := .md
+NOTES_HTML_ext := .html
+
+ANNOTATIONS_HTML_ext := .html
+
+# Samples - NIST
+
+NIST_CVR_path := $(CVR_SAMPLES_path)/nist
+
+NIST_CVR_XML_files := $(wildcard $(NIST_CVR_path)/*$(XML_ext))
+NIST_CVR_JSON_CONVERTED_files := $(NIST_CVR_XML_files:%$(XML_ext)=%$(JSON_CONVERTED_ext))
+
+NIST_CVR_YAML_files := $(wildcard $(NIST_CVR_path)/*$(YAML_ext))
+NIST_CVR_JSON_PORTED_files := $(NIST_CVR_YAML_files:%$(YAML_ext)=%$(JSON_PORTED_ext))
 
 # Schemas
 
-SCHEMAS_path := $(DATA_path)/schemas
-CVR_SCHEMAS_path := $(SCHEMAS_path)/cvr
-CVR_JSONSCHEMA_ext := jsonschema.json
-CVR_JSONSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(CVR_JSONSCHEMA_ext)
-CVR_XMLSCHEMA_ext := xmlschema.xml
-CVR_XMLSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(CVR_XMLSCHEMA_ext)
+CVR_JSONSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(JSONSCHEMA_ext)
+CVR_XMLSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(XMLSCHEMA_ext)
+
+# Notes
+
+NOTES_MARKDOWN_files := $(wildcard $(NOTES_DOCS_path)/*$(NOTES_MARKDOWN_ext))
+NOTES_HTML_files := $(NOTES_MARKDOWN_files:%$(NOTES_MARKDOWN_ext)=%$(NOTES_HTML_ext))
+
+# Annotations - NIST
+
+NIST_ANNOTATIONS_HTML_path := $(NIST_CVR_path)
+NIST_ANNOTATIONS_HTML_files := $(NIST_CVR_YAML_files:%$(YAML_ext)=%$(ANNOTATIONS_HTML_ext))
+NIST_ANNOTATIONS_DOCS_files := $(NIST_ANNOTATIONS_HTML_files:$(NIST_ANNOTATIONS_HTML_path)/%=$(ANNOTATIONS_DOCS_path)/%)
+
+# Tools
+
+PANDOC := pandoc
+PANDOC_NOTES_flags := --standalone
 
 VALIDATE_JSON := jsonschema
 VALIDATE_XML := xmlschema-validate
 
 XML_TO_JSON := xmlschema-xml2json
-
 YAML_TO_JSON := yaml2json
-
-# Documentation
-
-NOTES_MARKDOWN_ext := md
-NOTES_HTML_ext := html
-NOTES_DOCS_path := $(DOCS_path)/notes
-NOTES_MARKDOWN_files := $(wildcard $(NOTES_DOCS_path)/*.$(NOTES_MARKDOWN_ext))
-NOTES_HTML_files := $(NOTES_MARKDOWN_files:%.$(NOTES_MARKDOWN_ext)=%.$(NOTES_HTML_ext))
-
-PANDOC := pandoc
-PANDOC_NOTES_flags := --standalone
-
-# Documentation - Annotations
-
-ANNOTATIONS_HTML_ext := html
-ANNOTATIONS_DOCS_path := $(DOCS_path)/annotated
-ANNOTATIONS_HTML_files := $(patsubst %$(SOURCES_YAML_ext),%.$(ANNOTATIONS_HTML_ext),$(CVR_SOURCES_YAML_files))
-ANNOTATIONS_HTML_files := $(notdir $(ANNOTATIONS_HTML_files))
-ANNOTATIONS_HTML_files := $(ANNOTATIONS_HTML_files:%=$(ANNOTATIONS_DOCS_path)/%)
 
 DOCCO := docco
 # One of: parallel, linear, classic
@@ -76,30 +78,36 @@ DOCCO_flags := $(DOCCO_LAYOUT:%= -l %)$(DOCCO_STYLES:%= -c %)$(DOCCO_TEMPLATES:%
 help:
 	@echo "Targets":
 	@echo ""
+	@echo "  General"
+	@echo ""
+	@echo "    build:                 Build all samples, notes, annotations"
+	@echo "    clean:                 Clean all samples, notes, annotations"
+	@echo ""
 	@echo "  Build samples:"
 	@echo ""
-	@echo "    build-samples:         Build JSON samples from YAML"
-	@echo "    clean-build-samples:   Clean built JSON samples from YAML"
+	@echo "    build-samples:         Build all JSON samples from YAML"
+	@echo "    clean-samples:         Clean all JSON samples built from YAML"
 	@echo ""
-	@echo "  Convert samples:"
+	@echo "    build-nist-samples:    Build NIST JSON samples from YAML"
+	@echo "    clean-nist-samples:    Clean NIST JSON samples built from YAML"
 	@echo ""
-	@echo "    convert-samples:          Generate all converted samples"
-	@echo "    convert-samples-xml-json: Generate converted JSON samples from XML samples"
-	@echo "       Generated JSON is NOT valid. Use it for comparison."
-	@echo "    clean-converted-samples:  Cleanup converted samples"
+	@echo "  Converted samples:"
+	@echo ""
+	@echo "    build-nist-conversions: Converted NIST examples from XML to JSON"
+	@echo "       Note: The result is NOT valid under the JSON Schema. Use it for comparison."
+	@echo "    clean-nist-conversions: Cleanup converted samples"
 	@echo ""
 	@echo "  Documentation:"
 	@echo ""
 	@echo "    notes:                 Generate all notes"
-	@echo "    html-notes:            Generate HTML notes"
+	@echo "      html-notes:          Generate HTML notes"
 	@echo "    clean-notes:           Cleanup all generated notes"
-	@echo "    clean-html-notes:      Cleanup generated HTML notes"
+	@echo "      clean-html-notes:    Cleanup generated HTML notes"
 	@echo ""
 	@echo "    annotate:              Generate all annotations from samples"
-	@echo "    annotate-docco:        Generate Docco annotations from all samples"
-	@echo "    annotate-docco-yaml:   Generate Docco annotations from YAML samples"
+	@echo "      annotate-docco:      Generate Docco annotations from all samples"
 	@echo "    clean-annotations:     Cleanup all annotations"
-	@echo "    clean-docco-annotations: Cleanup all Docco annotations"
+	@echo "      clean-docco-annotations: Cleanup all Docco annotations"
 	@echo ""
 	@echo "  Validation:"
 	@echo ""
@@ -107,87 +115,60 @@ help:
 	@echo "    validate-json:         Validate JSON samples"
 	@echo "    validate-xml:          Validate XML samples"
 
-build: build-samples convert-samples
+
+# Build everything
+
+build: build-samples notes annotate
 
 
-clean: clean-build-samples clean-converted-samples clean-notes clean-annotations
+clean: clean-nist-samples clean-nist-conversions clean-notes clean-annotations
+
+
+# Build JSON samples
+
+build-samples: build-nist-samples build-nist-conversions
+
+
+clean-samples: clean-nist-samples clean-nist-conversions
 
 
 # Build JSON samples from YAML
 
-build-samples: build-yaml-sources
+build-nist-samples: $(NIST_CVR_JSON_PORTED_files)
 
 
-build-yaml-sources: $(CVR_SOURCES_JSON_files)
-
-
-$(CVR_SOURCES_path)/%_cvr.json: $(CVR_SOURCES_path)/%_cvr.yaml
+$(NIST_CVR_path)/%$(JSON_PORTED_ext): $(NIST_CVR_path)/%$(YAML_ext)
 	$(YAML_TO_JSON) $< $@
 
 
-clean-build-samples:
-	rm $(CVR_SOURCES_JSON_files)
-
-.PHONY: clean-build-samples
+clean-nist-samples:
+	rm -f $(NIST_CVR_JSON_PORTED_files)
 
 
-# Convert XML samples to JSON
-
-convert-samples: convert-samples-xml-json
+.PHONY: clean-nist-samples
 
 
-convert-samples-xml-json: $(CVR_SAMPLES_XML_TO_JSON_files)
+# Convert NIST XML samples to JSON
+
+build-nist-conversions: $(NIST_CVR_JSON_CONVERTED_files)
 
 
-$(CVR_SAMPLES_CONVERTED_path)/%.xml-json: $(CVR_SAMPLES_CONVERTED_path)/%.json
+$(NIST_CVR_path)/%$(JSON_CONVERTED_ext): $(NIST_CVR_path)/%$(JSON_ext)
 	jq '.' $< > $@
 
 
-$(CVR_SAMPLES_CONVERTED_path)/%.json: $(CVR_SAMPLES_path)/%.xml
-	@$(XML_TO_JSON) --schema $(CVR_XMLSCHEMA_file) $< -o $(CVR_SAMPLES_CONVERTED_path)
+$(NIST_CVR_path)/%$(JSON_ext): $(NIST_CVR_path)/%$(XML_ext)
+	@$(XML_TO_JSON) --schema $(CVR_XMLSCHEMA_file) $< -o $(NIST_CVR_path)
 
 
-clean-converted-samples:
-	rm $(CVR_SAMPLES_XML_TO_JSON_files)
-
-.PHONY: clean-converted-samples
+clean-nist-conversions:
+	rm -f $(NIST_CVR_JSON_CONVERTED_files)
 
 
-# Documentation - Annotations
-
-annotate: annotate-docco
+.PHONY: clean-nist-conversions
 
 
-annotate-docco: annotate-docco-yaml
-
-
-annotate-docco-yaml: $(ANNOTATIONS_HTML_files)
-
-
-$(ANNOTATIONS_DOCS_path)/%.html: $(ANNOTATIONS_DOCS_path)/%.yaml
-	( \
-		cd $(ANNOTATIONS_DOCS_path); \
-		$(DOCCO) $(DOCCO_flags) $$(basename $<) -o $$PWD; \
-	)
-
-
-$(ANNOTATIONS_DOCS_path)/%.yaml: $(CVR_SOURCES_path)/%_cvr.yaml
-	cp -af $< $@
-
-
-clean-annotations: clean-docco-annotations
-
-
-clean-docco-annotations:
-	rm -f $(ANNOTATIONS_DOCS_path)/*.html
-	rm -f $(ANNOTATIONS_DOCS_path)/*.css
-	rm -rf $(ANNOTATIONS_DOCS_path)/public
-
-
-.PHONY: clean-annotations clean-docco-annotations
-
-
-# Documentation
+# Documentation - Notes
 
 notes: html-notes
 
@@ -209,7 +190,44 @@ clean-html-notes:
 .PHONY: clean-notes clean-html-notes
 
 
+# Documentation - Annotations
+#
+# Note: docco has unintuitive behavior regarding paths which requires switching
+# to the destination directory and having all sources file in it.
+
+annotate: annotate-docco
+
+
+annotate-docco: $(NIST_ANNOTATIONS_DOCS_files)
+
+
+$(ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(ANNOTATIONS_DOCS_path)/%$(YAML_ext)
+	( \
+		cd $(ANNOTATIONS_DOCS_path); \
+		$(DOCCO) $(DOCCO_flags) $$(basename $<) -o $$PWD; \
+	)
+
+
+$(ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(NIST_CVR_path)/%$(YAML_ext)
+	cp -af $< $@
+
+
+clean-annotations: clean-docco-annotations
+
+
+clean-docco-annotations:
+	rm -f $(ANNOTATIONS_DOCS_path)/*.html
+	rm -f $(ANNOTATIONS_DOCS_path)/*.css
+	rm -rf $(ANNOTATIONS_DOCS_path)/public
+
+
+.PHONY: clean-annotations clean-docco-annotations
+
+
 # Validation
+#
+# Note: JSON converted from NIST XML examples will *not* validate.
+
 
 validate: validate-xml validate-json
 
@@ -217,7 +235,7 @@ validate: validate-xml validate-json
 validate-json: validate-cvr-json
 
 
-validate-cvr-json: $(CVR_SAMPLES_JSON_files) $(CVR_SOURCES_JSON_files)
+validate-cvr-json: $(NIST_CVR_JSON_PORTED_files)
 	@for file in $^; do \
 		echo "Validating: $$file..."; \
 		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
@@ -228,7 +246,7 @@ validate-cvr-json: $(CVR_SAMPLES_JSON_files) $(CVR_SOURCES_JSON_files)
 validate-xml: validate-cvr-xml
 
 
-validate-cvr-xml: $(CVR_SAMPLES_XML_files)
+validate-cvr-xml: $(NIST_CVR_XML_files)
 	@for file in $^; do \
 		$(VALIDATE_XML) --schema $(CVR_XMLSCHEMA_file) $$file; \
 	done

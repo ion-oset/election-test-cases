@@ -4,7 +4,7 @@
 
 ### Schemas
 
-`schemas/cast-vote-records`
+`cvr/schemas`:
 : Cast Vote Records schema: NIST SP 1500-103, version 1
 
     - [HTML (nist.gov)][nist-cvr-html]
@@ -26,7 +26,7 @@
 
 ### Samples
 
-`samples/cvr`:
+`cvr/samples`:
 : NIST examples.
 
     The original examples are in XML. They JSON examples were converted from the XML ones by us - they are not part of the spec.
