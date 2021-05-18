@@ -39,6 +39,20 @@ NIST_CVR_JSON_CONVERTED_files := $(NIST_CVR_XML_files:%$(XML_ext)=%$(JSON_CONVER
 NIST_CVR_YAML_files := $(wildcard $(NIST_CVR_path)/*$(YAML_ext))
 NIST_CVR_JSON_PORTED_files := $(NIST_CVR_YAML_files:%$(YAML_ext)=%$(JSON_PORTED_ext))
 
+# Samples - Minimal
+
+MINIMAL_CVR_path := $(CVR_SAMPLES_path)/minimal
+
+MINIMAL_CVR_YAML_files := $(wildcard $(MINIMAL_CVR_path)/*$(YAML_ext))
+MINIMAL_CVR_JSON_files := $(MINIMAL_CVR_YAML_files:%$(YAML_ext)=%$(JSON_ext))
+
+# Samples - NY-1912
+
+NY_1912_CVR_path := $(CVR_SAMPLES_path)/ny-1912
+
+NY_1912_CVR_YAML_files := $(wildcard $(NY_1912_CVR_path)/*$(YAML_ext))
+NY_1912_CVR_JSON_files := $(NY_1912_CVR_YAML_files:%$(YAML_ext)=%$(JSON_ext))
+
 # Schemas
 
 CVR_JSONSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(JSONSCHEMA_ext)
@@ -53,7 +67,22 @@ NOTES_HTML_files := $(NOTES_MARKDOWN_files:%$(NOTES_MARKDOWN_ext)=%$(NOTES_HTML_
 
 NIST_ANNOTATIONS_HTML_path := $(NIST_CVR_path)
 NIST_ANNOTATIONS_HTML_files := $(NIST_CVR_YAML_files:%$(YAML_ext)=%$(ANNOTATIONS_HTML_ext))
-NIST_ANNOTATIONS_DOCS_files := $(NIST_ANNOTATIONS_HTML_files:$(NIST_ANNOTATIONS_HTML_path)/%=$(ANNOTATIONS_DOCS_path)/%)
+NIST_ANNOTATIONS_DOCS_path := $(ANNOTATIONS_DOCS_path)/nist
+NIST_ANNOTATIONS_DOCS_files := $(NIST_ANNOTATIONS_HTML_files:$(NIST_ANNOTATIONS_HTML_path)/%=$(NIST_ANNOTATIONS_DOCS_path)/%)
+
+# Annotations - Minimal
+
+MINIMAL_ANNOTATIONS_HTML_path := $(MINIMAL_CVR_path)
+MINIMAL_ANNOTATIONS_HTML_files := $(MINIMAL_CVR_YAML_files:%$(YAML_ext)=%$(ANNOTATIONS_HTML_ext))
+MINIMAL_ANNOTATIONS_DOCS_path := $(ANNOTATIONS_DOCS_path)/minimal
+MINIMAL_ANNOTATIONS_DOCS_files := $(MINIMAL_ANNOTATIONS_HTML_files:$(MINIMAL_ANNOTATIONS_HTML_path)/%=$(MINIMAL_ANNOTATIONS_DOCS_path)/%)
+
+# # Annotations - NY-1912
+
+NY_1912_ANNOTATIONS_HTML_path := $(NY_1912_CVR_path)
+NY_1912_ANNOTATIONS_HTML_files := $(NY_1912_CVR_YAML_files:%$(YAML_ext)=%$(ANNOTATIONS_HTML_ext))
+NY_1912_ANNOTATIONS_DOCS_path := $(ANNOTATIONS_DOCS_path)/ny-1912
+NY_1912_ANNOTATIONS_DOCS_files := $(NY_1912_ANNOTATIONS_HTML_files:$(NY_1912_ANNOTATIONS_HTML_path)/%=$(NY_1912_ANNOTATIONS_DOCS_path)/%)
 
 # Tools
 
@@ -91,6 +120,12 @@ help:
 	@echo "    build-nist-samples:    Build NIST JSON samples from YAML"
 	@echo "    clean-nist-samples:    Clean NIST JSON samples built from YAML"
 	@echo ""
+	@echo "    build-minimal-samples: Build 'minimal' JSON samples from YAML"
+	@echo "    clean-ninimal-samples: Clean 'minimal' JSON samples built from YAML"
+	@echo ""
+	@echo "    build-ny-1912-samples: Build NY 1912 JSON samples from YAML"
+	@echo "    clean-ny-1912-samples: Clean NY 1912 JSON samples built from YAML"
+	@echo ""
 	@echo "  Converted samples:"
 	@echo ""
 	@echo "    build-nist-conversions: Converted NIST examples from XML to JSON"
@@ -121,31 +156,15 @@ help:
 build: build-samples notes annotate
 
 
-clean: clean-nist-samples clean-nist-conversions clean-notes clean-annotations
+clean: clean-samples clean-notes clean-annotations
 
 
 # Build JSON samples
 
-build-samples: build-nist-samples build-nist-conversions
+build-samples: build-nist-samples build-nist-conversions build-minimal-samples build-ny-1912-samples
 
 
-clean-samples: clean-nist-samples clean-nist-conversions
-
-
-# Build JSON samples from YAML
-
-build-nist-samples: $(NIST_CVR_JSON_PORTED_files)
-
-
-$(NIST_CVR_path)/%$(JSON_PORTED_ext): $(NIST_CVR_path)/%$(YAML_ext)
-	$(YAML_TO_JSON) $< $@
-
-
-clean-nist-samples:
-	rm -f $(NIST_CVR_JSON_PORTED_files)
-
-
-.PHONY: clean-nist-samples
+clean-samples: clean-nist-samples clean-nist-conversions clean-minimal-samples clean-ny-1912-samples
 
 
 # Convert NIST XML samples to JSON
@@ -166,6 +185,54 @@ clean-nist-conversions:
 
 
 .PHONY: clean-nist-conversions
+
+
+# Build NIST samples from YAML
+
+build-nist-samples: $(NIST_CVR_JSON_PORTED_files)
+
+
+$(NIST_CVR_path)/%$(JSON_PORTED_ext): $(NIST_CVR_path)/%$(YAML_ext)
+	$(YAML_TO_JSON) $< $@
+
+
+clean-nist-samples:
+	rm -f $(NIST_CVR_JSON_PORTED_files)
+
+
+.PHONY: clean-nist-samples
+
+
+# Build minimal sample from YAML
+
+build-minimal-samples: $(MINIMAL_CVR_JSON_files)
+
+
+$(MINIMAL_CVR_path)/%$(JSON_ext): $(MINIMAL_CVR_path)/%$(YAML_ext)
+	$(YAML_TO_JSON) $< $@
+
+
+clean-minimal-samples:
+	rm -f $(MINIMAL_CVR_JSON_files)
+
+
+.PHONY: clean-minimal-samples
+
+
+# Build NY 1912 sample from YAML
+
+build-ny-1912-samples: $(NY_1912_CVR_JSON_files)
+
+
+$(NY_1912_CVR_path)/%$(JSON_ext): $(NY_1912_CVR_path)/%$(YAML_ext)
+	$(YAML_TO_JSON) $< $@
+
+
+clean-ny-1912-samples:
+	rm -f $(NY_1912_CVR_JSON_files)
+
+
+.PHONY: clean-ny-1912-samples
 
 
 # Documentation - Notes
@@ -198,30 +265,76 @@ clean-html-notes:
 annotate: annotate-docco
 
 
-annotate-docco: $(NIST_ANNOTATIONS_DOCS_files)
+annotate-docco: \
+	$(NIST_ANNOTATIONS_DOCS_path) \
+	$(MINIMAL_ANNOTATIONS_DOCS_path) \
+	$(NY_1912_ANNOTATIONS_DOCS_path) \
+	$(NIST_ANNOTATIONS_DOCS_files) \
+	$(MINIMAL_ANNOTATIONS_DOCS_files) \
+	$(NY_1912_ANNOTATIONS_DOCS_files)
 
 
-$(ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(ANNOTATIONS_DOCS_path)/%$(YAML_ext)
+$(NIST_ANNOTATIONS_DOCS_path):
+	mkdir $@
+
+
+$(NIST_ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(NIST_ANNOTATIONS_DOCS_path)/%$(YAML_ext)
 	( \
-		cd $(ANNOTATIONS_DOCS_path); \
+		cd $(NIST_ANNOTATIONS_DOCS_path); \
 		$(DOCCO) $(DOCCO_flags) $$(basename $<) -o $$PWD; \
 	)
 
 
-$(ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(NIST_CVR_path)/%$(YAML_ext)
+$(NIST_ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(NIST_CVR_path)/%$(YAML_ext)
 	cp -af $< $@
 
 
-clean-annotations: clean-docco-annotations
+$(MINIMAL_ANNOTATIONS_DOCS_path):
+	mkdir $@
 
 
-clean-docco-annotations:
-	rm -f $(ANNOTATIONS_DOCS_path)/*.html
-	rm -f $(ANNOTATIONS_DOCS_path)/*.css
-	rm -rf $(ANNOTATIONS_DOCS_path)/public
+$(MINIMAL_ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(MINIMAL_ANNOTATIONS_DOCS_path)/%$(YAML_ext)
+	( \
+		cd $(MINIMAL_ANNOTATIONS_DOCS_path); \
+		$(DOCCO) $(DOCCO_flags) $$(basename $<) -o $$PWD; \
+	)
 
 
-.PHONY: clean-annotations clean-docco-annotations
+$(MINIMAL_ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(MINIMAL_CVR_path)/%$(YAML_ext)
+	cp -af $< $@
+
+
+$(NY_1912_ANNOTATIONS_DOCS_path):
+	mkdir $@
+
+
+$(NY_1912_ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(NY_1912_ANNOTATIONS_DOCS_path)/%$(YAML_ext)
+	( \
+		cd $(NY_1912_ANNOTATIONS_DOCS_path); \
+		$(DOCCO) $(DOCCO_flags) $$(basename $<) -o $$PWD; \
+	)
+
+
+$(NY_1912_ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(NY_1912_CVR_path)/%$(YAML_ext)
+	cp -af $< $@
+
+
+clean-annotations: clean-nist-docco-annotations clean-minimal-docco-annotations clean-ny-1912-docco-annotations
+
+
+clean-nist-docco-annotations:
+	rm -rf $(NIST_ANNOTATIONS_DOCS_path)
+
+
+clean-minimal-docco-annotations:
+	rm -rf $(MINIMAL_ANNOTATIONS_DOCS_path)
+
+
+clean-ny-1912-docco-annotations:
+	rm -rf $(NY_1912_ANNOTATIONS_DOCS_path)
+
+
+.PHONY: clean-annotations clean-nist-docco-annotations clean-minimal-docco-annotations clean-ny-1912-docco-annotations
 
 
 # Validation
@@ -235,7 +348,7 @@ validate: validate-xml validate-json
 validate-json: validate-cvr-json
 
 
-validate-cvr-json: $(NIST_CVR_JSON_PORTED_files)
+validate-cvr-json: $(NIST_CVR_JSON_PORTED_files) $(MINIMAL_CVR_JSON_files) $(NY_1912_CVR_JSON_files)
 	@for file in $^; do \
 		echo "Validating: $$file..."; \
 		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
