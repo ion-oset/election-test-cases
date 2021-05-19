@@ -5,32 +5,48 @@ subtitle: NIST Special Publication 1500-103
 
 ## Overview
 
-These notes are intended to help anyone working on Cast Vote Records as part of Trust the Vote get oriented with the specification and schemas without needing to read the entire specification.
+These notes are intended to help anyone working with Cast Vote Records (CVRs) as part of Trust the Vote to get oriented with the spec and schemas without needing to read the entire specification. This `Overview` section gives a summary of what's covered, the `Notes` are observations and tips.
 
-### The specification
+This is a work in progress. There are bound to be errors, misconceptions, and lack of clarity. Please provide feedback and edits.
 
-The full specification source is on GitHub in the [NIST CastVoteRecords repository][nist-cvr-source].
+### Specification
 
-The CVR 1.0 specification PDF is 94 pages long, but you don't need to read it. The notes below refer to the specification where it is useful so you can follow up on any questions you have.
+CVRs are defined as **`NIST CastVoteRecords Data Specification 1.0`** also known as *NIST-SP-1500-103*. The [home page][nist-cvr-home] provides the UML descriptions, and the [full specification is available as PDF][nist-cvr-pdf]. The complete source, including the spec, schemas, examples, and UML diagrams is on GitHub in the [NIST CastVoteRecords repository][nist-cvr-source].
 
-If you decide to read it, a recommended reading order to save you time.
+[The full CVR 1.0 specification PDF][cvr] is 94 pages long. The purpose of these notes is to save you the effort of reading it unless you need to. When the notes describe anything backed up by the spec they refer to sections of the specification and list the page number(s) to refer to. The first number is the page of the spec, and the number in parentheses is the page of the PDF.tree/v1.0.3/NIST_V0_cast_vote_records.json
 
-- Start with [Section 2, Background: Cast Vote Record Creation, Contents, and Handling]() which explains the general design of Cast Vote Records and what they are intended to be used for.
-- Take a look at the UML diagram record classes in [Section 3, Figure 1, UML Model - Classes] to get oriented.
-- Take a look at [Section 5, Usage Examples]() to see what records look like and get a taste of how they are used.
-- Look at [Appendix A, Acronyms] and [Appendix B, Glossary] if you want a summary of the terminology.
+```
+    Section 1, p. 1 (10)
+    Section 2, p. 10-11 (19-20)
+```
 
-That should get you oriented in general and help with the examples. If or when you need to know more or dig into the details of the CVR records.
+#### Reading Order
 
-- Look at [Section 3. Cast Vote Record UML Model Overview]. This discusses the overall structure of the records, and how they work together.
-- Use [Section 4. Cast Vote Record UML Model Documentation] only when you need to know specific details of specific record classes, or specific fields names and values.
+If you decide to read the full spec, a recommended reading order to save you time:
+
+To get you oriented in general and help understand the examples.
+
+- Start with [`Section 2, Background: Cast Vote Record Creation, Contents, and Handling` (p. 3 (12))] which explains the general design and use cases of Cast Vote Records.
+- Look over the UML diagram record classes in [`Section 3, Figure 1, UML Model - Classes` (p. 7-8 (16-17))] to understand how they relate.
+- Look at [`Section 5, Usage Examples` (p. 66 (75))] to see what records look like and get a taste of how they are used.
+- Look at [`Appendix A, Acronyms` (p. 79 (88))] and [`Appendix B, Glossary` (p. 80 (89))] when you need a term defined.
+
+If or when you need to know more or dig into the details of the CVR records.
+
+- Look at [`Section 3: Cast Vote Record UML Model Overview` (p. 6 (15))]. This explains the design of the structure of the records, and how they work together.
+- Use [`Section 4. Cast Vote Record UML Model Documentation` (p. 20 (29))] when you need to know specific details of specific record classes, or specific fields names and values. This is the bulk of the specification.
 
 ### Schemas
 
-There are two schema definitions designed by NIST for Cast Vote Records, one for [JSON Schema][json-schema-current]([Draft 4][json-schema-draft-4]) and one for [XML Schema (version 1.0)][xml-schema-version-1].
+There are two schema definitions designed by NIST for Cast Vote Records, one for [JSON Schema][json-schema-current]([Draft 4][json-schema-draft-4]) and one for [XML Schema (version 1.0)][xml-schema-version-1]. The schemas are found in this repository at [data/cvr/schemas](../../data/cvr/schemas).
 
-- We are preferentially using the JSON schema to pass data between modules of the Trust the Vote system.
-- The two schemas are trying to capture the same information but there are some small translation incompatibilities.
+- CVR 1.0 JSON Schema: [`data/cvr/schemas/nist-cvr-v1_jsonschema.json`](../../data/cvr/schemas/nist-cvr-v1_jsonschema.json). It's taken directly from the CVR GitHub repository from release 1.0.3: [`NIST_V0_cast_vote_records.json`][nist-source-jsonschema]
+- CVR 1.0 XML Schema: [`data/cvr/schemas/nist-cvr-v1_xmlschema.xml`](../../data/cvr/schemas/nist-cvr-v1_xmlschema.xml). It's taken directly from the CVR GitHub repository from release 1.0.3: [`NIST_V0_cast_vote_records.xsd`][nist-source-xmlschema]
+
+Notes:
+
+- We are using the JSON schema because modules of the Trust the Vote system communicate via JSON documents.
+- The two schemas are semantically 1-to-1 but there are some changes of notation and convention between XML and JSON that make a direct translation by naive software not produce a valid document.
 
 ### JSON Schema specific notes
 
@@ -90,7 +106,12 @@ You can see look at the [Full Glossary]
   Is this correct?
 - `GpUnit.Type` where the record was generated. How does this work for a vote-by-mail ballot? (A ballot printed at home is currently not even an option.)
 
+[nist-cvr-home]: https://pages.nist.gov/CastVoteRecords
+[nist-cvr-pdf]: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-103.pdf
 [nist-cvr-source]: https://github.com/usnistgov/CastVoteRecords
+
+[nist-source-jsonschema]: https://github.com/usnistgov/CastVoteRecords/tree/v1.0.3/NIST_V0_cast_vote_records.json
+[nist-source-xmlschema]: https://github.com/usnistgov/CastVoteRecords/tree/v1.0.3/NIST_V0_cast_vote_records.xsd
 
 [json-schema-current]: https://json-schema.org/specification-links.html
 [json-schema-draft-4]: https://json-schema.org/specification-links.html#draft-4
