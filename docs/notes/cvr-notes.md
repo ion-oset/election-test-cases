@@ -48,26 +48,66 @@ Notes:
 - We are using the JSON schema because modules of the Trust the Vote system communicate via JSON documents.
 - The two schemas are semantically 1-to-1 but there are some changes of notation and convention between XML and JSON that make a direct translation by naive software not produce a valid document.
 
-### JSON Schema specific notes
+## Notes
 
-- Optional properties are allowed in the spec but disallowed by the JSON schema.
-- An `@` at the start of a property name is a convention that is used to capture information that the XML schema represents as element and attribute names. The only examples are:
-  - `@id`, contains an ID unique to a given record or element that is used to refer to that record from other parts of the schema. In the XML schema this is an attribute called `ObjectId`.
-  - `@type` is the record's class according to the specification. In the XML schema this is the XML element name.
-    - `@type` is required on *every record*. The keys of the records are informational but they are not used for type checking.
+### Key Concepts
+
+The most important distinction to make is that a CVR report will include two overlapping contexts:
+
+- An *"election definition"* defines all possible choices for each contest, and all attributes of those choices (for instance a list of a candidates and names and parties of those candidates).
+
+    Think of these as the description of the full ballot *before* a voter makes any choices.
+
+- A *"cast vote record"* is description of the *concrete choices* made by an actual voter. These choices are a subset of the choices in the election definition. (A "cast vote record" is strictly speaking, this *concrete* choice but the term is used ambigiously. See below under [`Terminology`](#terminology)).
+
+    Think of these as the choices made on the ballot by a voter. This is (obviously) a subset of the full set of choices on the ballot.
+
+There are several concepts ("contest", "candidate") that have meaning in both contexts. The distinction is confusing enough that these notes reinforce it in several places.
+
+- A *"contest"* is all the choices available in a contest. Most contests are "candidate contests", but there are several other kinds. A *"contest selection"* is any individual choice in a contest.
+    - In an election definition a contest [`Section 4.9` (p. 29 (38))] includes all the choices available to a voter.
+    - In a cast vote record a contest [`Section 4.12` (p. 33 (42))] includes only the choices actually made by the voter. It will refer back to the contest in the election definition.
+
+#### Terminology
+
+This section is about any terminology that can be confusing.
+
+- The formal name for the document is a "Cast Vote Record _Report_". There is also a record type called `'CVR'` that refers to information about a given voter's cast vote. A `'CastVoteRecordReport'` consists of a series of `'CVR'` records as well as a formal definition of the election (in `'Election'` records) and other properties of the actual election, such as its location and the machinery used to carry it out.
+
+### JSON Schema Notes
+
+- The schema disallows `additionalProperties`: you can't add a property to a record that's not explicitly defined in the schema
+- An `@` at the start of a property name is a convention for attributes that are internal to the CVR document and have no meaning outside of it. (In the XML Schema these correspond to element names and attributes of a record class.)
+- `@id` is used for "object identifiers".
+    - *References* to object identifiers end with `"Id"`.
+    - Somewhat confusingly other kinds of ID definition *also* end with `"Id"`.
+
+        ```
+            "Contest": {
+                "@id": "contest-01"
+            }
+
+            # ...
+
+            "CVRContest": {
+                "ContestId": "contest-01"
+            }        
+        ```
+  - `@type` is the record's class according to the s pecification. In the XML schema this is the XML element name.
+    - `@type` is required on *every record*. 
     - In CVR the JSON keys almost always match the class names, but the data always has to independently contain the class. The definitions can look repetitive but they structurally are not.
-- Types always are prefixed with a `CVR.` namespace. The namespace is a *convention, not a feature of JSON Schema. However it is enforced by schema validation so if you leave it off you get an error.
-- You'll see fields called `@id` and fields ending in `Id`. The former are in the definition of the record the ID refers to. The latter are references to other records. So a contest defined in `Election.Contest` with an `@id`  of `contest-01` will be referenced in a `CVRContest` record as `ContestId: contest-01`.
-IDs are contest specific. Their primary purpose is to allow reference to a declaration to appear in the `CVR*` prefixed records without duplicating, i.e. to keep the record normalized.
-    - These are distinct from `@id` fields which identify the given record within the CVR.
-    - It's not clear if there is a benefit in them being unique beyond a given CVR.
-- Codes refer to codes used by election officials in particular jurisdictions.
-  They have a formal definition provided by the jurisdiction.
-    - Codes may be labelled with their purpose but they do not have to be meaningful outside of their jurisdiction.
-- A lot of material repeats.
-    - 
-    - CVRs need to be able to stand independently of other CVRs so the CVRs for a single election or contest will often replicate information in other CVRs.
-    - Snapshots in particular
+- `@type` is a required property on any JSON object that represents a CVR record class. The keys used for those records often the same as the class name, which will seem redundant and verbose, but the keys are informational but they are not used for type checking. (In the XML schema this the element's tag and not an attribute.)
+    - All classes are prefixed with a `CVR.` namespace. The namespace is a *convention*, not a feature of JSON Schema, but leaving it off is an error.
+
+    Example:
+
+    ```
+        {
+            "CVRContest": {
+                "@type": "CVR.CVRContest"
+            }
+        }
+    ```
 
 ### Record Classes
 
