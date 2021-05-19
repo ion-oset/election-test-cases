@@ -1,0 +1,1194 @@
+'@type': CVR.CastVoteRecordReport
+CVR:
+- '@type': CVR.CVR
+  BallotStyleId: _01-0052-01
+  CurrentSnapshotId: css-01
+  CVRSnapshot:
+  - '@type': CVR.CVRSnapshot
+    '@id': css-01
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: _1GO
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        OptionPosition: 4
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          CVRWriteIn:
+            '@type': CVR.CVRWriteIn
+            Text: John Smith
+          HasIndication: 'yes'
+          IsAllocable: unknown
+          NumberVotes: 1
+        Status:
+        - needs-adjudication
+        TotalNumberVotes: 0
+      Undervotes: 0
+    - '@type': CVR.CVRContest
+      ContestId: _2AG
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _3AS
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _4SS
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _5TS
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: _CS1ECP
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          IsAllocable: 'no'
+          NumberVotes: 1
+        TotalNumberVotes: 0
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: _CS1EJM
+        OptionPosition: 2
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          IsAllocable: 'no'
+          NumberVotes: 1
+        TotalNumberVotes: 0
+      Overvotes: 1
+      Undervotes: 0
+    - '@type': CVR.CVRContest
+      ContestId: _6RC
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _8SR34
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _9CC
+      Undervotes: 3
+    - '@type': CVR.CVRContest
+      ContestId: _10SB
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _11JS1
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _11JS2
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _12CA9
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _13CP1
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _14CP2
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _15CP3
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _16CP4
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _17CP5
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _18CP6
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _19CP7
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _20CP8
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _19CP9
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _22CP10
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _23ST
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _24CA1
+      Undervotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: _25CA2
+      Undervotes: 1
+    Status:
+    - other
+    OtherStatus: cast
+    Type: original
+  ElectionId: _AK2014General
+- '@type': CVR.CVR
+  BallotStyleId: _01-0052-01
+  CurrentSnapshotId: css-02
+  CVRSnapshot:
+  - '@type': CVR.CVRSnapshot
+    '@id': css-02
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: _6RC
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: _CS1FMZ
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          IsAllocable: unknown
+          MarkMetricValue:
+          - '76'
+          NumberVotes: 1
+    Status:
+    - needs-adjudication
+    Type: original
+  - '@type': CVR.CVRSnapshot
+    '@id': css-03
+    Annotation:
+    - '@type': CVR.Annotation
+      AdjudicatorName:
+      - Mark Kennamond
+      Message:
+      - Resting Mark, Mark Zetzer
+      TimeStamp: '2018-05-16T12:10:09'
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: _6RC
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: _CS1FMZ
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'no'
+          MarkMetricValue:
+          - '98'
+          NumberVotes: 1
+        TotalNumberVotes: 0
+      Undervotes: 1
+    Type: interpreted
+  ElectionId: _AK2014General
+Election:
+- '@type': CVR.Election
+  '@id': _AK2014General
+  Candidate:
+  - '@type': CVR.Candidate
+    '@id': _1AEF
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1AEF
+    Name: Edward FitzGerald and Sharen Swartz Neuhardt
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1AJK
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1AJK
+    Name: John Kasich and  Mary Taylor
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1AAR
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1AAR
+    Name: Anita Rios and Bob Fitrakis
+    PartyId: _Green
+  - '@type': CVR.Candidate
+    '@id': _1BDP
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1BDP
+    Name: David Pepper
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1BMD
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1BMD
+    Name: Mike DeWine
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1CBB
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1CBB
+    Name: Bob Bridges
+    PartyId: _Libertarian
+  - '@type': CVR.Candidate
+    '@id': _1CJC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1CJC
+    Name: John Patrick Carney
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1CDY
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1CDY
+    Name: David Yost
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1DJH
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1DJH
+    Name: Jon Husted
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1DKK
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1DKK
+    Name: Kevin Knedler
+    PartyId: _Libertarian
+  - '@type': CVR.Candidate
+    '@id': _1DNT
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1DNT
+    Name: Nina Turner
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1ECP
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1ECP
+    Name: Connie Pillich
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1EJM
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1EJM
+    Name: Josh Mandel
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1FMZ
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1FMZ
+    Name: Mark Zetzer
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1FMF
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1FMF
+    Name: Marcia L. Fudge
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1GCB
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1GCB
+    Name: Cynthia D. Blake
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1GES
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1GES
+    Name: Emilia Sykes
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1HBR
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1HBR
+    Name: Bill Roemer
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1HIS
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1HIS
+    Name: Ilene Shapiro
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1HDW
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1HDW
+    Name: Debbie Walsh
+    PartyId: _Republican
+  - '@type': CVR.Candidate
+    '@id': _1HJD
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1HJD
+    Name: John A. Donofrio
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1HGH
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1HGH
+    Name: Gary Hagen
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1HSK
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1HSK
+    Name: Sandra Kurt
+    PartyId: _Democratic
+  - '@type': CVR.Candidate
+    '@id': _1IDS
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1IDS
+    Name: David A. Spencer
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1IMC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1IMC
+    Name: Michael Charney
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1ISF
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1ISF
+    Name: Sarah E. Fowler
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1ISR
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1ISR
+    Name: Sarah Freeman
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1JTL
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1JTL
+    Name: Tom Letson
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1JSK
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1JSK
+    Name: Sharon Kennedy
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1KJO
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1KJO
+    Name: John P. O'Donnell
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1KJF
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1KJF
+    Name: Judi French
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1LTL
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1LTL
+    Name: Julie A. Schafer
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1LEB
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1LEB
+    Name: Eve Belfance
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1MTO
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1MTO
+    Name: Tammy O'Brien
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1MRC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1MRC
+    Name: Ron Cable
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1NTG
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1NTG
+    Name: Tavia Baxter Galonski
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1NLC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1NLC
+    Name: Lynne S. Callahan
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1OAM
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1OAM
+    Name: Alison McCarty
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1OLD
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1OLD
+    Name: Lisa Dean
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1PBW
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1PBW
+    Name: Beth Whitmore
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1PMR
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1PMR
+    Name: Mary Margaret Rowlands
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1QCC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1QCC
+    Name: Christine Croce
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1QJC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1QJC
+    Name: John Clark
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1RTP
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1RTP
+    Name: Tom Parker
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1RRM
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1RRM
+    Name: Rob McCarty
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1SJO
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1SJO
+    Name: Jon Oldham
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1TM
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1TM
+    Name: Todd McKenney
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1TLT
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1TLT
+    Name: Linda Tucci Teodosio
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1TJL
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1TJL
+    Name: Jill Flagg Lanzinger
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1UJQ
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1UJQ
+    Name: John P. Quinn
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1UKC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1UKC
+    Name: Katarina Cook
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1VES
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1VES
+    Name: Elinore Marsh Stormer
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1VKO
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1VKO
+    Name: Kandi S. C'Connor
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1DY
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1DY
+    Name: 'YES'
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _1DN
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1DN
+    Name: 'NO'
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _2DY
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 2DY
+    Name: 'YES'
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _2DN
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 2DN
+    Name: 'NO'
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _3DY
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 3DY
+    Name: 'YES'
+    PartyId: _
+  - '@type': CVR.Candidate
+    '@id': _3DN
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 3DN
+    Name: 'NO'
+    PartyId: _
+  Code:
+  - '@type': CVR.Code
+    Type: local-level
+    Value: 2014-11-04G
+  Contest:
+  - '@type': CVR.CandidateContest
+    '@id': _1GO
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 1GO
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1AEF
+      CandidateIds:
+      - _1AEF
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1AJK
+      CandidateIds:
+      - _1AJK
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1AAR
+      CandidateIds:
+      - _1AAR
+    Name: For Governor and Lieutenant Governor
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _2AG
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 2AG
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1BDP
+      CandidateIds:
+      - _1BDP
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1BMD
+      CandidateIds:
+      - _1BMD
+    Name: For Attorney General
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _3AS
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 3AS
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1CBB
+      CandidateIds:
+      - _1CBB
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1CJC
+      CandidateIds:
+      - _1CJC
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1CDY
+      CandidateIds:
+      - _1CDY
+    Name: For Auditor of State
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _4SS
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 4SS
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1DJH
+      CandidateIds:
+      - _1DJH
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1DKK
+      CandidateIds:
+      - _1DKK
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1DNT
+      CandidateIds:
+      - _1DNT
+    Name: For Secretary of State
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _5TS
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 5TS
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1ECP
+      CandidateIds:
+      - _1ECP
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1EJM
+      CandidateIds:
+      - _1EJM
+    Name: For Treasurer of State
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _6RC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 6RC
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1FMZ
+      CandidateIds:
+      - _1FMZ
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1FMF
+      CandidateIds:
+      - _1FMF
+    Name: For  Representative to Congress(11th District)
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _8SR34
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 8SR34
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1GCB
+      CandidateIds:
+      - _1GCB
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1GES
+      CandidateIds:
+      - _1GES
+    Name: For  State Representative(34th District)
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _9CC
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 9CC
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1HBR
+      CandidateIds:
+      - _1HBR
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1HIS
+      CandidateIds:
+      - _1HIS
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1HDW
+      CandidateIds:
+      - _1HDW
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1HJD
+      CandidateIds:
+      - _1HJD
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1HGH
+      CandidateIds:
+      - _1HGH
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1HSK
+      CandidateIds:
+      - _1HSK
+    Name: For  Member of  County Council at Large
+    VoteVariation: n-of-m
+    VotesAllowed: 3
+  - '@type': CVR.CandidateContest
+    '@id': _10SB
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 10SB
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1IDS
+      CandidateIds:
+      - _1IDS
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1IMC
+      CandidateIds:
+      - _1IMC
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1ISF
+      CandidateIds:
+      - _1ISF
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1ISR
+      CandidateIds:
+      - _1ISR
+    Name: For  Member of State Board of Education(7th District)
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _11JS1
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 11JS1
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1JTL
+      CandidateIds:
+      - _1JTL
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1JSK
+      CandidateIds:
+      - _1JSK
+    Name: "For Justice of the Supreme Court\n\t\t\t\t\t\t\t\tFull Term Commencing\
+      \ 1/1/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _11JS2
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 11JS2
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1KJO
+      CandidateIds:
+      - _1KJO
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1KJF
+      CandidateIds:
+      - _1KJF
+    Name: "For Justice of the Supreme Court\n\t\t\t\t\t\t\t\tFull Term Commencing\
+      \ 1/2/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _12CA9
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 12CA9
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1LTL
+      CandidateIds:
+      - _1LTL
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1LEB
+      CandidateIds:
+      - _1LEB
+    Name: "For Judge of the Court of Appeals(9th District)\n\t\t\t\t\t\t\t\tFull\
+      \ Term Commencing 2/9/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _13CP1
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 13CP1
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1MTO
+      CandidateIds:
+      - _1MTO
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1MRC
+      CandidateIds:
+      - _1MRC
+    Name: "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term\
+      \ Commencing 1/2/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _14CP2
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 14CP2
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1NTG
+      CandidateIds:
+      - _1NTG
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1NLC
+      CandidateIds:
+      - _1NLC
+    Name: "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term\
+      \ Commencing 1/3/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _15CP3
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 15CP3
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1OAM
+      CandidateIds:
+      - _1OAM
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1OLD
+      CandidateIds:
+      - _1OLD
+    Name: "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term\
+      \ Commencing 1/5/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _16CP4
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 16CP4
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1PBW
+      CandidateIds:
+      - _1PBW
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1PMR
+      CandidateIds:
+      - _1PMR
+    Name: "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term\
+      \ Commencing 1/6/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _17CP5
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 17CP5
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1QCC
+      CandidateIds:
+      - _1QCC
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1QJC
+      CandidateIds:
+      - _1QJC
+    Name: "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term\
+      \ Commencing 2/9/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _18CP6
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 18CP6
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1RTP
+      CandidateIds:
+      - _1RTP
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1RRM
+      CandidateIds:
+      - _1RRM
+    Name: "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term\
+      \ Commencing 5/1/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _19CP7
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 19CP7
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1SJO
+      CandidateIds:
+      - _1SJO
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1TM
+      CandidateIds:
+      - _1TM
+    Name: "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term\
+      \ Commencing 1/4/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _20CP8
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 20CP8
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1TLT
+      CandidateIds:
+      - _1TLT
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1TJL
+      CandidateIds:
+      - _1TJL
+    Name: "For Judge of the Court of  Common Pleas(Juvenile Division)\n\t\t\t\t\
+      \t\t\t\tFull Term Commencing 1/1/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _19CP9
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 19CP9
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1UJQ
+      CandidateIds:
+      - _1UJQ
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1UKC
+      CandidateIds:
+      - _1UKC
+    Name: "For Judge of the Court of  Common Pleas(Domestic Relations Division)\n\
+      \t\t\t\t\t\t\t\tFull Term Commencing 1/4/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _22CP10
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 22CP10
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1VES
+      CandidateIds:
+      - _1VES
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1VKO
+      CandidateIds:
+      - _1VKO
+    Name: "For Judge of the Court of  Common Pleas(Probate Division)\n\t\t\t\t\
+      \t\t\t\tFull Term Commencing 1/4/2015\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _23ST
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 23ST
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1DY
+      CandidateIds:
+      - _1DY
+    - '@type': CVR.CandidateSelection
+      '@id': _CS1DN
+      CandidateIds:
+      - _1DN
+    Name: "\n\t\t\t\t\t\t\t\t12 Proposed Sales and Use Tax County of Summit\t\n\
+      \t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _24CA1
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 24CA1
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS2DY
+      CandidateIds:
+      - _2DY
+    - '@type': CVR.CandidateSelection
+      '@id': _CS2DN
+      CandidateIds:
+      - _2DN
+    Name: "\n\t\t\t\t\t\t\t\t13  Proposed Charter Amendment  County of Summit\t\
+      \t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  - '@type': CVR.CandidateContest
+    '@id': _25CA2
+    Code:
+    - '@type': CVR.Code
+      Type: local-level
+      Value: 25CA2
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': _CS3DY
+      CandidateIds:
+      - _3DY
+    - '@type': CVR.CandidateSelection
+      '@id': _CS3DN
+      CandidateIds:
+      - _3DN
+    Name: "\n\t\t\t\t\t\t\t\t14  Proposed Charter Amendment  County of Summit\t\
+      \t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
+    VoteVariation: n-of-m
+    VotesAllowed: 1
+  ElectionScopeId: gpu-precinct
+  # Name: null
+GeneratedDate: '2018-07-15T00:00:00Z'
+GpUnit:
+- '@type': CVR.GpUnit
+  '@id': gpu-precinct
+  Code:
+  - '@type': CVR.Code
+    Type: local-level
+    Value: '77'
+  Type: precinct
+Notes: Example using the NIST CVR CDF
+Party:
+- '@type': CVR.Party
+  '@id': _Green
+  Name: Green
+- '@type': CVR.Party
+  '@id': _Libertarian
+  Name: Libertarian
+- '@type': CVR.Party
+  '@id': _Republican
+  Name: Republican
+- '@type': CVR.Party
+  '@id': _Democratic
+  Name: Democratic
+- '@type': CVR.Party
+  '@id': _
+  # Name: null
+ReportGeneratingDeviceIds:
+- rd
+ReportingDevice:
+- '@type': CVR.ReportingDevice
+  '@id': rd
+  Application: Ballot Marker
+  Manufacturer: Hilton Roscoe LLC
+  MarkMetricType: AJAX
+ReportType:
+- originating-device-export
+Version: 1.0.0
