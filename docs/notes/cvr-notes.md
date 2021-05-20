@@ -74,6 +74,29 @@ This section is about any terminology that can be confusing.
 
 - The formal name for the document is a "Cast Vote Record _Report_". There is also a record type called `'CVR'` that refers to information about a given voter's cast vote. A `'CastVoteRecordReport'` consists of a series of `'CVR'` records as well as a formal definition of the election (in `'Election'` records) and other properties of the actual election, such as its location and the machinery used to carry it out.
 
+### Record Classes
+
+The full overview of record types in CVR is in [`Section 2: Background: Cast Vote Record Creation, Contents, and Handling`(p. 3 (12))]. These are a brief summary of the main ones and their subtle or confusing points.
+
+- The top-level record is `CastVoteRecordReport` [`Section 4.7` (p. 26 (35)]. It's most important sub-records are `CVR` and `Election`.
+- `Election` represents an "election defintion". It includes details such as what it is called, where it happened, who or what is being voted on. It's sub-elements are the full set of choices available to a voter in an election. The choices made by the voter in a `CVR` will refer back to the definitions made in an `Election`.
+
+    `Election`s avoid duplication by using references between types.
+
+    - A `Contest` describes an abstract contest being voted on. A contest with candidates will have `Candidate`s defined in the election, and referenced by ID in the `Contest`.
+    - Similarly a `Candidate` will keep a reference to the ID of a `Party`, with the `Party` defined separately.
+
+- `CVR` [`Section 4.11` (p. 31 (40)] represents a "cast vote record". It includes the information which choices the voter made, whether the vote was counted, and what the details of the vote are if it needs arbitration. Its sub-records are concrete choices made from the menu of choices available in the `Election`. It refers back to the records in `Election`s.
+
+    `CVR` sub-elements refer to the sub-elements of `Election`. Some main record types that start with a `"CVR"` prefix are sub-elements of `CVR` records that refer back to sub-elements of `Election` without the prefix.
+
+Notes & Gotchas:
+
+- Not all records starting with `"CVR"` have equivalents in `Election` because some properties are only part of a CVR such as the actual choices made on the ballot.
+    - The main ones are  `Contest`/`CVRContest` and `ContestSelection`/`CVRContestSelection`.
+- In general the attributes of similar types differ significantly between the election definition and the cast vote record.
+- Not all sub-elements of a cast vote record start with `"CVR"`, only the ones that are ambiguous. This can be confusing when trying to remember what something is called.
+
 ### JSON Schema Notes
 
 - The schema disallows `additionalProperties`: you can't add a property to a record that's not explicitly defined in the schema
@@ -108,31 +131,6 @@ This section is about any terminology that can be confusing.
             }
         }
     ```
-
-### Record Classes
-
-Certain record classes can be subtle or confugins
-
-- `SelectionPosition` is the record type that has the most special cases. It 
-    - `HasIndication`: the presence of a mark.
-    - `IsAllocable`: does the mark get "allocated" (counted)
-        - Optional. Defaults to `HasIndication`
-
-- Distinguish between `CVRContestPosition.OptionPosition` and `SelectionPosition.Position` will be the same in a valid majority or plurality ballot. The reason they are different is that more than one selection can be marked in other kinds of voting methods, and CVRs need to track all marks valid or not.
-
-### Glossary
-
-You can see look at the [Full Glossary]
-
-- `CVR`: "Cast Vote Record". This term can be used ambiguously.
-    - The entire report. The specification calls this a  `CastVoteRecordReport`, but discussion of the reports often refers to "CVRs"
-    - An individual cast vote record. The specification calls this a `CVR`.
-    - The specification itself.
-
-- `Election`: An entire election as run in a given jurisdiction.
-- `Contest`: Anything being voted on: an office or offices, a ballot measure, a party-line vote. What is colloquially referred to as a "race" is a `Contest`. An `Election` typically has multiple `Contest`s. 
-- `ContestSelection`: A choice in a `Contest`.
-- `Candidate`: Anyone running for an office.
 
 ### Questions
 
