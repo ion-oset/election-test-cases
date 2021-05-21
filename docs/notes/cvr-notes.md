@@ -64,6 +64,11 @@ The most important distinction to make is that a CVR report will include two ove
 
 There are several concepts ("contest", "candidate") that have meaning in both contexts. The distinction is confusing enough that these notes reinforce it in several places.
 
+- A *"snapshot"* is the description of a cast vote record at different phase of processing. Ballot marking and scanning is just one phase of many. A cast vote record keeps individual snapshots of each phase, recording the history of a given ballot.
+
+    - All sub-elements of a cast vote record are contained within snapshots.
+    - Snapshots are quite repetitive of each other. Each needs to be able to stand independently of the others.
+
 - A *"contest"* is all the choices available in a contest. Most contests are "candidate contests", but there are several other kinds. A *"contest selection"* is any individual choice in a contest.
     - In an election definition a contest [`Section 4.9` (p. 29 (38))] includes all the choices available to a voter.
     - In a cast vote record a contest [`Section 4.12` (p. 33 (42))] includes only the choices actually made by the voter. It will refer back to the contest in the election definition.
@@ -89,6 +94,8 @@ The full overview of record types in CVR is in [`Section 2: Background: Cast Vot
 - `CVR` [`Section 4.11` (p. 31 (40)] represents a "cast vote record". It includes the information which choices the voter made, whether the vote was counted, and what the details of the vote are if it needs arbitration. Its sub-records are concrete choices made from the menu of choices available in the `Election`. It refers back to the records in `Election`s.
 
     `CVR` sub-elements refer to the sub-elements of `Election`. Some main record types that start with a `"CVR"` prefix are sub-elements of `CVR` records that refer back to sub-elements of `Election` without the prefix.
+
+    - A `CVRSnapshot` represents each snapshot with the `CVR`. There is always at least one.
 
 Notes & Gotchas:
 
