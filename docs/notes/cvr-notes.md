@@ -69,9 +69,18 @@ There are several concepts ("contest", "candidate") that have meaning in both co
     - All sub-elements of a cast vote record are contained within snapshots.
     - Snapshots are quite repetitive of each other. Each needs to be able to stand independently of the others.
 
+- A *"voting variation"* (also "voting method") is the system of voting (e.g. plurality, ranked choice, etc.) There are many voting variations (See: [`Section 4.41` (p. 65 (74))] for the full list) and much of the complexity of the CVR spec comes from managing these different systems. For plurality or majority elections some of the layers in the spec will seem redundant.
+
 - A *"contest"* is all the choices available in a contest. Most contests are "candidate contests", but there are several other kinds. A *"contest selection"* is any individual choice in a contest.
     - In an election definition a contest [`Section 4.9` (p. 29 (38))] includes all the choices available to a voter.
     - In a cast vote record a contest [`Section 4.12` (p. 33 (42))] includes only the choices actually made by the voter. It will refer back to the contest in the election definition.
+
+- A *"selection position"* is information in a cast vote record's context selection about each individual mark made in that selection. Much of the complexity of a cast vote record is in the selection positions [`Section 3.4: Representing Contest Selections and Selection Positions` (p. 10 (19))]. Several attributes only matter for particular voting variations.
+
+- A *"code"* in a codes used by election officials in particular jurisdictions.
+  They have a formal definition provided by the jurisdiction.
+    - Codes may be labelled with their purpose but they do not have to be meaningful outside of their jurisdiction.
+    - Some codes have elaborate formal definitions (such as those that are national standards). Others are much more _ad hoc_.
 
 #### Terminology
 
