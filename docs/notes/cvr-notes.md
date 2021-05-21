@@ -77,6 +77,8 @@ There are several concepts ("contest", "candidate") that have meaning in both co
 
 - A *"selection position"* is information in a cast vote record's context selection about each individual mark made in that selection. Much of the complexity of a cast vote record is in the selection positions [`Section 3.4: Representing Contest Selections and Selection Positions` (p. 10 (19))]. Several attributes only matter for particular voting variations.
 
+    Don't worry about this until you need to, just be aware of it.
+
 - A *"code"* in a codes used by election officials in particular jurisdictions.
   They have a formal definition provided by the jurisdiction.
     - Codes may be labelled with their purpose but they do not have to be meaningful outside of their jurisdiction.
@@ -86,11 +88,15 @@ There are several concepts ("contest", "candidate") that have meaning in both co
 
 This section is about any terminology that can be confusing.
 
-- The formal name for the document is a "Cast Vote Record _Report_". There is also a record type called `'CVR'` that refers to information about a given voter's cast vote. A `'CastVoteRecordReport'` consists of a series of `'CVR'` records as well as a formal definition of the election (in `'Election'` records) and other properties of the actual election, such as its location and the machinery used to carry it out.
+- The term "CVR" is ambiguous, referring both to the entire document ("report"), and to a specific class of records ("record"). In this document when we need to be explicit we use "CVR report" or "CVR record".
+
+    The formal name for the document is a "Cast Vote Record _Report_". There is also a record type called `'CVR'` that refers to information about a given voter's cast vote. A `'CastVoteRecordReport'` consists of a series of `'CVR'` records as well as a formal definition of the election (in `'Election'` records) and other properties of the actual election, such as its location and the machinery used to carry it out.
 
 ### Record Classes
 
 The full overview of record types in CVR is in [`Section 2: Background: Cast Vote Record Creation, Contents, and Handling`(p. 3 (12))]. These are a brief summary of the main ones and their subtle or confusing points.
+
+Note that most of what follows is independent of which schema language is being used. Schema language specific issues are listed in their own sections.
 
 - The top-level record is `CastVoteRecordReport` [`Section 4.7` (p. 26 (35)]. It's most important sub-records are `CVR` and `Election`.
 - `Election` represents an "election defintion". It includes details such as what it is called, where it happened, who or what is being voted on. It's sub-elements are the full set of choices available to a voter in an election. The choices made by the voter in a `CVR` will refer back to the definitions made in an `Election`.
@@ -112,6 +118,17 @@ Notes & Gotchas:
     - The main ones are  `Contest`/`CVRContest` and `ContestSelection`/`CVRContestSelection`.
 - In general the attributes of similar types differ significantly between the election definition and the cast vote record.
 - Not all sub-elements of a cast vote record start with `"CVR"`, only the ones that are ambiguous. This can be confusing when trying to remember what something is called.
+
+### Record Attributes
+
+Notes on attributes of specific records.
+
+CVR records:
+
+- `SelectionPosition` and validity:
+    - `HasIndication` means there was a mark in a particular selection position.
+    - `IsAllocable` is whether the mark is valid or not. If `HasIndication` is `"no"` then `IsAllocable` can be left out.
+- `CVRContestPosition.OptionPosition` and `SelectionPosition.Position` are subtly different. In a valid majority or plurality ballot the latter is always `1` and can be left out. In other voting variations where there can be multiple votes per
 
 ### JSON Schema Notes
 
