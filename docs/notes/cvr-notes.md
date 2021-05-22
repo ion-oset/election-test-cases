@@ -130,6 +130,43 @@ CVR records:
     - `IsAllocable` is whether the mark is valid or not. If `HasIndication` is `"no"` then `IsAllocable` can be left out.
 - `CVRContestPosition.OptionPosition` and `SelectionPosition.Position` are subtly different. In a valid majority or plurality ballot the latter is always `1` and can be left out. In other voting variations where there can be multiple votes per
 
+#### IDs
+
+- There's a distinction between IDs are internal to the CVR report (meaningless outside it) and ones that are external and are meaningful to specific jurisdictions or other references. **TODO: Elaborate on this.** This can be somewhat complex, but in general internal IDs seem to be declared with a different syntax than external ones.
+- The most important *internal* ID is what the specification refers to as an "object identifier" [`Section 5.1:Anatomy of a CVR`, p. 66 (75)], an ID unique to a given record or element. (In the XML schema this is an attribute called `ObjectId`.) Other records in the CVR report can refer to that record using this ID.
+    - This is primarily used by `CVR` records to refer to definitions in the `Election` record, but they are also used to refer to IDs from other `CVRSnapshot`s in the same `CVR`.
+    - The graph of internal ID references is a DAG. There should be no circular references (though this is not confirmed).
+- There are many different kinds of external IDs within `CVR` records [`Section 3.5: Identifiers Within the CVR` (p.)]
+
+There's no specific guidance on how to define internal IDs. Some questions when designing internal IDs.
+
+- How unique IDs need to be is complex.
+    - Some internal IDs intended to be unique within the whole CVR report, some only within a `CVR` record (across snapshots).
+    - Some IDs (like `CVRSnapshot.UniqueID`) have clear requirements (monotonically increasing integers).
+    - External IDs depend on the external specification.
+- How readable IDs need to be is unclear. Choices are:
+    1. *Clearly identify record content*: Allow a human reader to identify the specific entity they refer to (e.g. easily identifying a candidate or contest)
+    2. *Clearly identify record class*. Allow a human reader to identify the class (e.g. with a prefix like `contest-` or `candidate-`)
+    3. *Opaque* (e.g. hashes). 
+
+    The simple and complex CVR examples seem to use respectively, short identifiers of type 2 and type 1.
+
+    ```
+        # Contest 1, contest selection 2
+        "ContestSelectionId": "_C1CS2"
+
+        # Contest 11 (supreme court justices), selection 1
+        "ContestSelectionId": "_11JS1"
+    ```
+
+    The examples in [`data/cvr/samples`](../../data/cvr/samples) use long names of type 2:
+
+    ```
+        # Contest 1, candidate 3
+        # Note: Not the 3rd candidate in the contest, the 3rd in the list of *all* candidates
+        "ContestSelectionId": "contest-01-candidate-03"
+    ```
+
 ### JSON Schema Notes
 
 - The schema disallows `additionalProperties`: you can't add a property to a record that's not explicitly defined in the schema
