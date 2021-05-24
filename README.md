@@ -1,17 +1,36 @@
-# Trust the Vote ABC Schemas
+# Trust the Vote: Cast Vote Records
 
-Documentation and tooling for explaining and validating schemas used in the Trust the Vote ABC.
+Documentation and tooling for explaining and validating Cast Vote Records (CVRs)
 
-## Overview
+This repository contains:
 
-This repository contains or will contain:
+- Documentation and notes on generating and using CVRs.
+- Sample CVRs.
+- Scripts and tooling for use with CVRs.
 
-- Sample files for the data exchanged between modules of the TTV ABC.
-- Documentation and notes on the design of those APIs.
+## Getting Started
 
-For the ABC the focus is on NIST Cast Vote Records (CVRs).
+### Setup
 
-## Goals and Design Choices
+To setup and build the samples and docs follow the directions in  `docs/setup.md`.
+
+The short version, assuming you have the pre-requisites:
+
+```
+    make build
+```
+
+#### Documentation
+
+Documentation is in the `docs` folder. Notes are in `docs/notes` and annotated samples in `docs/annotated`.
+
+#### Data
+
+All generated samples files are in `data/samples` and the schemas in `data/schemas.` The index of specific files and what they contain is in `data/README.md`.
+
+## Development
+
+### Goals and Design Choices
 
 1. Provide cast vote record samples with annotations.
 
@@ -26,7 +45,7 @@ For the ABC the focus is on NIST Cast Vote Records (CVRs).
     The XML and JSON schemas only do structural validation. They don't cover certain aspects of correctness, such as whether IDs in CVRs match the IDs in definitions.
     Over time adding this capability should turn into a suite of tests for CVRs.
 
-## Status
+### Status
 
 ### Current Schemas
 
@@ -55,20 +74,6 @@ In planning:
 - Generation of CVR data from readable (but not valid by the schema) fragments.
 - Additional validation of CVR records on top of what the NIST schemas provide.
 
-## File Structure
-
-### Documentation
-
-Documentation is in the `docs` folder. Notes are in `docs/notes` and annotated samples in `docs/annotated`.
-
-### Data
-
-All generated samples files are in `data/samples` and the schemas in `data/schemas.` The index of specific files and what they contain is in `data/README.md`.
-
-## Setup 
-
-To setup and build the samples follow the directions in  `docs/development.md`.
-
 ## References
 
 NIST Cast Vote Records v1.0 (NIST-SP-1500-103):
@@ -76,8 +81,6 @@ NIST Cast Vote Records v1.0 (NIST-SP-1500-103):
 - Landing page & UML breakdown: https://pages.nist.gov/CastVoteRecords
 - Github project: https://github.com/usnistgov/CastVoteRecords
     - Specification available as:
-        - [HTML](https://github.com/usnistgov/CastVoteRecords/NIST.SP.1500-103-rev.html)
-        - [Markdown](https://github.com/usnistgov/CastVoteRecords/NIST.SP.1500-103-rev.md)
         - [PDF](https://github.com/usnistgov/CastVoteRecords/NIST.SP.1500-103-rev.pdf)
         - [Word](https://github.com/usnistgov/CastVoteRecords/NIST.SP.1500-103-rev.docx)
     - JSON schema: https://github.com/usnistgov/CastVoteRecords/NIST_V0_cast_vote_records.json
