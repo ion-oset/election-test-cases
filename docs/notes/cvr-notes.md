@@ -13,7 +13,7 @@ This is a work in progress. There are bound to be errors, misconceptions, and la
 
 CVRs are defined as **`NIST CastVoteRecords Data Specification 1.0`** also known as *NIST-SP-1500-103*. The [home page][nist-cvr-home] provides the UML descriptions, and the [full specification is available as PDF][nist-cvr-pdf]. The complete source, including the spec, schemas, examples, and UML diagrams is on GitHub in the [NIST CastVoteRecords repository][nist-cvr-source].
 
-[The full CVR 1.0 specification PDF][cvr] is 94 pages long. The purpose of these notes is to save you the effort of reading it unless you need to. When the notes describe anything backed up by the spec they refer to sections of the specification and list the page number(s) to refer to. The first number is the page of the spec, and the number in parentheses is the page of the PDF.tree/v1.0.3/NIST_V0_cast_vote_records.json
+[The full CVR 1.0 specification PDF][nist-cvr-pdf] is 94 pages long. The purpose of these notes is to save you the effort of reading it unless you need to. When the notes describe anything backed up by the spec they refer to sections of the specification and list the page number(s) to refer to. The first number is the page of the spec, and the number in parentheses is the page of the PDF.tree/v1.0.3/NIST_V0_cast_vote_records.json
 
 ```
     Section 1, p. 1 (10)
