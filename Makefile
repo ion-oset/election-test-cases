@@ -262,7 +262,7 @@ clean-html-notes:
 # Note: docco has unintuitive behavior regarding paths which requires switching
 # to the destination directory and having all sources file in it.
 
-annotate: annotate-docco
+annotate: $(ANNOTATIONS_DOCS_path) annotate-docco
 
 
 annotate-docco: \
@@ -273,9 +273,12 @@ annotate-docco: \
 	$(MINIMAL_ANNOTATIONS_DOCS_files) \
 	$(NY_1912_ANNOTATIONS_DOCS_files)
 
+$(ANNOTATIONS_DOCS_path):
+	mkdir -p $@
+
 
 $(NIST_ANNOTATIONS_DOCS_path):
-	mkdir $@
+	mkdir -p $@
 
 
 $(NIST_ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(NIST_ANNOTATIONS_DOCS_path)/%$(YAML_ext)
@@ -290,7 +293,7 @@ $(NIST_ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(NIST_CVR_path)/%$(YAML_ext)
 
 
 $(MINIMAL_ANNOTATIONS_DOCS_path):
-	mkdir $@
+	mkdir -p $@
 
 
 $(MINIMAL_ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(MINIMAL_ANNOTATIONS_DOCS_path)/%$(YAML_ext)
@@ -305,7 +308,7 @@ $(MINIMAL_ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(MINIMAL_CVR_path)/%$(YAML_ext)
 
 
 $(NY_1912_ANNOTATIONS_DOCS_path):
-	mkdir $@
+	mkdir -p $@
 
 
 $(NY_1912_ANNOTATIONS_DOCS_path)/%$(ANNOTATIONS_HTML_ext): $(NY_1912_ANNOTATIONS_DOCS_path)/%$(YAML_ext)
