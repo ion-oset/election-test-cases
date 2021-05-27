@@ -1,0 +1,25 @@
+{
+  "name": "ttv-cast-vote-records",
+  "version": "0.1.0",
+  "description": "Create and manage NIST SP 1500-103 Cast Vote Records",
+  "author": "Ion Y",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "homepage": "https://github.com/ion-oset/cast-vote-records#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ion-oset/cast-vote-records.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ion-oset/cast-vote-records/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "docco": ">= 0.8.0",
+    "package.json": "^2.0.1"
+  }
+}

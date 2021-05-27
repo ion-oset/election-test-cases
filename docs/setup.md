@@ -29,14 +29,12 @@ To rebuild the data and/or you will need the following pre-requisites. Installat
 
 #### Node.js
 
-1. Make sure you have Node.js installed.
+1. Make sure you have Node.js and NPM installed.
 2. Install the required packages.
 
-    - Docco is needed to build the annotated CVR samples.
-
-        ```
-            npm --install docco
-        ```
+    ```
+        npm install
+    ```
 
 ### Generating documents and samples
 
