@@ -351,7 +351,26 @@ validate: validate-xml validate-json
 validate-json: validate-cvr-json
 
 
-validate-cvr-json: $(NIST_CVR_JSON_PORTED_files) $(MINIMAL_CVR_JSON_files) $(NY_1912_CVR_JSON_files)
+validate-cvr-json: validate-nist-cvr-json validate-minimal-cvr-json validate-ny-1912-cvr-json
+
+
+validate-nist-cvr-json: $(NIST_CVR_JSON_PORTED_files)
+	@for file in $^; do \
+		echo "Validating: $$file..."; \
+		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
+		if [ $$? -eq 0 ]; then echo "Valid schema."; else echo "Invalid schema."; fi; \
+	done
+
+
+validate-minimal-cvr-json: $(MINIMAL_CVR_JSON_files)
+	@for file in $^; do \
+		echo "Validating: $$file..."; \
+		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
+		if [ $$? -eq 0 ]; then echo "Valid schema."; else echo "Invalid schema."; fi; \
+	done
+
+
+validate-ny-1912-cvr-json: $(NY_1912_CVR_JSON_files)
 	@for file in $^; do \
 		echo "Validating: $$file..."; \
 		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
@@ -362,7 +381,10 @@ validate-cvr-json: $(NIST_CVR_JSON_PORTED_files) $(MINIMAL_CVR_JSON_files) $(NY_
 validate-xml: validate-cvr-xml
 
 
-validate-cvr-xml: $(NIST_CVR_XML_files)
+validate-cvr-xml: validate-nist-cvr-xml
+
+
+validate-nist-cvr-xml: $(NIST_CVR_XML_files)
 	@for file in $^; do \
 		$(VALIDATE_XML) --schema $(CVR_XMLSCHEMA_file) $$file; \
 	done
