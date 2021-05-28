@@ -78,6 +78,12 @@
 
     - They are heavily annotated. Use `make annotate` to generate the annotations in readable form, or look at the source YAML.
 
+
+`cvr/samples/jetsons`:
+: CVRs for the Jetson's election.
+
+    Samples for the Jetson's election used in the ABC.
+
 [nist-cvr-html]: https://pages.nist.gov/CastVoteRecords/
 [nist-cvr-source]: https://github.com/usnistgov/CastVoteRecords
 
