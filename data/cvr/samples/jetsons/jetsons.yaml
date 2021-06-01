@@ -22,10 +22,37 @@ Election:
     Name: Rudy Indexer
   Contest:
   - '@type': CVR.CandidateContest
-    '@id': contest-
+    '@id': contest-mayor-orbit-city
+    Name: Mayor of Orbit City
+    VoteVariation: majority
     ContestSelection:
     - '@type': CVR.CandidateSelection
-      '@id': contest-/selection-
+      '@id': contest-mayor/selection-cosmo-spacely
+      CandidateIds:
+      - candidate-cosmo-spacely
+    - '@type': CVR.CandidateSelection
+      '@id': contest-mayor/selection-spencer-cogswell
+      CandidateIds:
+      - candidate-spencer-cogswell
+  - '@type': CVR.CandidateContest
+    '@id': contest-control-board-spaceport
+    Name: SpacePort Control Board
+    VoteVariation: n-of-m
+    VotesAllowed: 2
+    NumberElected: 2
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board/selection-jane-jetson
+      CandidateIds:
+      - candidate-jane-jetson
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board/selection-harlan-ellis
+      CandidateIds:
+      - candidate-harlan-ellis
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board/selection-rudy-indexer
+      CandidateIds:
+      - candidate-rudy-indexer
   ElectionScopeId: 'gadget-county'
 GeneratedDate: '2021-06-01'
 GpUnit:
