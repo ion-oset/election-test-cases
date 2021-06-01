@@ -115,10 +115,14 @@ Party:
   '@id': 'party-lepton'
   Name: "Lepton Party"
 ReportGeneratingDeviceIds:
-- reporting-device-
+- ballot-marker-1
 ReportingDevice:
 - '@type': CVR.ReportingDevice
-  '@id': reporting-device-
+  '@id': ballot-marker-1
+  Application: Ballot marking app
+  Manufacturer: Trust the Vote
+  Model: git-c3cd6f4f-20210601
+  SerialNumber: ''
 ReportType:
 - originating-device-export
 Version: 1.0.0
