@@ -32,6 +32,18 @@ GpUnit:
 - '@type': CVR.GpUnit
   '@id': gadget-county
   Type: other
+- '@type': CVR.GpUnit
+  '@id': 'bedrock-precinct'
+  Type: 'precinct'
+- '@type': CVR.GpUnit
+  '@id': 'downtown-precinct'
+  Type: 'precinct'
+- '@type': CVR.GpUnit
+  '@id': 'port-precinct'
+  Type: 'precinct'
+- '@type': CVR.GpUnit
+  '@id': 'spacetown-precinct'
+  Type: 'precinct'
 Party:
 - '@type': CVR.Party
   '@id': 'party-hadron'
