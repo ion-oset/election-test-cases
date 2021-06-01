@@ -53,6 +53,17 @@ Election:
       '@id': contest-control-board/selection-rudy-indexer
       CandidateIds:
       - candidate-rudy-indexer
+  - '@type': CVR.BallotMeasureContest
+    '@id': contest-ballot-measure-gadget-county-1
+    Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
+    VoteVariation: approval
+    ContestSelection:
+    - '@type': CVR.BallotMeasureSelection
+      '@id': 'contest-ballot-measure-1/selection-yes'
+      Selection: "Yes"
+    - '@type': CVR.BallotMeasureSelection
+      '@id': 'contest-ballot-measure-1/selection-no'
+      Selection: "No"
   ElectionScopeId: 'gadget-county'
 GeneratedDate: '2021-06-01'
 GpUnit:
