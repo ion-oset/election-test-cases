@@ -24,6 +24,7 @@ Election:
   - '@type': CVR.CandidateContest
     '@id': contest-mayor-orbit-city
     Name: Mayor of Orbit City
+    # QUESTION: 'majority' or 'plurality'?
     VoteVariation: majority
     ContestSelection:
     - '@type': CVR.CandidateSelection
@@ -41,7 +42,9 @@ Election:
     '@id': contest-control-board-spaceport
     Name: SpacePort Control Board
     VoteVariation: n-of-m
+    # NOTE: Maximum number of candidates a voter can select.
     VotesAllowed: 2
+    # NOTE: Total number of seats to fill (possibly optional).
     NumberElected: 2
     ContestSelection:
     - '@type': CVR.CandidateSelection
@@ -56,6 +59,7 @@ Election:
       '@id': contest-control-board/selection-rudy-indexer
       CandidateIds:
       - candidate-rudy-indexer
+    # NOTE: Write-in slot count has to match 'VotesAllowed'
     - '@type': CVR.CandidateSelection
       '@id': contest-control-board/selection-write-in-1
       IsWriteIn: true
@@ -65,6 +69,7 @@ Election:
   - '@type': CVR.BallotMeasureContest
     '@id': contest-ballot-measure-gadget-county-1
     Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
+    # Is this the correct voting method?
     VoteVariation: approval
     ContestSelection:
     - '@type': CVR.BallotMeasureSelection
@@ -73,11 +78,13 @@ Election:
     - '@type': CVR.BallotMeasureSelection
       '@id': 'contest-ballot-measure-1/selection-no'
       Selection: "No"
+  # QUESTION: This has to be county wide right?
   ElectionScopeId: 'gadget-county'
 GeneratedDate: '2021-06-01'
 GpUnit:
 - '@type': CVR.GpUnit
   '@id': gadget-county
+  # QUESTION: What's the actual 'Type'?
   Type: other
 - '@type': CVR.GpUnit
   '@id': 'bedrock-precinct'
@@ -115,14 +122,21 @@ Party:
   '@id': 'party-lepton'
   Name: "Lepton Party"
 ReportGeneratingDeviceIds:
+# NOTE: Use the '@id' of the appropriate 'ReportingDevice'.
 - ballot-marker-1
 ReportingDevice:
 - '@type': CVR.ReportingDevice
   '@id': ballot-marker-1
+  # NOTE: The name of the software that is generating the ballot
   Application: Ballot marking app
   Manufacturer: Trust the Vote
+  # NOTE: Should be a released version, but for testing is working revision.
   Model: git-c3cd6f4f-20210601
+  # QUESTION: What are appropriate values for this?
   SerialNumber: ''
+# A ballot generating/marking device is always of this report type.
+# A scanner would be also. Other types are further along the processing stages.
 ReportType:
 - originating-device-export
+# CVR standard version is mandatory and currently only has one legal value.
 Version: 1.0.0
