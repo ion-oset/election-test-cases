@@ -4,7 +4,22 @@ Election:
   '@id': gadget-county-2021-06
   Candidate:
   - '@type': CVR.Candidate
-    '@id': candidate-
+    '@id': candidate-cosmo-spacely
+    Name: Cosmo Spacely
+    PartyId: party-lepton
+  - '@type': CVR.Candidate
+    '@id': candidate-spencer-cogswell
+    Name: Spencer Cogswell
+    PartyId: party-hadron
+  - '@type': CVR.Candidate
+    '@id': candidate-jane-jetson
+    Name: Jane Jetson
+  - '@type': CVR.Candidate
+    '@id': candidate-harlan-ellis
+    Name: Harlan Ellis
+  - '@type': CVR.Candidate
+    '@id': candidate-rudy-indexer
+    Name: Rudy Indexer
   Contest:
   - '@type': CVR.CandidateContest
     '@id': contest-
@@ -19,8 +34,11 @@ GpUnit:
   Type: other
 Party:
 - '@type': CVR.Party
-  '@id': party-
-  Name: "Party"
+  '@id': 'party-hadron'
+  Name: "Hadron Party"
+- '@type': CVR.Party
+  '@id': 'party-lepton'
+  Name: "Lepton Party"
 ReportGeneratingDeviceIds:
 - reporting-device-
 ReportingDevice:
