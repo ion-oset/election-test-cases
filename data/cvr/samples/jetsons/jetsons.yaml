@@ -34,6 +34,9 @@ Election:
       '@id': contest-mayor/selection-spencer-cogswell
       CandidateIds:
       - candidate-spencer-cogswell
+    - '@type': CVR.CandidateSelection
+      '@id': contest-mayor/selection-write-in
+      IsWriteIn: true
   - '@type': CVR.CandidateContest
     '@id': contest-control-board-spaceport
     Name: SpacePort Control Board
@@ -53,6 +56,12 @@ Election:
       '@id': contest-control-board/selection-rudy-indexer
       CandidateIds:
       - candidate-rudy-indexer
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board/selection-write-in-1
+      IsWriteIn: true
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board/selection-write-in-2
+      IsWriteIn: true
   - '@type': CVR.BallotMeasureContest
     '@id': contest-ballot-measure-gadget-county-1
     Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
