@@ -88,6 +88,19 @@ NIST Cast Vote Records v1.0 (NIST-SP-1500-103):
     - XML examples:
         - https://github.com/usnistgov/CastVoteRecords/example_1.xml
 
+NIST Election Reports v2.0 (NIST-SP-1500-100r2)
+
+- Landing page & UML breakdown: https://pages.nist.gov/ElectionResultsReporting
+- Github project: https://github.com/usnistgov/ElectionResultsReporting
+    - Specification available as:
+    - [PDF](https://github.com/usnistgov/ElectionResultsReporting/NIST.SP.1500-100r2-rev.pdf)
+        - [Word](https://github.com/usnistgov/ElectionResultsReporting/NIST.SP.1500-100r2-rev.docx)
+    - JSON schema: https://github.com/usnistgov/ElectionResultsReporting/NIST_V2_election_results_reporting.json
+    - XML schema: https://github.com/usnistgov/ElectionResultsReporting/NIST_V2_election_results_reporting.xsd
+    - XML examples:
+        - https://github.com/usnistgov/ElectionResultsReporting/NIST%20V2.0%20-%20ElectionResultsReporting.xml
+
+
 JSON Schema:
 
 - Main site: https://json-schema.org
