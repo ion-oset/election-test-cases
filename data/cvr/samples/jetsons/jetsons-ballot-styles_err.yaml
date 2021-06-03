@@ -11,6 +11,39 @@ Election:
   StartDate: '2021-06-01'
   EndDate: '2021-06-15'
   Type: general
+  BallotStyle:
+  - '@type': ElectionResults.BallotStyle
+    GpUnitIds:
+    - bedrock-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-ballot-measure-gadget-county-1
+  - '@type': ElectionResults.BallotStyle
+    GpUnitIds:
+    - downtown-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-mayor-orbit-city
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-ballot-measure-gadget-county-1
+  - '@type': ElectionResults.BallotStyle
+    GpUnitIds:
+    - port-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-control-board-spaceport
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-ballot-measure-gadget-county-1
+  - '@type': ElectionResults.BallotStyle
+    GpUnitIds:
+    - spacetown-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-mayor-orbit-city
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-control-board-spaceport
+    - '@type': ElectionResults.OrderedContest
+      ContestId: contest-ballot-measure-gadget-county-1
 Format: summary-contest
 # GeneratedDate: '2021-06-01T12:00:00Z'
 GeneratedDate: '2021-06-01T12:00:00-08:00'
