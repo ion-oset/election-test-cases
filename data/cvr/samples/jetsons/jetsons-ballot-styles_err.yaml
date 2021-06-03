@@ -1,0 +1,22 @@
+'@type': ElectionResults.ElectionReport
+Election:
+- '@type': ElectionResults.Election
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+      - '@type': ElectionResults.LanguageString
+        Content: Gadget County Elections
+        Language: en
+  ElectionScopeId: gadget-county
+  StartDate: '2021-06-01'
+  EndDate: '2021-06-15'
+  Type: general
+Format: summary-contest
+# GeneratedDate: '2021-06-01T12:00:00Z'
+GeneratedDate: '2021-06-01T12:00:00-08:00'
+Issuer: State
+IssuerAbbreviation: US
+SequenceEnd: 1
+SequenceStart: 1
+Status: pre-election
+VendorApplicationId: TTV
