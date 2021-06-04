@@ -115,6 +115,32 @@ Election:
 Format: summary-contest
 # GeneratedDate: '2021-06-01T12:00:00Z'
 GeneratedDate: '2021-06-01T12:00:00-08:00'
+# Headers are used by ballot styles
+Header:
+- '@type': ElectionResults.Header
+  '@id': header-ballot-measures
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Ballot Measures
+      Language: en
+- '@type': ElectionResults.Header
+  '@id': header-control-board-spaceport
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: SpacePort Control Board
+      Language: en
+- '@type': ElectionResults.Header
+  '@id': header-mayor-orbit-city
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Mayor of Orbit City
+      Language: en
 Issuer: State
 IssuerAbbreviation: US
 SequenceEnd: 1
