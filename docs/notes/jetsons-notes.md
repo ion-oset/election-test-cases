@@ -12,7 +12,9 @@ Still left to do:
 
 - Add ballot styles for each of the ballot types from Election Results Reporting.
 
-### Notes
+### CVRs / Cast Vote Records
+
+#### CVR Notes
 
 - The CVR Report (`jetsons.yaml`) specifies the `Election` but not the cast vote records (`CVR` elements). The former is what's used to describe the contents of the ballot. The latter are meaningful only for an already marked ballot. The ballot marking app will read in the former and generate the latter.
 
@@ -63,7 +65,7 @@ Still left to do:
 
 - `Version` is always `1.0.0`. (It's an enumeration which currently only has one value.)
 
-### Questions
+#### CVR Questions
 
 - How are the roles of non-partisans listed?
 
@@ -80,3 +82,22 @@ Still left to do:
 - Does the ballot measure have `VotingVariation` of'approval'?
 
 - What are appropriate values for 'ReportingDevice.SerialNumber'?
+
+### ERRs / Election Report Results
+
+#### ERR Notes
+
+- All the ERR changes are because ERRs allow specifying the content of `BallotStyle`s which CVRs do not.
+
+- There's a lot of data duplication between the CVR and the ERR: `Candidate`s, `Contest`s, `GPUnit`s and several other aspects need to be kept in sync. Ideally this is automated, but these examples are still hand-generated.
+
+- ERRs are more complex than CVRs. In particular a number of fields have the data type `InternationalizedText` which stores information about the language text is presented in.
+
+#### ERR Questions
+
+- Currently the information about a race is stored in both the `Contest` and the `Header` displayed in the `BallotStyle`. This is redundant but it's not obvious that one can infer the `Header` from the `Contest.Name`, and the `Header` is the correct place for display.
+    - This should be reviewed.
+
+- ERR `Contest`s need an `ElectionDistrictId`. They are left undefined (`"N/A"` instead of `null` because the type is a string). This is because:
+    - It's not actually meaningful. ERRs are supposed to be produced after an election is done to summarize results, while we are using them to specify information needed for ballot generation before the election is done.
+    - The ID is restricted to be a *single* district ID not a list, so it doesn't map into the idea of re-using the `Contest` in multiple `BallotStyle`s. It would be presumably the actual district the report was generated for.
