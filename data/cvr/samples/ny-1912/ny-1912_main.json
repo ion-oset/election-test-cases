@@ -1,0 +1,597 @@
+{
+    "@type": "CVR.CastVoteRecordReport",
+    "CVR": [
+        {
+            "@type": "CVR.CVR",
+            "BallotStyleId": "ballotstyle-01",
+            "CurrentSnapshotId": "snapshot-01",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-01-candidate-01",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-02",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-02-candidate-05",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "election-01",
+            "UniqueId": "1"
+        },
+        {
+            "@type": "CVR.CVR",
+            "BallotStyleId": "ballotstyle-01",
+            "CurrentSnapshotId": "snapshot-01",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-01-candidate-03",
+                                    "OptionPosition": 3,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-02",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-02-candidate-06",
+                                    "OptionPosition": 2,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "election-01",
+            "UniqueId": "2"
+        },
+        {
+            "@type": "CVR.CVR",
+            "BallotStyleId": "ballotstyle-01",
+            "CurrentSnapshotId": "snapshot-01",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-01-candidate-04",
+                                    "OptionPosition": 4,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "Status": [
+                                "not-indicated"
+                            ],
+                            "Undervotes": 1
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "election-01",
+            "UniqueId": "3"
+        },
+        {
+            "@type": "CVR.CVR",
+            "CurrentSnapshotId": "snapshot-01",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-02",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-02-candidate-06",
+                                    "OptionPosition": 2,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "election-ny-1912",
+            "UniqueId": "4"
+        },
+        {
+            "@type": "CVR.CVR",
+            "CurrentSnapshotId": "snapshot-01",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-01-candidate-02",
+                                    "OptionPosition": 2,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "no",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 0
+                                },
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-01-candidate-03",
+                                    "OptionPosition": 3,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "no",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 0
+                                }
+                            ],
+                            "Overvotes": 1,
+                            "Undervotes": 1
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "election-ny-1912",
+            "UniqueId": "5"
+        },
+        {
+            "@type": "CVR.CVR",
+            "CurrentSnapshotId": "snapshot-01",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-02",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-02-candidate-06",
+                                    "OptionPosition": 2,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "election-ny-1912",
+            "UniqueId": "6"
+        },
+        {
+            "@type": "CVR.CVR",
+            "CurrentSnapshotId": "snapshot-01",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "OptionPosition": 5,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "CVRWriteIn": {
+                                                "@type": "CVR.CVRWriteIn",
+                                                "Text": "William Jennings Bryan"
+                                            },
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "unknown",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "Status": [
+                                        "needs-adjudication"
+                                    ],
+                                    "TotalNumberVotes": 0
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-02",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-02-candidate-05",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "election-ny-1912",
+            "UniqueId": "7"
+        },
+        {
+            "@type": "CVR.CVR",
+            "CurrentSnapshotId": "snapshot-02",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "OptionPosition": 5,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "CVRWriteIn": {
+                                                "@type": "CVR.CVRWriteIn",
+                                                "Text": "William Jennings Bryan"
+                                            },
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "unknown",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "Status": [
+                                        "needs-adjudication"
+                                    ],
+                                    "TotalNumberVotes": 0
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-02",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-02-candidate-05",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                },
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "Annotation": [
+                        {
+                            "@type": "CVR.Annotation",
+                            "AdjudicatorName": [
+                                "Edward Lazansky"
+                            ],
+                            "Message": [
+                                "[A message describing why the mark was valid]"
+                            ]
+                        }
+                    ],
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-01",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "OptionPosition": 5,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "CVRWriteIn": {
+                                                "@type": "CVR.CVRWriteIn",
+                                                "Text": "William Jennings Bryan"
+                                            },
+                                            "HasIndication": "yes",
+                                            "IsAllocable": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "interpreted"
+                }
+            ],
+            "ElectionId": "election-ny-1912",
+            "UniqueId": "8"
+        }
+    ],
+    "Election": [
+        {
+            "@type": "CVR.Election",
+            "@id": "election-01",
+            "Candidate": [
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-01",
+                    "Name": "Woodrow Wilson",
+                    "PartyId": "party-01"
+                },
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-02",
+                    "Name": "William Howard Taft",
+                    "PartyId": "party-02"
+                },
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-03",
+                    "Name": "Theodore Roosevelt",
+                    "PartyId": "party-03"
+                },
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-04",
+                    "Name": "Eugene Debs",
+                    "PartyId": "party-04"
+                },
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-05",
+                    "Name": "William Sulzer",
+                    "PartyId": "party-01"
+                },
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-06",
+                    "Name": "Job E. Hedges",
+                    "PartyId": "party-02"
+                },
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-07",
+                    "Name": "Oscar S. Straus",
+                    "PartyId": "party-05"
+                }
+            ],
+            "Contest": [
+                {
+                    "@type": "CVR.Contest",
+                    "@id": "contest-01",
+                    "ContestSelection": [
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-01-candidate-01"
+                        },
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-01-candidate-02"
+                        },
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-01-candidate-03"
+                        },
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-01-candidate-04"
+                        }
+                    ],
+                    "Name": "President of the United States",
+                    "VoteVariation": "majority"
+                },
+                {
+                    "@type": "CVR.Contest",
+                    "@id": "contest-02",
+                    "ContestSelection": [
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-02-candidate-05"
+                        },
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-02-candidate-06"
+                        },
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-02-candidate-07"
+                        }
+                    ],
+                    "Name": "Governor of the State of New York",
+                    "VoteVariation": "plurality"
+                }
+            ],
+            "ElectionScopeId": "local-district-01",
+            "Name": "New York State General Election of 1912"
+        }
+    ],
+    "GeneratedDate": "2021-05-10T19:12:11",
+    "GpUnit": [
+        {
+            "@type": "CVR.GpUnit",
+            "@id": "local-district-01",
+            "Type": "precinct"
+        }
+    ],
+    "Party": [
+        {
+            "@type": "CVR.Party",
+            "@id": "party-01",
+            "Name": "Democratic"
+        },
+        {
+            "@type": "CVR.Party",
+            "@id": "party-02",
+            "Name": "Republican"
+        },
+        {
+            "@type": "CVR.Party",
+            "@id": "party-03",
+            "Name": "Progressive"
+        },
+        {
+            "@type": "CVR.Party",
+            "@id": "party-04",
+            "Name": "Socialist"
+        },
+        {
+            "@type": "CVR.Party",
+            "@id": "party-05",
+            "Name": "Progressive/Independent"
+        }
+    ],
+    "ReportGeneratingDeviceIds": [
+        "reporting-device-01"
+    ],
+    "ReportingDevice": [
+        {
+            "@type": "CVR.ReportingDevice",
+            "@id": "reporting-device-01",
+            "Application": "Ballot Studio",
+            "Manufacturer": "Trust the Vote",
+            "Model": "git-25a73940-20210202",
+            "Notes": [
+                "A scanner in a real election should be hardware for security reasons. A demo scanner could be software, so that's what this one is.\n"
+            ],
+            "SerialNumber": "AB:CD:EF:01:23:34"
+        }
+    ],
+    "ReportType": [
+        "originating-device-export"
+    ],
+    "Version": "1.0.0"
+}
