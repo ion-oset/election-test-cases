@@ -101,3 +101,5 @@ Still left to do:
 - ERR `Contest`s need an `ElectionDistrictId`. They are left undefined (`"N/A"` instead of `null` because the type is a string). This is because:
     - It's not actually meaningful. ERRs are supposed to be produced after an election is done to summarize results, while we are using them to specify information needed for ballot generation before the election is done.
     - The ID is restricted to be a *single* district ID not a list, so it doesn't map into the idea of re-using the `Contest` in multiple `BallotStyle`s. It would be presumably the actual district the report was generated for.
+
+- `BallotStyle` needs an `ExternalIdentifier` to give it a recognizable ID. We should figure out what those are.
