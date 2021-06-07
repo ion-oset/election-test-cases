@@ -1,0 +1,284 @@
+{
+    "@type": "ElectionResults.ElectionReport",
+    "Election": [
+        {
+            "@type": "ElectionResults.Election",
+            "Name": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Gadget County Elections",
+                        "Language": "en"
+                    }
+                ]
+            },
+            "ElectionScopeId": "gadget-county",
+            "StartDate": "2021-06-01",
+            "EndDate": "2021-06-15",
+            "Type": "general",
+            "Candidate": [
+                {
+                    "@type": "ElectionResults.Candidate",
+                    "@id": "candidate-cosmo-spacely",
+                    "BallotName": {
+                        "@type": "ElectionResults.InternationalizedText",
+                        "Text": [
+                            {
+                                "@type": "ElectionResults.LanguageString",
+                                "Content": "Cosmo Spacely",
+                                "Language": "en"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ElectionResults.Candidate",
+                    "@id": "candidate-spencer-cogswell",
+                    "BallotName": {
+                        "@type": "ElectionResults.InternationalizedText",
+                        "Text": [
+                            {
+                                "@type": "ElectionResults.LanguageString",
+                                "Content": "Spencer Cogswell",
+                                "Language": "en"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ElectionResults.Candidate",
+                    "@id": "candidate-jane-jetson",
+                    "BallotName": {
+                        "@type": "ElectionResults.InternationalizedText",
+                        "Text": [
+                            {
+                                "@type": "ElectionResults.LanguageString",
+                                "Content": "Jane Jetson",
+                                "Language": "en"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ElectionResults.Candidate",
+                    "@id": "candidate-harlan-ellis",
+                    "BallotName": {
+                        "@type": "ElectionResults.InternationalizedText",
+                        "Text": [
+                            {
+                                "@type": "ElectionResults.LanguageString",
+                                "Content": "Harlan Ellis",
+                                "Language": "en"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "ElectionResults.Candidate",
+                    "@id": "candidate-rudy-indexer",
+                    "BallotName": {
+                        "@type": "ElectionResults.InternationalizedText",
+                        "Text": [
+                            {
+                                "@type": "ElectionResults.LanguageString",
+                                "Content": "Rudy Indexer",
+                                "Language": "en"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Contest": [
+                {
+                    "@type": "ElectionResults.CandidateContest",
+                    "@id": "contest-mayor-orbit-city",
+                    "Name": "Mayor of Orbit City",
+                    "ElectionDistrictId": "N/A",
+                    "VoteVariation": "majority",
+                    "VotesAllowed": 1
+                },
+                {
+                    "@type": "ElectionResults.CandidateContest",
+                    "@id": "contest-control-board-spaceport",
+                    "Name": "SpacePort Control Board",
+                    "ElectionDistrictId": "N/A",
+                    "VoteVariation": "n-of-m",
+                    "VotesAllowed": 2
+                },
+                {
+                    "@type": "ElectionResults.BallotMeasureContest",
+                    "@id": "contest-ballot-measure-gadget-county-1",
+                    "Name": "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?",
+                    "ElectionDistrictId": "N/A"
+                }
+            ],
+            "BallotStyle": [
+                {
+                    "@type": "ElectionResults.BallotStyle",
+                    "GpUnitIds": [
+                        "bedrock-precinct"
+                    ],
+                    "OrderedContent": [
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-ballot-measures",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-ballot-measure-gadget-county-1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@type": "ElectionResults.BallotStyle",
+                    "GpUnitIds": [
+                        "downtown-precinct"
+                    ],
+                    "OrderedContent": [
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-mayor-orbit-city",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-mayor-orbit-city"
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-ballot-measures",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-ballot-measure-gadget-county-1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@type": "ElectionResults.BallotStyle",
+                    "GpUnitIds": [
+                        "port-precinct"
+                    ],
+                    "OrderedContent": [
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-control-board-spaceport",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-control-board-spaceport"
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-ballot-measures",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-ballot-measure-gadget-county-1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@type": "ElectionResults.BallotStyle",
+                    "GpUnitIds": [
+                        "spacetown-precinct"
+                    ],
+                    "OrderedContent": [
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-mayor-orbit-city",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-mayor-orbit-city"
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-control-board-spaceport",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-control-board-spaceport"
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.OrderedHeader",
+                            "HeaderId": "header-ballot-measures",
+                            "OrderedContent": [
+                                {
+                                    "@type": "ElectionResults.OrderedContest",
+                                    "ContestId": "contest-ballot-measure-gadget-county-1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Format": "summary-contest",
+    "GeneratedDate": "2021-06-01T12:00:00-08:00",
+    "Header": [
+        {
+            "@type": "ElectionResults.Header",
+            "@id": "header-ballot-measures",
+            "Name": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Ballot Measures",
+                        "Language": "en"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Header",
+            "@id": "header-control-board-spaceport",
+            "Name": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "SpacePort Control Board",
+                        "Language": "en"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Header",
+            "@id": "header-mayor-orbit-city",
+            "Name": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Mayor of Orbit City",
+                        "Language": "en"
+                    }
+                ]
+            }
+        }
+    ],
+    "Issuer": "State",
+    "IssuerAbbreviation": "US",
+    "SequenceEnd": 1,
+    "SequenceStart": 1,
+    "Status": "pre-election",
+    "VendorApplicationId": "TTV"
+}

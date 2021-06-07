@@ -1,0 +1,1746 @@
+{
+  "@xmlns:cdf": "http://itl.nist.gov/ns/voting/1500-103/v1",
+  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+  "cdf:CVR": [
+    {
+      "cdf:BallotStyleId": "_01-0052-01",
+      "cdf:CurrentSnapshotId": "css-01",
+      "cdf:CVRSnapshot": [
+        {
+          "@ObjectId": "css-01",
+          "cdf:CVRContest": [
+            {
+              "cdf:ContestId": "_1GO",
+              "cdf:CVRContestSelection": [
+                {
+                  "cdf:OptionPosition": 4,
+                  "cdf:SelectionPosition": [
+                    {
+                      "cdf:CVRWriteIn": {
+                        "cdf:Text": "John Smith"
+                      },
+                      "cdf:HasIndication": "yes",
+                      "cdf:IsAllocable": "unknown",
+                      "cdf:NumberVotes": 1
+                    }
+                  ],
+                  "cdf:Status": [
+                    "needs-adjudication"
+                  ],
+                  "cdf:TotalNumberVotes": 0
+                }
+              ],
+              "cdf:Undervotes": 0
+            },
+            {
+              "cdf:ContestId": "_2AG",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_3AS",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_4SS",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_5TS",
+              "cdf:CVRContestSelection": [
+                {
+                  "cdf:ContestSelectionId": "_CS1ECP",
+                  "cdf:OptionPosition": 1,
+                  "cdf:SelectionPosition": [
+                    {
+                      "cdf:HasIndication": "yes",
+                      "cdf:IsAllocable": "no",
+                      "cdf:NumberVotes": 1
+                    }
+                  ],
+                  "cdf:TotalNumberVotes": 0
+                },
+                {
+                  "cdf:ContestSelectionId": "_CS1EJM",
+                  "cdf:OptionPosition": 2,
+                  "cdf:SelectionPosition": [
+                    {
+                      "cdf:HasIndication": "yes",
+                      "cdf:IsAllocable": "no",
+                      "cdf:NumberVotes": 1
+                    }
+                  ],
+                  "cdf:TotalNumberVotes": 0
+                }
+              ],
+              "cdf:Overvotes": 1,
+              "cdf:Undervotes": 0
+            },
+            {
+              "cdf:ContestId": "_6RC",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_8SR34",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_9CC",
+              "cdf:Undervotes": 3
+            },
+            {
+              "cdf:ContestId": "_10SB",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_11JS1",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_11JS2",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_12CA9",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_13CP1",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_14CP2",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_15CP3",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_16CP4",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_17CP5",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_18CP6",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_19CP7",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_20CP8",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_19CP9",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_22CP10",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_23ST",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_24CA1",
+              "cdf:Undervotes": 1
+            },
+            {
+              "cdf:ContestId": "_25CA2",
+              "cdf:Undervotes": 1
+            }
+          ],
+          "cdf:Status": [
+            "other"
+          ],
+          "cdf:OtherStatus": "cast",
+          "cdf:Type": "original"
+        }
+      ],
+      "cdf:ElectionId": "_AK2014General"
+    },
+    {
+      "cdf:BallotStyleId": "_01-0052-01",
+      "cdf:CurrentSnapshotId": "css-02",
+      "cdf:CVRSnapshot": [
+        {
+          "@ObjectId": "css-02",
+          "cdf:CVRContest": [
+            {
+              "cdf:ContestId": "_6RC",
+              "cdf:CVRContestSelection": [
+                {
+                  "cdf:ContestSelectionId": "_CS1FMZ",
+                  "cdf:OptionPosition": 1,
+                  "cdf:SelectionPosition": [
+                    {
+                      "cdf:HasIndication": "yes",
+                      "cdf:IsAllocable": "unknown",
+                      "cdf:MarkMetricValue": [
+                        "76"
+                      ],
+                      "cdf:NumberVotes": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "cdf:Status": [
+            "needs-adjudication"
+          ],
+          "cdf:Type": "original"
+        },
+        {
+          "@ObjectId": "css-03",
+          "cdf:Annotation": [
+            {
+              "cdf:AdjudicatorName": [
+                "Mark Kennamond"
+              ],
+              "cdf:Message": [
+                "Resting Mark, Mark Zetzer"
+              ],
+              "cdf:TimeStamp": "2018-05-16T12:10:09"
+            }
+          ],
+          "cdf:CVRContest": [
+            {
+              "cdf:ContestId": "_6RC",
+              "cdf:CVRContestSelection": [
+                {
+                  "cdf:ContestSelectionId": "_CS1FMZ",
+                  "cdf:OptionPosition": 1,
+                  "cdf:SelectionPosition": [
+                    {
+                      "cdf:HasIndication": "no",
+                      "cdf:MarkMetricValue": [
+                        "98"
+                      ],
+                      "cdf:NumberVotes": 1
+                    }
+                  ],
+                  "cdf:TotalNumberVotes": 0
+                }
+              ],
+              "cdf:Undervotes": 1
+            }
+          ],
+          "cdf:Type": "interpreted"
+        }
+      ],
+      "cdf:ElectionId": "_AK2014General"
+    }
+  ],
+  "cdf:Election": [
+    {
+      "@ObjectId": "_AK2014General",
+      "cdf:Candidate": [
+        {
+          "@ObjectId": "_1AEF",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1AEF"
+            }
+          ],
+          "cdf:Name": "Edward FitzGerald and Sharen Swartz Neuhardt",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1AJK",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1AJK"
+            }
+          ],
+          "cdf:Name": "John Kasich and  Mary Taylor",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1AAR",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1AAR"
+            }
+          ],
+          "cdf:Name": "Anita Rios and Bob Fitrakis",
+          "cdf:PartyId": "_Green"
+        },
+        {
+          "@ObjectId": "_1BDP",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1BDP"
+            }
+          ],
+          "cdf:Name": "David Pepper",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1BMD",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1BMD"
+            }
+          ],
+          "cdf:Name": "Mike DeWine",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1CBB",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1CBB"
+            }
+          ],
+          "cdf:Name": "Bob Bridges",
+          "cdf:PartyId": "_Libertarian"
+        },
+        {
+          "@ObjectId": "_1CJC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1CJC"
+            }
+          ],
+          "cdf:Name": "John Patrick Carney",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1CDY",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1CDY"
+            }
+          ],
+          "cdf:Name": "David Yost",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1DJH",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1DJH"
+            }
+          ],
+          "cdf:Name": "Jon Husted",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1DKK",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1DKK"
+            }
+          ],
+          "cdf:Name": "Kevin Knedler",
+          "cdf:PartyId": "_Libertarian"
+        },
+        {
+          "@ObjectId": "_1DNT",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1DNT"
+            }
+          ],
+          "cdf:Name": "Nina Turner",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1ECP",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1ECP"
+            }
+          ],
+          "cdf:Name": "Connie Pillich",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1EJM",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1EJM"
+            }
+          ],
+          "cdf:Name": "Josh Mandel",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1FMZ",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1FMZ"
+            }
+          ],
+          "cdf:Name": "Mark Zetzer",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1FMF",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1FMF"
+            }
+          ],
+          "cdf:Name": "Marcia L. Fudge",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1GCB",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1GCB"
+            }
+          ],
+          "cdf:Name": "Cynthia D. Blake",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1GES",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1GES"
+            }
+          ],
+          "cdf:Name": "Emilia Sykes",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1HBR",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1HBR"
+            }
+          ],
+          "cdf:Name": "Bill Roemer",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1HIS",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1HIS"
+            }
+          ],
+          "cdf:Name": "Ilene Shapiro",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1HDW",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1HDW"
+            }
+          ],
+          "cdf:Name": "Debbie Walsh",
+          "cdf:PartyId": "_Republican"
+        },
+        {
+          "@ObjectId": "_1HJD",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1HJD"
+            }
+          ],
+          "cdf:Name": "John A. Donofrio",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1HGH",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1HGH"
+            }
+          ],
+          "cdf:Name": "Gary Hagen",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1HSK",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1HSK"
+            }
+          ],
+          "cdf:Name": "Sandra Kurt",
+          "cdf:PartyId": "_Democratic"
+        },
+        {
+          "@ObjectId": "_1IDS",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1IDS"
+            }
+          ],
+          "cdf:Name": "David A. Spencer",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1IMC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1IMC"
+            }
+          ],
+          "cdf:Name": "Michael Charney",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1ISF",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1ISF"
+            }
+          ],
+          "cdf:Name": "Sarah E. Fowler",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1ISR",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1ISR"
+            }
+          ],
+          "cdf:Name": "Sarah Freeman",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1JTL",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1JTL"
+            }
+          ],
+          "cdf:Name": "Tom Letson",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1JSK",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1JSK"
+            }
+          ],
+          "cdf:Name": "Sharon Kennedy",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1KJO",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1KJO"
+            }
+          ],
+          "cdf:Name": "John P. O'Donnell",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1KJF",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1KJF"
+            }
+          ],
+          "cdf:Name": "Judi French",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1LTL",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1LTL"
+            }
+          ],
+          "cdf:Name": "Julie A. Schafer",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1LEB",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1LEB"
+            }
+          ],
+          "cdf:Name": "Eve Belfance",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1MTO",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1MTO"
+            }
+          ],
+          "cdf:Name": "Tammy O'Brien",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1MRC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1MRC"
+            }
+          ],
+          "cdf:Name": "Ron Cable",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1NTG",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1NTG"
+            }
+          ],
+          "cdf:Name": "Tavia Baxter Galonski",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1NLC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1NLC"
+            }
+          ],
+          "cdf:Name": "Lynne S. Callahan",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1OAM",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1OAM"
+            }
+          ],
+          "cdf:Name": "Alison McCarty",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1OLD",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1OLD"
+            }
+          ],
+          "cdf:Name": "Lisa Dean",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1PBW",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1PBW"
+            }
+          ],
+          "cdf:Name": "Beth Whitmore",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1PMR",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1PMR"
+            }
+          ],
+          "cdf:Name": "Mary Margaret Rowlands",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1QCC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1QCC"
+            }
+          ],
+          "cdf:Name": "Christine Croce",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1QJC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1QJC"
+            }
+          ],
+          "cdf:Name": "John Clark",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1RTP",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1RTP"
+            }
+          ],
+          "cdf:Name": "Tom Parker",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1RRM",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1RRM"
+            }
+          ],
+          "cdf:Name": "Rob McCarty",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1SJO",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1SJO"
+            }
+          ],
+          "cdf:Name": "Jon Oldham",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1TM",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1TM"
+            }
+          ],
+          "cdf:Name": "Todd McKenney",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1TLT",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1TLT"
+            }
+          ],
+          "cdf:Name": "Linda Tucci Teodosio",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1TJL",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1TJL"
+            }
+          ],
+          "cdf:Name": "Jill Flagg Lanzinger",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1UJQ",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1UJQ"
+            }
+          ],
+          "cdf:Name": "John P. Quinn",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1UKC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1UKC"
+            }
+          ],
+          "cdf:Name": "Katarina Cook",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1VES",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1VES"
+            }
+          ],
+          "cdf:Name": "Elinore Marsh Stormer",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1VKO",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1VKO"
+            }
+          ],
+          "cdf:Name": "Kandi S. C'Connor",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1DY",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1DY"
+            }
+          ],
+          "cdf:Name": "YES",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_1DN",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1DN"
+            }
+          ],
+          "cdf:Name": "NO",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_2DY",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "2DY"
+            }
+          ],
+          "cdf:Name": "YES",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_2DN",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "2DN"
+            }
+          ],
+          "cdf:Name": "NO",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_3DY",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "3DY"
+            }
+          ],
+          "cdf:Name": "YES",
+          "cdf:PartyId": "_"
+        },
+        {
+          "@ObjectId": "_3DN",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "3DN"
+            }
+          ],
+          "cdf:Name": "NO",
+          "cdf:PartyId": "_"
+        }
+      ],
+      "cdf:Code": [
+        {
+          "cdf:Type": "local-level",
+          "cdf:Value": "2014-11-04G"
+        }
+      ],
+      "cdf:Contest": [
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_1GO",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "1GO"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1AEF",
+              "cdf:CandidateIds": [
+                "_1AEF"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1AJK",
+              "cdf:CandidateIds": [
+                "_1AJK"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1AAR",
+              "cdf:CandidateIds": [
+                "_1AAR"
+              ]
+            }
+          ],
+          "cdf:Name": "For Governor and Lieutenant Governor",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_2AG",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "2AG"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1BDP",
+              "cdf:CandidateIds": [
+                "_1BDP"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1BMD",
+              "cdf:CandidateIds": [
+                "_1BMD"
+              ]
+            }
+          ],
+          "cdf:Name": "For Attorney General",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_3AS",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "3AS"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1CBB",
+              "cdf:CandidateIds": [
+                "_1CBB"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1CJC",
+              "cdf:CandidateIds": [
+                "_1CJC"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1CDY",
+              "cdf:CandidateIds": [
+                "_1CDY"
+              ]
+            }
+          ],
+          "cdf:Name": "For Auditor of State",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_4SS",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "4SS"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1DJH",
+              "cdf:CandidateIds": [
+                "_1DJH"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1DKK",
+              "cdf:CandidateIds": [
+                "_1DKK"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1DNT",
+              "cdf:CandidateIds": [
+                "_1DNT"
+              ]
+            }
+          ],
+          "cdf:Name": "For Secretary of State",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_5TS",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "5TS"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1ECP",
+              "cdf:CandidateIds": [
+                "_1ECP"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1EJM",
+              "cdf:CandidateIds": [
+                "_1EJM"
+              ]
+            }
+          ],
+          "cdf:Name": "For Treasurer of State",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_6RC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "6RC"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1FMZ",
+              "cdf:CandidateIds": [
+                "_1FMZ"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1FMF",
+              "cdf:CandidateIds": [
+                "_1FMF"
+              ]
+            }
+          ],
+          "cdf:Name": "For  Representative to Congress(11th District)",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_8SR34",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "8SR34"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1GCB",
+              "cdf:CandidateIds": [
+                "_1GCB"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1GES",
+              "cdf:CandidateIds": [
+                "_1GES"
+              ]
+            }
+          ],
+          "cdf:Name": "For  State Representative(34th District)",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_9CC",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "9CC"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1HBR",
+              "cdf:CandidateIds": [
+                "_1HBR"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1HIS",
+              "cdf:CandidateIds": [
+                "_1HIS"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1HDW",
+              "cdf:CandidateIds": [
+                "_1HDW"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1HJD",
+              "cdf:CandidateIds": [
+                "_1HJD"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1HGH",
+              "cdf:CandidateIds": [
+                "_1HGH"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1HSK",
+              "cdf:CandidateIds": [
+                "_1HSK"
+              ]
+            }
+          ],
+          "cdf:Name": "For  Member of  County Council at Large",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 3
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_10SB",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "10SB"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1IDS",
+              "cdf:CandidateIds": [
+                "_1IDS"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1IMC",
+              "cdf:CandidateIds": [
+                "_1IMC"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1ISF",
+              "cdf:CandidateIds": [
+                "_1ISF"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1ISR",
+              "cdf:CandidateIds": [
+                "_1ISR"
+              ]
+            }
+          ],
+          "cdf:Name": "For  Member of State Board of Education(7th District)",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_11JS1",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "11JS1"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1JTL",
+              "cdf:CandidateIds": [
+                "_1JTL"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1JSK",
+              "cdf:CandidateIds": [
+                "_1JSK"
+              ]
+            }
+          ],
+          "cdf:Name": "For Justice of the Supreme Court\n\t\t\t\t\t\t\t\tFull Term Commencing 1/1/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_11JS2",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "11JS2"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1KJO",
+              "cdf:CandidateIds": [
+                "_1KJO"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1KJF",
+              "cdf:CandidateIds": [
+                "_1KJF"
+              ]
+            }
+          ],
+          "cdf:Name": "For Justice of the Supreme Court\n\t\t\t\t\t\t\t\tFull Term Commencing 1/2/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_12CA9",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "12CA9"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1LTL",
+              "cdf:CandidateIds": [
+                "_1LTL"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1LEB",
+              "cdf:CandidateIds": [
+                "_1LEB"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of Appeals(9th District)\n\t\t\t\t\t\t\t\tFull Term Commencing 2/9/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_13CP1",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "13CP1"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1MTO",
+              "cdf:CandidateIds": [
+                "_1MTO"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1MRC",
+              "cdf:CandidateIds": [
+                "_1MRC"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term Commencing 1/2/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_14CP2",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "14CP2"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1NTG",
+              "cdf:CandidateIds": [
+                "_1NTG"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1NLC",
+              "cdf:CandidateIds": [
+                "_1NLC"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term Commencing 1/3/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_15CP3",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "15CP3"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1OAM",
+              "cdf:CandidateIds": [
+                "_1OAM"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1OLD",
+              "cdf:CandidateIds": [
+                "_1OLD"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term Commencing 1/5/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_16CP4",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "16CP4"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1PBW",
+              "cdf:CandidateIds": [
+                "_1PBW"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1PMR",
+              "cdf:CandidateIds": [
+                "_1PMR"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term Commencing 1/6/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_17CP5",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "17CP5"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1QCC",
+              "cdf:CandidateIds": [
+                "_1QCC"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1QJC",
+              "cdf:CandidateIds": [
+                "_1QJC"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term Commencing 2/9/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_18CP6",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "18CP6"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1RTP",
+              "cdf:CandidateIds": [
+                "_1RTP"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1RRM",
+              "cdf:CandidateIds": [
+                "_1RRM"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term Commencing 5/1/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_19CP7",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "19CP7"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1SJO",
+              "cdf:CandidateIds": [
+                "_1SJO"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1TM",
+              "cdf:CandidateIds": [
+                "_1TM"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas\n\t\t\t\t\t\t\t\tFull Term Commencing 1/4/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_20CP8",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "20CP8"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1TLT",
+              "cdf:CandidateIds": [
+                "_1TLT"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1TJL",
+              "cdf:CandidateIds": [
+                "_1TJL"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas(Juvenile Division)\n\t\t\t\t\t\t\t\tFull Term Commencing 1/1/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_19CP9",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "19CP9"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1UJQ",
+              "cdf:CandidateIds": [
+                "_1UJQ"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1UKC",
+              "cdf:CandidateIds": [
+                "_1UKC"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas(Domestic Relations Division)\n\t\t\t\t\t\t\t\tFull Term Commencing 1/4/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_22CP10",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "22CP10"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1VES",
+              "cdf:CandidateIds": [
+                "_1VES"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1VKO",
+              "cdf:CandidateIds": [
+                "_1VKO"
+              ]
+            }
+          ],
+          "cdf:Name": "For Judge of the Court of  Common Pleas(Probate Division)\n\t\t\t\t\t\t\t\tFull Term Commencing 1/4/2015\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_23ST",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "23ST"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1DY",
+              "cdf:CandidateIds": [
+                "_1DY"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS1DN",
+              "cdf:CandidateIds": [
+                "_1DN"
+              ]
+            }
+          ],
+          "cdf:Name": "\n\t\t\t\t\t\t\t\t12 Proposed Sales and Use Tax County of Summit\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_24CA1",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "24CA1"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS2DY",
+              "cdf:CandidateIds": [
+                "_2DY"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS2DN",
+              "cdf:CandidateIds": [
+                "_2DN"
+              ]
+            }
+          ],
+          "cdf:Name": "\n\t\t\t\t\t\t\t\t13  Proposed Charter Amendment  County of Summit\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        },
+        {
+          "@xsi:type": "cdf:CandidateContest",
+          "@ObjectId": "_25CA2",
+          "cdf:Code": [
+            {
+              "cdf:Type": "local-level",
+              "cdf:Value": "25CA2"
+            }
+          ],
+          "cdf:ContestSelection": [
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS3DY",
+              "cdf:CandidateIds": [
+                "_3DY"
+              ]
+            },
+            {
+              "@xsi:type": "cdf:CandidateSelection",
+              "@ObjectId": "_CS3DN",
+              "cdf:CandidateIds": [
+                "_3DN"
+              ]
+            }
+          ],
+          "cdf:Name": "\n\t\t\t\t\t\t\t\t14  Proposed Charter Amendment  County of Summit\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t",
+          "cdf:VoteVariation": "n-of-m",
+          "cdf:VotesAllowed": 1
+        }
+      ],
+      "cdf:ElectionScopeId": "gpu-precinct",
+      "cdf:Name": null
+    }
+  ],
+  "cdf:GeneratedDate": "2018-07-15T00:00:00Z",
+  "cdf:GpUnit": [
+    {
+      "@ObjectId": "gpu-precinct",
+      "cdf:Code": [
+        {
+          "cdf:Type": "local-level",
+          "cdf:Value": "77"
+        }
+      ],
+      "cdf:Type": "precinct"
+    }
+  ],
+  "cdf:Notes": "Example using the NIST CVR CDF",
+  "cdf:Party": [
+    {
+      "@ObjectId": "_Green",
+      "cdf:Name": "Green"
+    },
+    {
+      "@ObjectId": "_Libertarian",
+      "cdf:Name": "Libertarian"
+    },
+    {
+      "@ObjectId": "_Republican",
+      "cdf:Name": "Republican"
+    },
+    {
+      "@ObjectId": "_Democratic",
+      "cdf:Name": "Democratic"
+    },
+    {
+      "@ObjectId": "_",
+      "cdf:Name": null
+    }
+  ],
+  "cdf:ReportGeneratingDeviceIds": [
+    "rd"
+  ],
+  "cdf:ReportingDevice": [
+    {
+      "@ObjectId": "rd",
+      "cdf:Application": "Ballot Marker",
+      "cdf:Manufacturer": "Hilton Roscoe LLC",
+      "cdf:MarkMetricType": "AJAX"
+    }
+  ],
+  "cdf:ReportType": [
+    "originating-device-export"
+  ],
+  "cdf:Version": "1.0.0"
+}
