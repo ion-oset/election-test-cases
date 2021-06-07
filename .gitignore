@@ -14,9 +14,7 @@ package-lock.json
 
 # Data Samples
 
-data/cvr/samples/*/*.json
 *_converted.json
-*_ported.json
 
 # Documentation
 

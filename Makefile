@@ -129,19 +129,14 @@ help:
 	@echo "  Build samples:"
 	@echo ""
 	@echo "    build-samples:         Build all JSON samples from YAML"
-	@echo "    clean-samples:         Clean all JSON samples built from YAML"
 	@echo ""
 	@echo "    build-nist-samples:    Build NIST JSON samples from YAML"
-	@echo "    clean-nist-samples:    Clean NIST JSON samples built from YAML"
 	@echo ""
 	@echo "    build-minimal-samples: Build 'minimal' JSON samples from YAML"
-	@echo "    clean-ninimal-samples: Clean 'minimal' JSON samples built from YAML"
 	@echo ""
 	@echo "    build-ny-1912-samples: Build NY 1912 JSON samples from YAML"
-	@echo "    clean-ny-1912-samples: Clean NY 1912 JSON samples built from YAML"
 	@echo ""
 	@echo "    build-jetsons-samples: Build Jetsons JSON samples from YAML"
-	@echo "    clean-jetsons-samples: Clean Jetsons JSON samples built from YAML"
 	@echo ""
 	@echo "  Converted samples:"
 	@echo ""
@@ -183,9 +178,10 @@ build-samples: \
 	build-ny-1912-samples build-jetsons-samples
 
 
-clean-samples: \
-	clean-nist-samples clean-nist-conversions clean-minimal-samples \
-	clean-ny-1912-samples clean-jetsons-samples
+clean-samples: clean-nist-conversions
+
+
+.PHONY: clean-samples
 
 
 # Convert NIST XML samples to JSON
@@ -233,13 +229,6 @@ $(MINIMAL_CVR_path)/%$(JSON_ext): $(MINIMAL_CVR_path)/%$(YAML_ext)
 	$(YAML_TO_JSON) $< $@
 
 
-clean-minimal-samples:
-	rm -f $(MINIMAL_CVR_JSON_files)
-
-
-.PHONY: clean-minimal-samples
-
-
 # Build NY 1912 sample from YAML
 
 build-ny-1912-samples: $(NY_1912_CVR_JSON_files)
@@ -249,13 +238,6 @@ $(NY_1912_CVR_path)/%$(JSON_ext): $(NY_1912_CVR_path)/%$(YAML_ext)
 	$(YAML_TO_JSON) $< $@
 
 
-clean-ny-1912-samples:
-	rm -f $(NY_1912_CVR_JSON_files)
-
-
-.PHONY: clean-ny-1912-samples
-
-
 # Build Jetsons sample from YAML
 
 build-jetsons-samples: $(JETSONS_CVR_JSON_files)
@@ -263,13 +245,6 @@ build-jetsons-samples: $(JETSONS_CVR_JSON_files)
 
 $(JETSONS_CVR_path)/%$(JSON_ext): $(JETSONS_CVR_path)/%$(YAML_ext)
 	$(YAML_TO_JSON) $< $@
-
-
-clean-jetsons-samples:
-	rm -f $(JETSONS_CVR_JSON_files)
-
-
-.PHONY: clean-jetsons-samples
 
 
 # Documentation - Notes
