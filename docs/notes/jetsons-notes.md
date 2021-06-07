@@ -83,23 +83,25 @@ Still left to do:
 
 - What are appropriate values for 'ReportingDevice.SerialNumber'?
 
-### ERRs / Election Report Results
+### EDFs / Election Report Results
 
-#### ERR Notes
+*Note*: Election Report Results is the spec. But we use the same format for its pre-election use case "to specify informaton needed for ballot generation before the election". In this case it's called an "Election Definition File" or "EDF".
 
-- All the ERR changes are because ERRs allow specifying the content of `BallotStyle`s which CVRs do not.
+#### EDF Notes
 
-- There's a lot of data duplication between the CVR and the ERR: `Candidate`s, `Contest`s, `GPUnit`s and several other aspects need to be kept in sync. Ideally this is automated, but these examples are still hand-generated.
+- All the EDF changes are because EDFs allow specifying the content of `BallotStyle`s which CVRs do not.
 
-- ERRs are more complex than CVRs. In particular a number of fields have the data type `InternationalizedText` which stores information about the language text is presented in.
+- There's a lot of data duplication between the CVR and the EDF: `Candidate`s, `Contest`s, `GPUnit`s and several other aspects need to be kept in sync. Ideally this is automated, but these examples are still hand-generated.
 
-#### ERR Questions
+- EDFs are more complex than CVRs. In particular a number of fields have the data type `InternationalizedText` which stores information about the language text is presented in.
+
+#### EDF Questions
 
 - Currently the information about a race is stored in both the `Contest` and the `Header` displayed in the `BallotStyle`. This is redundant but it's not obvious that one can infer the `Header` from the `Contest.Name`, and the `Header` is the correct place for display.
     - This should be reviewed.
 
-- ERR `Contest`s need an `ElectionDistrictId`. They are left undefined (`"N/A"` instead of `null` because the type is a string). This is because:
-    - It's not actually meaningful. ERRs are supposed to be produced after an election is done to summarize results, while we are using them to specify information needed for ballot generation before the election is done.
+- EDF `Contest`s need an `ElectionDistrictId`. They are left undefined (`"N/A"` instead of `null` because the type is a string). This is because:
+    - It's not actually meaningful. EDFs are supposed to be produced after an election is done to summarize results, while we are using them to specify information needed for ballot generation before the election is done.
     - The ID is restricted to be a *single* district ID not a list, so it doesn't map into the idea of re-using the `Contest` in multiple `BallotStyle`s. It would be presumably the actual district the report was generated for.
 
 - `BallotStyle` needs an `ExternalIdentifier` to give it a recognizable ID. We should figure out what those are.

@@ -11,8 +11,8 @@ Election:
   StartDate: '2021-06-01'
   EndDate: '2021-06-15'
   Type: general
-  # An ERR 'Candidate' has the same information as a CVR 'Candidate' except:
-  # - 'Name' in the CVR is 'BallotName' in the ERR.
+  # An EDF 'Candidate' has the same information as a CVR 'Candidate' except:
+  # - 'Name' in the CVR is 'BallotName' in the EDF.
   # - Internationalization is *required* for 'BallotName'.
   Candidate:
   - '@type': ElectionResults.Candidate
@@ -55,7 +55,7 @@ Election:
       - '@type': ElectionResults.LanguageString
         Content: Rudy Indexer
         Language: en
-  # An ERR 'Contest' is more complex than a CVR 'Contest'.
+  # An EDF 'Contest' is more complex than a CVR 'Contest'.
   # - 'Name' is required. A non-minimal 'Contest' would require 'BallotTitle'
   #    in addition to support internationalization.
   # - 'ElectionDistrictId' is required - but it's not meaningful at this stage,
