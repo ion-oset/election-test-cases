@@ -79,6 +79,10 @@ Election:
       '@id': contest-ballot-measure-gadget-county-1
       Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
       ElectionDistrictId: N/A
+  # BallotStyle doesn't use '@id'.
+  # It supports 'ExternalIdentifier' but those are formally defined elsewhere.
+  # The structure describes nested sections with each 'OrderedContent' being a
+  # section and each 'HeaderId' being a header shown on the ballot.
   BallotStyle:
   - '@type': ElectionResults.BallotStyle
     GpUnitIds:
@@ -94,6 +98,11 @@ Election:
     - downtown-precinct
     OrderedContent:
     - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-mayor-orbit-city
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-mayor-orbit-city
+    - '@type': ElectionResults.OrderedHeader
       HeaderId: header-ballot-measures
       OrderedContent:
       - '@type': ElectionResults.OrderedContest
@@ -103,6 +112,11 @@ Election:
     - port-precinct
     OrderedContent:
     - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-control-board-spaceport
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-control-board-spaceport
+    - '@type': ElectionResults.OrderedHeader
       HeaderId: header-ballot-measures
       OrderedContent:
       - '@type': ElectionResults.OrderedContest
@@ -111,6 +125,16 @@ Election:
     GpUnitIds:
     - spacetown-precinct
     OrderedContent:
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-mayor-orbit-city
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-mayor-orbit-city
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-control-board-spaceport
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-control-board-spaceport
     - '@type': ElectionResults.OrderedHeader
       HeaderId: header-ballot-measures
       OrderedContent:
