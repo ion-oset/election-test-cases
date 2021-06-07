@@ -18,8 +18,13 @@ ANNOTATIONS_DOCS_path := $(DOCS_path)/annotated
 XML_ext := .xml
 JSON_ext := .json
 YAML_ext := .yaml
-JSON_PORTED_ext := _ported.json
-JSON_CONVERTED_ext := _converted.json
+
+CVR_XML_ext := _cvr.xml
+CVR_JSON_ext := _cvr.json
+CVR_YAML_ext := _cvr.yaml
+
+CVR_JSON_PORTED_ext := -ported_cvr.json
+CVR_JSON_CONVERTED_ext := -converted_cvr.json
 
 JSONSCHEMA_ext := jsonschema.json
 XMLSCHEMA_ext := xmlschema.xml
@@ -33,11 +38,11 @@ ANNOTATIONS_HTML_ext := .html
 
 NIST_CVR_path := $(CVR_SAMPLES_path)/nist
 
-NIST_CVR_XML_files := $(wildcard $(NIST_CVR_path)/*$(XML_ext))
-NIST_CVR_JSON_CONVERTED_files := $(NIST_CVR_XML_files:%$(XML_ext)=%$(JSON_CONVERTED_ext))
+NIST_CVR_XML_files := $(wildcard $(NIST_CVR_path)/*$(CVR_XML_ext))
+NIST_CVR_JSON_CONVERTED_files := $(NIST_CVR_XML_files:%$(CVR_XML_ext)=%$(CVR_JSON_CONVERTED_ext))
 
-NIST_CVR_YAML_files := $(wildcard $(NIST_CVR_path)/*$(YAML_ext))
-NIST_CVR_JSON_PORTED_files := $(NIST_CVR_YAML_files:%$(YAML_ext)=%$(JSON_PORTED_ext))
+NIST_CVR_YAML_files := $(wildcard $(NIST_CVR_path)/*$(CVR_YAML_ext))
+NIST_CVR_JSON_PORTED_files := $(NIST_CVR_YAML_files:%$(CVR_YAML_ext)=%$(CVR_JSON_PORTED_ext))
 
 # Samples - Minimal
 
@@ -189,7 +194,7 @@ clean-samples: clean-nist-conversions
 build-nist-conversions: $(NIST_CVR_JSON_CONVERTED_files)
 
 
-$(NIST_CVR_path)/%$(JSON_CONVERTED_ext): $(NIST_CVR_path)/%$(JSON_ext)
+$(NIST_CVR_path)/%$(CVR_JSON_CONVERTED_ext): $(NIST_CVR_path)/%$(JSON_ext)
 	jq '.' $< > $@
 
 
@@ -209,7 +214,7 @@ clean-nist-conversions:
 build-nist-samples: $(NIST_CVR_JSON_PORTED_files)
 
 
-$(NIST_CVR_path)/%$(JSON_PORTED_ext): $(NIST_CVR_path)/%$(YAML_ext)
+$(NIST_CVR_path)/%$(CVR_JSON_PORTED_ext): $(NIST_CVR_path)/%$(YAML_ext)
 	$(YAML_TO_JSON) $< $@
 
 
