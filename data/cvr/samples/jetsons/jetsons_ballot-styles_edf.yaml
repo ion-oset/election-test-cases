@@ -66,7 +66,7 @@ Election:
       '@id': contest-mayor-orbit-city
       Name: Mayor of Orbit City
       ElectionDistrictId: gadget-county
-      VoteVariation: majority
+      VoteVariation: plurality
       VotesAllowed: 1
     - '@type': ElectionResults.CandidateContest
       '@id': contest-control-board-spaceport
@@ -199,8 +199,8 @@ GpUnit:
     Model: git-c3cd6f4f-20210601
     # QUESTION: Is this correct?
     Type: bmd
-  # QUESTION: What are appropriate values for this?
-  SerialNumber: ''
+  # NOTE: Use the MAC Address of the hardware
+  SerialNumber: 'AB:CD:EF:12:34:56'
 # Headers are used by ballot styles
 Header:
 - '@type': ElectionResults.Header

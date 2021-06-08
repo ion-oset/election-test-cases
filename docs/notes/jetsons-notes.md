@@ -55,7 +55,7 @@ Still left to do:
         - `2021.05.27`
         - `build 1027`
         - `git:abcdef01+2021-06-01`
-    - It's not clear how to interpret `SerialNumber`. Perhaps use the MAC address of the phone or computer that generates the ballot?
+    - `SerialNumber` is not required but if it use the MAC address of the phone or computer that generates the ballot.
 
 - There's one `GpUnit` for each precinct.
 
@@ -73,15 +73,30 @@ Still left to do:
 
 - Is Orbit City mayor a majority or plurality race?
 
-    With only two candidates it doesn't matter, this is for correctness only.
+    Plurality.
 
-- `CandidateIds` is redundant for plurarity races. Should they be listed anyway?
+- `CandidateIds` is redundant for plurality races. Should they be listed anyway?
+
+    Yes.
 
 - Should there be a `GpUnit` for the county?
 
-- Does the ballot measure have `VotingVariation` of'approval'?
+    Yes. Since `ReportingType` doesn't have `'county'` as a value, use:
+
+    ```
+        {
+            "Type": "other",
+            "OtherType": "county"
+        }
+    ```
+
+- Does the ballot measure have `VotingVariation` of 'approval'?
+
+    No, the `VotingVariation` is `plurality`.
 
 - What are appropriate values for 'ReportingDevice.SerialNumber'?
+
+    MAC address of device that generated the report.
 
 ### EDFs / Election Report Results
 
@@ -89,10 +104,16 @@ Still left to do:
 
 #### EDF Notes
 
-- All the EDF changes are because EDFs allow specifying the content of `BallotStyle`s which CVRs do not.
-    - When a CVR refers to a `BallotStyle` it has to do so using the ID created in the EDF. Because of this `BallotStyle` IDs are defined in `ExternalIdentifier`s and not `@id`, and have to follow the rules for external identifiers (which are not defined in the ERR specification).
+- All the EDF changes are because EDFs allow specifying the content of `BallotStyle`s which CVRs do not. This means the CVR depends on the EDF for the ballot styles and needs to refer to them using the ID created in the EDF.
+    - Because of this EDF `BallotStyle` IDs are defined in `ExternalIdentifier`s and not `@id`, and have to follow the rules for external identifiers (which are not defined in the ERR specification).
 
 - There's a lot of data overlap between the CVR and the EDF: `Candidate`s, `Contest`s, `GPUnit`s and several other aspects need to be kept in sync. Ideally this is automated, but these examples are still hand-generated.
+
+- It can be really hard to tell if `BallotStyle` `OrderedContent` and headers are nested properly. This may requiring tinkering as you modify the ballot layout.
+Note that:
+    - Each `OrderedContent` describes a sub-section of a section on the ballot, and each `OrderedHeader` describes a header for the sections below it.
+    - There usually aren't more than a couple of nestings. The samples nest to two levels.
+    - **TODO** There are `jq` scripts that can be used to display the layout clearly.
 
 - The `ElectionDistrictId` of an EDF `Contest`s is the GpUnit of the entire county. It can't be any of the individual precincts because a contest can occur in multiple precincts.
 
@@ -108,6 +129,6 @@ Still left to do:
 
 - Currently the information about a race is stored in both the `Contest` and the `Header` displayed in the `BallotStyle`. This is redundant but it's not obvious that one can infer the `Header` from the `Contest.Name`, and the `Header` is the correct place for display. Is this correct?
 
-- `BallotStyle` needs an `ExternalIdentifier` to give it a recognizable ID. We should figure out what those are.
+- `BallotStyle` needs an `ExternalIdentifier` to give it an ID that can be referred to outside of the EDF (e.g. in the CVR).
 
 - Is the `ReportingDevice.DeviceClass.Type` of our ballot marking system `bmd`?

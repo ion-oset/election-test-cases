@@ -95,7 +95,7 @@
                     "@id": "contest-mayor-orbit-city",
                     "Name": "Mayor of Orbit City",
                     "ElectionDistrictId": "gadget-county",
-                    "VoteVariation": "majority",
+                    "VoteVariation": "plurality",
                     "VotesAllowed": 1
                 },
                 {
@@ -316,7 +316,7 @@
                 "Model": "git-c3cd6f4f-20210601",
                 "Type": "bmd"
             },
-            "SerialNumber": ""
+            "SerialNumber": "AB:CD:EF:12:34:56"
         }
     ],
     "Header": [

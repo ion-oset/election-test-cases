@@ -38,7 +38,7 @@
                     "@type": "CVR.CandidateContest",
                     "@id": "contest-mayor-orbit-city",
                     "Name": "Mayor of Orbit City",
-                    "VoteVariation": "majority",
+                    "VoteVariation": "plurality",
                     "ContestSelection": [
                         {
                             "@type": "CVR.CandidateSelection",
@@ -106,7 +106,7 @@
                     "@type": "CVR.BallotMeasureContest",
                     "@id": "contest-ballot-measure-gadget-county-1",
                     "Name": "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?",
-                    "VoteVariation": "approval",
+                    "VoteVariation": "plurality",
                     "ContestSelection": [
                         {
                             "@type": "CVR.BallotMeasureSelection",
@@ -129,7 +129,8 @@
         {
             "@type": "CVR.GpUnit",
             "@id": "gadget-county",
-            "Type": "other"
+            "Type": "other",
+            "OtherType": "county"
         },
         {
             "@type": "CVR.GpUnit",
@@ -202,7 +203,7 @@
             "Application": "Ballot marking app",
             "Manufacturer": "Trust the Vote",
             "Model": "git-c3cd6f4f-20210601",
-            "SerialNumber": ""
+            "SerialNumber": "AB:CD:EF:12:34:56"
         }
     ],
     "ReportType": [
