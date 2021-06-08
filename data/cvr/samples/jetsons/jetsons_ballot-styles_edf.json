@@ -306,6 +306,17 @@
                 ]
             },
             "Type": "precinct"
+        },
+        {
+            "@type": "ElectionResults.ReportingDevice",
+            "@id": "ballot-marker-1",
+            "DeviceClass": {
+                "@type": "ElectionResults.DeviceClass",
+                "Manufacturer": "Trust the Vote",
+                "Model": "git-c3cd6f4f-20210601",
+                "Type": "bmd"
+            },
+            "SerialNumber": ""
         }
     ],
     "Header": [
