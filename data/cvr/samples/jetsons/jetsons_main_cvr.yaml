@@ -78,7 +78,7 @@ Election:
     - '@type': CVR.BallotMeasureSelection
       '@id': 'contest-ballot-measure-1/selection-no'
       Selection: "No"
-  # QUESTION: This has to be county wide right?
+  # NOTE: This has to be the county.
   ElectionScopeId: 'gadget-county'
 GeneratedDate: '2021-06-01'
 GpUnit:
