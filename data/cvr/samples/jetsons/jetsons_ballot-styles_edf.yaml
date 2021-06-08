@@ -143,6 +143,52 @@ Election:
 Format: summary-contest
 # GeneratedDate: '2021-06-01T12:00:00Z'
 GeneratedDate: '2021-06-01T12:00:00-08:00'
+GpUnit:
+- '@type': ElectionResults.ReportingUnit
+  '@id': gadget-county
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Gadget County
+      Language: en
+  Type: county
+- '@type': ElectionResults.ReportingUnit
+  '@id': bedrock-precinct
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Bedrock Precinct
+      Language: en
+  Type: precinct
+- '@type': ElectionResults.ReportingUnit
+  '@id': downtown-precinct
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Downtown Precinct
+      Language: en
+  Type: precinct
+- '@type': ElectionResults.ReportingUnit
+  '@id': port-precinct
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Port Precinct
+      Language: en
+  Type: precinct
+- '@type': ElectionResults.ReportingUnit
+  '@id': spacetown-precinct
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: SpaceTown Precinct
+      Language: en
+  Type: precinct
 # Headers are used by ballot styles
 Header:
 - '@type': ElectionResults.Header
