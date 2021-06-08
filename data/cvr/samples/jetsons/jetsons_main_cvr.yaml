@@ -24,8 +24,7 @@ Election:
   - '@type': CVR.CandidateContest
     '@id': contest-mayor-orbit-city
     Name: Mayor of Orbit City
-    # QUESTION: 'majority' or 'plurality'?
-    VoteVariation: majority
+    VoteVariation: plurality
     ContestSelection:
     - '@type': CVR.CandidateSelection
       '@id': contest-mayor/selection-cosmo-spacely
@@ -70,7 +69,7 @@ Election:
     '@id': contest-ballot-measure-gadget-county-1
     Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
     # Is this the correct voting method?
-    VoteVariation: approval
+    VoteVariation: plurality
     ContestSelection:
     - '@type': CVR.BallotMeasureSelection
       '@id': 'contest-ballot-measure-1/selection-yes'
@@ -84,8 +83,8 @@ GeneratedDate: '2021-06-01'
 GpUnit:
 - '@type': CVR.GpUnit
   '@id': gadget-county
-  # QUESTION: What's the actual 'Type'?
   Type: other
+  OtherType: county
 - '@type': CVR.GpUnit
   '@id': 'bedrock-precinct'
   Code:
@@ -132,8 +131,8 @@ ReportingDevice:
   Manufacturer: Trust the Vote
   # NOTE: Should be a released version, but for testing is working revision.
   Model: git-c3cd6f4f-20210601
-  # QUESTION: What are appropriate values for this?
-  SerialNumber: ''
+  # NOTE: Use the MAC Address of the hardware the software runs on.
+  SerialNumber: 'AB:CD:EF:12:34:56'
 # A ballot generating/marking device is always of this report type.
 # A scanner would be also. Other types are further along the processing stages.
 ReportType:
