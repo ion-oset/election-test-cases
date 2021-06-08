@@ -94,7 +94,7 @@
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "contest-mayor-orbit-city",
                     "Name": "Mayor of Orbit City",
-                    "ElectionDistrictId": "N/A",
+                    "ElectionDistrictId": "gadget-county",
                     "VoteVariation": "majority",
                     "VotesAllowed": 1
                 },
@@ -102,7 +102,7 @@
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "contest-control-board-spaceport",
                     "Name": "SpacePort Control Board",
-                    "ElectionDistrictId": "N/A",
+                    "ElectionDistrictId": "gadget-county",
                     "VoteVariation": "n-of-m",
                     "VotesAllowed": 2
                 },
@@ -110,7 +110,7 @@
                     "@type": "ElectionResults.BallotMeasureContest",
                     "@id": "contest-ballot-measure-gadget-county-1",
                     "Name": "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?",
-                    "ElectionDistrictId": "N/A"
+                    "ElectionDistrictId": "gadget-county"
                 }
             ],
             "BallotStyle": [

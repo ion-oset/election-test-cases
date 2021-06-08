@@ -90,18 +90,16 @@ Still left to do:
 #### EDF Notes
 
 - All the EDF changes are because EDFs allow specifying the content of `BallotStyle`s which CVRs do not.
+    - When a CVR refers to a `BallotStyle` it has to do so using the ID created in the EDF. Because of this `BallotStyle` IDs are defined in `ExternalIdentifier`s and not `@id`, and have to follow the rules for external identifiers (which are not defined in the ERR specification).
 
-- There's a lot of data duplication between the CVR and the EDF: `Candidate`s, `Contest`s, `GPUnit`s and several other aspects need to be kept in sync. Ideally this is automated, but these examples are still hand-generated.
+- There's a lot of data overlap between the CVR and the EDF: `Candidate`s, `Contest`s, `GPUnit`s and several other aspects need to be kept in sync. Ideally this is automated, but these examples are still hand-generated.
+
+- The `ElectionDistrictId` of an EDF `Contest`s is the GpUnit of the entire county. It can't be any of the individual precincts because a contest can occur in multiple precincts.
 
 - EDFs are more complex than CVRs. In particular a number of fields have the data type `InternationalizedText` which stores information about the language text is presented in.
 
 #### EDF Questions
 
-- Currently the information about a race is stored in both the `Contest` and the `Header` displayed in the `BallotStyle`. This is redundant but it's not obvious that one can infer the `Header` from the `Contest.Name`, and the `Header` is the correct place for display.
-    - This should be reviewed.
-
-- EDF `Contest`s need an `ElectionDistrictId`. They are left undefined (`"N/A"` instead of `null` because the type is a string). This is because:
-    - It's not actually meaningful. EDFs are supposed to be produced after an election is done to summarize results, while we are using them to specify information needed for ballot generation before the election is done.
-    - The ID is restricted to be a *single* district ID not a list, so it doesn't map into the idea of re-using the `Contest` in multiple `BallotStyle`s. It would be presumably the actual district the report was generated for.
+- Currently the information about a race is stored in both the `Contest` and the `Header` displayed in the `BallotStyle`. This is redundant but it's not obvious that one can infer the `Header` from the `Contest.Name`, and the `Header` is the correct place for display. Is this correct?
 
 - `BallotStyle` needs an `ExternalIdentifier` to give it a recognizable ID. We should figure out what those are.
