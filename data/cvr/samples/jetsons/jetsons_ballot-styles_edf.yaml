@@ -188,6 +188,19 @@ GpUnit:
       Content: SpaceTown Precinct
       Language: en
   Type: precinct
+# NOTE: Values are chosen to match CVR. Is this correct?
+# NOTE: Reporting device is considered a GpUnit
+- '@type': ElectionResults.ReportingDevice
+  '@id': ballot-marker-1
+  DeviceClass:
+    '@type': ElectionResults.DeviceClass
+    Manufacturer: Trust the Vote
+    # NOTE: Should be a released version, but for testing is working revision.
+    Model: git-c3cd6f4f-20210601
+    # QUESTION: Is this correct?
+    Type: bmd
+  # QUESTION: What are appropriate values for this?
+  SerialNumber: ''
 # Headers are used by ballot styles
 Header:
 - '@type': ElectionResults.Header

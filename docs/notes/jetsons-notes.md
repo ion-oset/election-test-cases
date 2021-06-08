@@ -98,8 +98,16 @@ Still left to do:
 
 - EDFs are more complex than CVRs. In particular a number of fields have the data type `InternationalizedText` which stores information about the language text is presented in.
 
+- EDF `ReportingDevice`s differ from their CVR counterparts:
+    - A CVR has the concept of a `ReportingDevice` for the whole `ElectionReport` as well as devices specific to a `GpUnit`. An EDF treats a `ReportingDevice` as another `GpUnit` entry.
+    - Most of the properties are nested under the field `DeviceClass`, except for `SerialNumber`.
+    - EDF has an explicit `Type` field to identify the device type, which CVR does not have.
+
+
 #### EDF Questions
 
 - Currently the information about a race is stored in both the `Contest` and the `Header` displayed in the `BallotStyle`. This is redundant but it's not obvious that one can infer the `Header` from the `Contest.Name`, and the `Header` is the correct place for display. Is this correct?
 
 - `BallotStyle` needs an `ExternalIdentifier` to give it a recognizable ID. We should figure out what those are.
+
+- Is the `ReportingDevice.DeviceClass.Type` of our ballot marking system `bmd`?
