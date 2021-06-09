@@ -229,6 +229,23 @@ Header:
       Language: en
 Issuer: State
 IssuerAbbreviation: US
+Party:
+- '@type': ElectionResults.Party
+  '@id': 'party-hadron'
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Hadron Party
+      Language: en
+- '@type': ElectionResults.Party
+  '@id': 'party-lepton'
+  Name:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Lepton Party
+      Language: en
 SequenceEnd: 1
 SequenceStart: 1
 Status: pre-election
