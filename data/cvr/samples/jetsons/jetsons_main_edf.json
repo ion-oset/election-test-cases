@@ -96,7 +96,37 @@
                     "Name": "Mayor of Orbit City",
                     "ElectionDistrictId": "gadget-county",
                     "VoteVariation": "plurality",
-                    "VotesAllowed": 1
+                    "VotesAllowed": 1,
+                    "ContestSelection": [
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-mayor/selection-cosmo-spacely",
+                            "SequenceOrder": 1,
+                            "CandidateIds": [
+                                "candidate-cosmo-spacely"
+                            ],
+                            "EndorsementPartyIds": [
+                                "party-lepton"
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-mayor/selection-spencer-cogswell",
+                            "SequenceOrder": 2,
+                            "CandidateIds": [
+                                "candidate-spencer-cogswell"
+                            ],
+                            "EndorsementPartyIds": [
+                                "party-hadron"
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-mayor/selection-write-in",
+                            "SequenceOrder": 3,
+                            "IsWriteIn": true
+                        }
+                    ]
                 },
                 {
                     "@type": "ElectionResults.CandidateContest",
@@ -104,7 +134,45 @@
                     "Name": "SpacePort Control Board",
                     "ElectionDistrictId": "gadget-county",
                     "VoteVariation": "n-of-m",
-                    "VotesAllowed": 2
+                    "VotesAllowed": 2,
+                    "ContestSelection": [
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-control-board-spaceport/selection-jane-jetson",
+                            "SequenceOrder": 1,
+                            "CandidateIds": [
+                                "candidate-jane-jetson"
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-control-board-spaceport/selection-harlan-ellis",
+                            "SequenceOrder": 2,
+                            "CandidateIds": [
+                                "candidate-harlan-ellis"
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-control-board-spaceport/selection-rudy-indexer",
+                            "SequenceOrder": 3,
+                            "CandidateIds": [
+                                "candidate-rudy-indexer"
+                            ]
+                        },
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-control-board/selection-write-in-1",
+                            "SequenceOrder": 4,
+                            "IsWriteIn": true
+                        },
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "contest-control-board/selection-write-in-2",
+                            "SequenceOrder": 5,
+                            "IsWriteIn": true
+                        }
+                    ]
                 },
                 {
                     "@type": "ElectionResults.BallotMeasureContest",
