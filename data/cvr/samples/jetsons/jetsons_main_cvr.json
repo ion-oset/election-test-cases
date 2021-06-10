@@ -4,17 +4,17 @@
         "CurrentSnapshotId": "snapshot-01",
         "CVRSnapshot": [
             {
-                "@id": "snapshot-01",
+                "@id": "snapshot-01---bedrock-precinct",
                 "@type": "CVR.CVRSnapshot",
+                "BallotStyleId": "adhoc:ballot-style/bedrock-precinct",
                 "CVRContest": [
                     {
                         "@type": "CVR.CVRContest",
-                        "ContestId": "contest-mayor-orbit-city",
+                        "ContestId": "contest-ballot-measure-gadget-county-1",
                         "CVRContestSelection": [
                             {
-                                "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "candidate-cosmo-spacely",
-                                "OptionPosition": 1,
+                                "@type": "CVR.ContestSelection",
+                                "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
                                 "SelectionPosition": {
                                     "HasIndication": "yes",
                                     "NumberVotes": 1
@@ -22,14 +22,22 @@
                                 "TotalNumberVotes": 1
                             }
                         ]
-                    },
+                    }
+                ],
+                "Type": "original"
+            },
+            {
+                "@id": "snapshot-01---port-precinct",
+                "@type": "CVR.CVRSnapshot",
+                "BallotStyleId": "adhoc:ballot-style/port-precinct",
+                "CVRContest": [
                     {
                         "@type": "CVR.CVRContest",
                         "ContestId": "contest-control-board-spaceport",
                         "CVRContestSelection": [
                             {
                                 "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "candidate-jane-jetson",
+                                "ContestSelectionId": "contest-control-board-spaceport/selection-rudi-indexer",
                                 "OptionPosition": 1,
                                 "SelectionPosition": {
                                     "HasIndication": "yes",
@@ -39,7 +47,11 @@
                             },
                             {
                                 "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "candidate-harlan-ellis",
+                                "ContestSelectionId": "contest-control-board-spaceport/selection-write-in-1",
+                                "CVRWriteIn": {
+                                    "@type": "CVR.CVRWriteIn",
+                                    "Text": "Fred Flintstone"
+                                },
                                 "OptionPosition": 2,
                                 "SelectionPosition": {
                                     "HasIndication": "yes",
@@ -55,7 +67,7 @@
                         "CVRContestSelection": [
                             {
                                 "@type": "CVR.ContestSelection",
-                                "ContestSelectionId": "contest-ballot-measure-1-selection-yes",
+                                "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
                                 "SelectionPosition": {
                                     "HasIndication": "yes",
                                     "NumberVotes": 1
@@ -65,7 +77,111 @@
                         ]
                     }
                 ],
-                "Type": "interpreted"
+                "Type": "original"
+            },
+            {
+                "@id": "snapshot-01---downtown-precinct",
+                "@type": "CVR.CVRSnapshot",
+                "BallotStyleId": "adhoc:ballot-style/downtown-precinct",
+                "CVRContest": [
+                    {
+                        "@type": "CVR.CVRContest",
+                        "ContestId": "contest-mayor-orbit-city",
+                        "CVRContestSelection": [
+                            {
+                                "@type": "CVR.CVRContestSelection",
+                                "ContestSelectionId": "contest-mayor/selection-spencer-cogswell",
+                                "OptionPosition": 1,
+                                "SelectionPosition": {
+                                    "HasIndication": "yes",
+                                    "NumberVotes": 1
+                                },
+                                "TotalNumberVotes": 1
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "CVR.CVRContest",
+                        "ContestId": "contest-ballot-measure-gadget-county-1",
+                        "CVRContestSelection": [
+                            {
+                                "@type": "CVR.ContestSelection",
+                                "ContestSelectionId": "contest-ballot-measure-1/selection-no",
+                                "SelectionPosition": {
+                                    "HasIndication": "yes",
+                                    "NumberVotes": 1
+                                },
+                                "TotalNumberVotes": 1
+                            }
+                        ]
+                    }
+                ],
+                "Type": "original"
+            },
+            {
+                "@id": "snapshot-01---spacetown-precinct",
+                "@type": "CVR.CVRSnapshot",
+                "BallotStyleId": "adhoc:ballot-style/spacetown-precinct",
+                "CVRContest": [
+                    {
+                        "@type": "CVR.CVRContest",
+                        "ContestId": "contest-mayor-orbit-city",
+                        "CVRContestSelection": [
+                            {
+                                "@type": "CVR.CVRContestSelection",
+                                "ContestSelectionId": "contest-mayor/selection-cosmo-spacely",
+                                "OptionPosition": 1,
+                                "SelectionPosition": {
+                                    "HasIndication": "yes",
+                                    "NumberVotes": 1
+                                },
+                                "TotalNumberVotes": 1
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "CVR.CVRContest",
+                        "ContestId": "contest-control-board-spaceport",
+                        "CVRContestSelection": [
+                            {
+                                "@type": "CVR.CVRContestSelection",
+                                "ContestSelectionId": "contest-control-board-spaceport/selection-jane-jetson",
+                                "OptionPosition": 1,
+                                "SelectionPosition": {
+                                    "HasIndication": "yes",
+                                    "NumberVotes": 1
+                                },
+                                "TotalNumberVotes": 1
+                            },
+                            {
+                                "@type": "CVR.CVRContestSelection",
+                                "ContestSelectionId": "contest-control-board-spaceport/selection-harlan-ellis",
+                                "OptionPosition": 2,
+                                "SelectionPosition": {
+                                    "HasIndication": "yes",
+                                    "NumberVotes": 1
+                                },
+                                "TotalNumberVotes": 1
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "CVR.CVRContest",
+                        "ContestId": "contest-ballot-measure-gadget-county-1",
+                        "CVRContestSelection": [
+                            {
+                                "@type": "CVR.ContestSelection",
+                                "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
+                                "SelectionPosition": {
+                                    "HasIndication": "yes",
+                                    "NumberVotes": 1
+                                },
+                                "TotalNumberVotes": 1
+                            }
+                        ]
+                    }
+                ],
+                "Type": "original"
             }
         ]
     },
