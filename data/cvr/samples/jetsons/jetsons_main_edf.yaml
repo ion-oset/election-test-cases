@@ -121,12 +121,18 @@ Election:
       '@id': contest-ballot-measure-gadget-county-1
       Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
       ElectionDistrictId: gadget-county
-  # BallotStyle doesn't use '@id'.
-  # It supports 'ExternalIdentifier' but those are formally defined elsewhere.
-  # The structure describes nested sections with each 'OrderedContent' being a
-  # section and each 'HeaderId' being a header shown on the ballot.
+  # NOTE: BallotStyle doesn't use '@id'.
+  # - It supports 'ExternalIdentifier' but those are formally defined.
+  # - We mock up an external ID as a regular '@id' with the prefix 'adhoc:'.
+  # NOTE: The structure describes nested sections with each 'OrderedContent'
+  # being a section and each 'HeaderId' being a header shown on the ballot.
   BallotStyle:
   - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Value: 'adhoc:ballot-style/bedrock-precinct'
+      Type: other
+      OtherType: ad hoc namespace
     GpUnitIds:
     - bedrock-precinct
     OrderedContent:
@@ -136,6 +142,11 @@ Election:
       - '@type': ElectionResults.OrderedContest
         ContestId: contest-ballot-measure-gadget-county-1
   - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Value: 'adhoc:ballot-style/downtown-precinct'
+      Type: other
+      OtherType: ad hoc namespace
     GpUnitIds:
     - downtown-precinct
     OrderedContent:
@@ -150,6 +161,11 @@ Election:
       - '@type': ElectionResults.OrderedContest
         ContestId: contest-ballot-measure-gadget-county-1
   - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Value: 'adhoc:ballot-style/port-precinct'
+      Type: other
+      OtherType: ad hoc namespace
     GpUnitIds:
     - port-precinct
     OrderedContent:
@@ -164,6 +180,11 @@ Election:
       - '@type': ElectionResults.OrderedContest
         ContestId: contest-ballot-measure-gadget-county-1
   - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Value: 'adhoc:ballot-style/spacetown-precinct'
+      Type: other
+      OtherType: ad hoc namespace
     GpUnitIds:
     - spacetown-precinct
     OrderedContent:
