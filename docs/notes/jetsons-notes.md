@@ -106,6 +106,34 @@ Still left to do:
 
 - All the EDF changes are because EDFs allow specifying the content of `BallotStyle`s which CVRs do not. This means the CVR depends on the EDF for the ballot styles and needs to refer to them using the ID created in the EDF.
     - Because of this EDF `BallotStyle` IDs are defined in `ExternalIdentifier`s and not `@id`, and have to follow the rules for external identifiers (which are not defined in the ERR specification).
+    - Several options exist according to the spec using [Open Civic Data Identifiers](https://opencivicdata.readthedocs.io/en/latest/ocdids.html)
+        - A (pseudo/invalid) division ID, where the divisions are as fictional as the Jetsons jurisdiction is:
+
+            ```
+                ocd-division/country:hb/state:js/county:gadget
+                ocd-division/country:hb/state:js/county:gadget/precinct:bedrock
+                ...
+            ```
+
+        where `country:hb` refers to Hanna-Barbera, and `state:js` refers to the Jetsons.
+
+        *Note*: This isn't a valid jurisdiction ID because it isn't registered but it gets the point across.
+
+        - An organization ID, which uses UUIDs to set the prefix. The spec calls for UUID1, but we can use UUID5 parameterized by the project and the jurisdiction:
+
+            ```
+                ocd-organization/{UUID5("Trust the Vote/Jetsons", "Gadget County")}
+                ocd-organization/{UUID5("Trust the Vote/Jetsons", "Bedrock Precinct")}
+                ...
+            ```
+
+    - A simpler answer for the time being is to name them like internal IDs with an obvious namespace prefix (`jetsons:ballot-style-{jurisdiction}`):
+
+        ```
+            jetsons:ballot-style-gadget-county
+            jetsons:ballot-style-bedrock-precinct
+            ...
+        ```
 
 - There's a lot of data overlap between the CVR and the EDF: `Candidate`s, `Contest`s, `GPUnit`s and several other aspects need to be kept in sync. Ideally this is automated, but these examples are still hand-generated.
 
