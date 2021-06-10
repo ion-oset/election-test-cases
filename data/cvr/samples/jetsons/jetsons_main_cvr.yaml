@@ -18,8 +18,8 @@ Election:
     '@id': candidate-harlan-ellis
     Name: Harlan Ellis
   - '@type': CVR.Candidate
-    '@id': candidate-rudy-indexer
-    Name: Rudy Indexer
+    '@id': candidate-rudi-indexer
+    Name: Rudi Indexer
   Contest:
   - '@type': CVR.CandidateContest
     '@id': contest-mayor-orbit-city
@@ -47,23 +47,23 @@ Election:
     NumberElected: 2
     ContestSelection:
     - '@type': CVR.CandidateSelection
-      '@id': contest-control-board/selection-jane-jetson
+      '@id': contest-control-board-spaceport/selection-jane-jetson
       CandidateIds:
       - candidate-jane-jetson
     - '@type': CVR.CandidateSelection
-      '@id': contest-control-board/selection-harlan-ellis
+      '@id': contest-control-board-spaceport/selection-harlan-ellis
       CandidateIds:
       - candidate-harlan-ellis
     - '@type': CVR.CandidateSelection
-      '@id': contest-control-board/selection-rudy-indexer
+      '@id': contest-control-board-spaceport/selection-rudi-indexer
       CandidateIds:
-      - candidate-rudy-indexer
+      - candidate-rudi-indexer
     # NOTE: Write-in slot count has to match 'VotesAllowed'
     - '@type': CVR.CandidateSelection
-      '@id': contest-control-board/selection-write-in-1
+      '@id': contest-control-board-spaceport/selection-write-in-1
       IsWriteIn: true
     - '@type': CVR.CandidateSelection
-      '@id': contest-control-board/selection-write-in-2
+      '@id': contest-control-board-spaceport/selection-write-in-2
       IsWriteIn: true
   - '@type': CVR.BallotMeasureContest
     '@id': contest-ballot-measure-gadget-county-1
@@ -72,13 +72,13 @@ Election:
     VoteVariation: plurality
     ContestSelection:
     - '@type': CVR.BallotMeasureSelection
-      '@id': 'contest-ballot-measure-1/selection-yes'
+      '@id': contest-ballot-measure-1/selection-yes
       Selection: "Yes"
     - '@type': CVR.BallotMeasureSelection
-      '@id': 'contest-ballot-measure-1/selection-no'
+      '@id': contest-ballot-measure-1/selection-no
       Selection: "No"
   # NOTE: This has to be the county.
-  ElectionScopeId: 'gadget-county'
+  ElectionScopeId: gadget-county
 GeneratedDate: '2021-06-01'
 GpUnit:
 - '@type': CVR.GpUnit
@@ -86,40 +86,40 @@ GpUnit:
   Type: other
   OtherType: county
 - '@type': CVR.GpUnit
-  '@id': 'bedrock-precinct'
+  '@id': bedrock-precinct
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: 'GC-1-BRP'
-  Type: 'precinct'
+      Value: GC-1-BRP
+  Type: precinct
 - '@type': CVR.GpUnit
-  '@id': 'downtown-precinct'
+  '@id': downtown-precinct
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: 'GC-4-DPP'
-  Type: 'precinct'
+      Value: GC-4-DPP
+  Type: precinct
 - '@type': CVR.GpUnit
-  '@id': 'port-precinct'
+  '@id': port-precinct
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: 'GC-2-SPP'
-  Type: 'precinct'
+      Value: GC-2-SPP
+  Type: precinct
 - '@type': CVR.GpUnit
-  '@id': 'spacetown-precinct'
+  '@id': spacetown-precinct
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: 'GC-3-STP'
-  Type: 'precinct'
+      Value: GC-3-STP
+  Type: precinct
 Party:
 - '@type': CVR.Party
-  '@id': 'party-hadron'
-  Name: "Hadron Party"
+  '@id': party-hadron
+  Name: Hadron Party
 - '@type': CVR.Party
-  '@id': 'party-lepton'
-  Name: "Lepton Party"
+  '@id': party-lepton
+  Name: Lepton Party
 ReportGeneratingDeviceIds:
 # NOTE: Use the '@id' of the appropriate 'ReportingDevice'.
 - ballot-marker-1

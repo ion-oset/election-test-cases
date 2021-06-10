@@ -29,8 +29,8 @@
                 },
                 {
                     "@type": "CVR.Candidate",
-                    "@id": "candidate-rudy-indexer",
-                    "Name": "Rudy Indexer"
+                    "@id": "candidate-rudi-indexer",
+                    "Name": "Rudi Indexer"
                 }
             ],
             "Contest": [
@@ -71,33 +71,33 @@
                     "ContestSelection": [
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board/selection-jane-jetson",
+                            "@id": "contest-control-board-spaceport/selection-jane-jetson",
                             "CandidateIds": [
                                 "candidate-jane-jetson"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board/selection-harlan-ellis",
+                            "@id": "contest-control-board-spaceport/selection-harlan-ellis",
                             "CandidateIds": [
                                 "candidate-harlan-ellis"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board/selection-rudy-indexer",
+                            "@id": "contest-control-board-spaceport/selection-rudi-indexer",
                             "CandidateIds": [
-                                "candidate-rudy-indexer"
+                                "candidate-rudi-indexer"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board/selection-write-in-1",
+                            "@id": "contest-control-board-spaceport/selection-write-in-1",
                             "IsWriteIn": true
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board/selection-write-in-2",
+                            "@id": "contest-control-board-spaceport/selection-write-in-2",
                             "IsWriteIn": true
                         }
                     ]

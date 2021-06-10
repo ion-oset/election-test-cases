@@ -48,12 +48,12 @@ Election:
         Content: Harlan Ellis
         Language: en
   - '@type': ElectionResults.Candidate
-    '@id': candidate-rudy-indexer
+    '@id': candidate-rudi-indexer
     BallotName:
       '@type': ElectionResults.InternationalizedText
       Text:
       - '@type': ElectionResults.LanguageString
-        Content: Rudy Indexer
+        Content: Rudi Indexer
         Language: en
   # An EDF 'Contest' is more complex than a CVR 'Contest'.
   # - 'Name' is required. A non-minimal 'Contest' would require 'BallotTitle'
@@ -105,16 +105,16 @@ Election:
         CandidateIds:
         - candidate-harlan-ellis
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board-spaceport/selection-rudy-indexer
+        '@id': contest-control-board-spaceport/selection-rudi-indexer
         SequenceOrder: 3
         CandidateIds:
-        - candidate-rudy-indexer
+        - candidate-rudi-indexer
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board/selection-write-in-1
+        '@id': contest-control-board-spaceport/selection-write-in-1
         SequenceOrder: 4
         IsWriteIn: true
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board/selection-write-in-2
+        '@id': contest-control-board-spaceport/selection-write-in-2
         SequenceOrder: 5
         IsWriteIn: true
     - '@type': ElectionResults.BallotMeasureContest
@@ -274,7 +274,7 @@ Issuer: State
 IssuerAbbreviation: US
 Party:
 - '@type': ElectionResults.Party
-  '@id': 'party-hadron'
+  '@id': party-hadron
   Name:
     '@type': ElectionResults.InternationalizedText
     Text:
@@ -282,7 +282,7 @@ Party:
       Content: Hadron Party
       Language: en
 - '@type': ElectionResults.Party
-  '@id': 'party-lepton'
+  '@id': party-lepton
   Name:
     '@type': ElectionResults.InternationalizedText
     Text:
