@@ -76,13 +76,13 @@
                 },
                 {
                     "@type": "ElectionResults.Candidate",
-                    "@id": "candidate-rudy-indexer",
+                    "@id": "candidate-rudi-indexer",
                     "BallotName": {
                         "@type": "ElectionResults.InternationalizedText",
                         "Text": [
                             {
                                 "@type": "ElectionResults.LanguageString",
-                                "Content": "Rudy Indexer",
+                                "Content": "Rudi Indexer",
                                 "Language": "en"
                             }
                         ]
@@ -154,21 +154,21 @@
                         },
                         {
                             "@type": "ElectionResults.CandidateSelection",
-                            "@id": "contest-control-board-spaceport/selection-rudy-indexer",
+                            "@id": "contest-control-board-spaceport/selection-rudi-indexer",
                             "SequenceOrder": 3,
                             "CandidateIds": [
-                                "candidate-rudy-indexer"
+                                "candidate-rudi-indexer"
                             ]
                         },
                         {
                             "@type": "ElectionResults.CandidateSelection",
-                            "@id": "contest-control-board/selection-write-in-1",
+                            "@id": "contest-control-board-spaceport/selection-write-in-1",
                             "SequenceOrder": 4,
                             "IsWriteIn": true
                         },
                         {
                             "@type": "ElectionResults.CandidateSelection",
-                            "@id": "contest-control-board/selection-write-in-2",
+                            "@id": "contest-control-board-spaceport/selection-write-in-2",
                             "SequenceOrder": 5,
                             "IsWriteIn": true
                         }
