@@ -1,4 +1,51 @@
 '@type': CVR.CastVoteRecordReport
+CVR:
+  # NOTE: This file should only have one snapshot:
+  # The one generated when the ballot is marked by the voter.
+  CurrentSnapshotId: snapshot-01
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    # NOTE: 'CVRContestSelection.OptionPosition' should match
+    # 'ContestSelection.SequenceOrder' in the EDF.
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-mayor-orbit-city
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: candidate-cosmo-spacely
+        OptionPosition: 1
+        SelectionPosition:
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: contest-control-board-spaceport
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: candidate-jane-jetson
+        OptionPosition: 1
+        SelectionPosition:
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: candidate-harlan-ellis
+        OptionPosition: 2
+        SelectionPosition:
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: contest-ballot-measure-gadget-county-1
+      CVRContestSelection:
+      - '@type': CVR.ContestSelection
+        ContestSelectionId: contest-ballot-measure-1-selection-yes
+        SelectionPosition:
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    Type: interpreted
 Election:
 - '@type': CVR.Election
   '@id': gadget-county-2021-06
