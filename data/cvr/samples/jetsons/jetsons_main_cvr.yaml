@@ -13,7 +13,7 @@ CVR:
       ContestId: contest-mayor-orbit-city
       CVRContestSelection:
       - '@type': CVR.CVRContestSelection
-        ContestSelectionId: candidate-cosmo-spacely
+        ContestSelectionId: contest-mayor/selection-cosmo-spacely
         OptionPosition: 1
         SelectionPosition:
           HasIndication: 'yes'
@@ -30,7 +30,7 @@ CVR:
           NumberVotes: 1
         TotalNumberVotes: 1
       - '@type': CVR.CVRContestSelection
-        ContestSelectionId: candidate-harlan-ellis
+        ContestSelectionId: contest-control-board-spaceport/selection-jane-jetson
         OptionPosition: 2
         SelectionPosition:
           HasIndication: 'yes'
@@ -40,12 +40,12 @@ CVR:
       ContestId: contest-ballot-measure-gadget-county-1
       CVRContestSelection:
       - '@type': CVR.ContestSelection
-        ContestSelectionId: contest-ballot-measure-1-selection-yes
+        ContestSelectionId: contest-ballot-measure-1/selection-yes
         SelectionPosition:
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
-    Type: interpreted
+    Type: original
 Election:
 - '@type': CVR.Election
   '@id': gadget-county-2021-06
