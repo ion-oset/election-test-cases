@@ -184,6 +184,14 @@
             "BallotStyle": [
                 {
                     "@type": "ElectionResults.BallotStyle",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Value": "adhoc:ballot-style/bedrock-precinct",
+                            "Type": "other",
+                            "OtherType": "ad hoc namespace"
+                        }
+                    ],
                     "GpUnitIds": [
                         "bedrock-precinct"
                     ],
@@ -202,6 +210,14 @@
                 },
                 {
                     "@type": "ElectionResults.BallotStyle",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Value": "adhoc:ballot-style/downtown-precinct",
+                            "Type": "other",
+                            "OtherType": "ad hoc namespace"
+                        }
+                    ],
                     "GpUnitIds": [
                         "downtown-precinct"
                     ],
@@ -230,6 +246,14 @@
                 },
                 {
                     "@type": "ElectionResults.BallotStyle",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Value": "adhoc:ballot-style/port-precinct",
+                            "Type": "other",
+                            "OtherType": "ad hoc namespace"
+                        }
+                    ],
                     "GpUnitIds": [
                         "port-precinct"
                     ],
@@ -258,6 +282,14 @@
                 },
                 {
                     "@type": "ElectionResults.BallotStyle",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Value": "adhoc:ballot-style/spacetown-precinct",
+                            "Type": "other",
+                            "OtherType": "ad hoc namespace"
+                        }
+                    ],
                     "GpUnitIds": [
                         "spacetown-precinct"
                     ],
