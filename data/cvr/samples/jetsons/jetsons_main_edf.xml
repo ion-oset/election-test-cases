@@ -102,9 +102,9 @@
                 <Text Language="en">Harlan Ellis</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate-rudy-indexer">
+        <Candidate ObjectId="candidate-rudi-indexer">
             <BallotName>
-                <Text Language="en">Rudy Indexer</Text>
+                <Text Language="en">Rudi Indexer</Text>
             </BallotName>
         </Candidate>
 
@@ -144,9 +144,9 @@
                 <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
             
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-rudy-indexer">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-rudi-indexer">
                 <SequenceOrder>3</SequenceOrder>
-                <CandidateIds>candidate-rudy-indexer</CandidateIds>
+                <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             
             <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-write-in-1">
