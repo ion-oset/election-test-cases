@@ -9,6 +9,7 @@
                 <HeaderId>header-ballot-measures</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
+                    <OrderedContestSelectionIds>contest-ballot-measure-gadget-county-1</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
@@ -18,6 +19,7 @@
                 <HeaderId>header-mayor-orbit-city</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-mayor-orbit-city</ContestId>
+                    <OrderedContestSelectionIds>candidate-cosmo-spacely candidate-jane-jetson</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
             <OrderedContent xsi:type="OrderedHeader">
@@ -64,6 +66,7 @@
                 <HeaderId>header-mayor-orbit-city</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-mayor-orbit-city</ContestId>
+                    <OrderedContestSelectionIds>candidate-cosmo-spacely candidate-spencer-cogswell</OrderedContestSelectionIds>
                 </OrderedContent>
                 <OrderedContent xsi:type="OrderedHeader">
                     <HeaderId>header-control-board-spaceport</HeaderId>
@@ -106,17 +109,66 @@
         </Candidate>
 
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-cosmo-spacely">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate-cosmo-spacely</CandidateIds>
+                <EndorsementPartyIds>party-lepton</EndorsementPartyIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-spencer-cogswell">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate-spencer-cogswell</CandidateIds>
+                <EndorsementPartyIds>party-hadron</EndorsementPartyIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-write-in">
+                <SequenceOrder>3</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>      
+            
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
             <Name>Mayor of Orbit City</Name>
             <VoteVariation>plurality</VoteVariation>
             <VotesAllowed>1</VotesAllowed>
         </Contest>
+        
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-jane-jetson">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate-jane-jetson</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-harlan-ellis">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate-harlan-ellis</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-rudy-indexer">
+                <SequenceOrder>3</SequenceOrder>
+                <CandidateIds>candidate-rudy-indexer</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-write-in-1">
+                <SequenceOrder>4</SequenceOrder>
+                <CandidateIds> contest-control-board-spaceport-selection-write-in-1</CandidateIds>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-write-in-2">
+                <SequenceOrder>5</SequenceOrder>
+                <CandidateIds> contest-control-board-spaceport-selection-write-in-2</CandidateIds>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            
+            
+            
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
             <Name>Spaceport Control Board</Name>
             <VoteVariation>n-of-m</VoteVariation>
             <VotesAllowed>2</VotesAllowed>
         </Contest>
+        
         <Contest xsi:type="BallotMeasureContest" ObjectId="contest-ballot-measure-gadget-county-1">
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
             <Name>Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Name>
@@ -187,6 +239,16 @@
     </Header>
     <Issuer>State</Issuer>
     <IssuerAbbreviation>US</IssuerAbbreviation>
+    <Party ObjectId="party-hadron">
+        <Name>
+            <Text Language="en">Hadron Party</Text>
+        </Name>
+    </Party>
+    <Party ObjectId="party-lepton">
+        <Name>
+            <Text Language="en">Lepton Party</Text>
+        </Name>
+    </Party>
     <SequenceStart>1</SequenceStart>
     <SequenceEnd>1</SequenceEnd>
     <Status>pre-election</Status>
