@@ -9,17 +9,16 @@
                 <HeaderId>header-ballot-measures</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
-                    <OrderedContestSelectionIds>contest-ballot-measure-gadget-county-1</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
+        
         <BallotStyle>
             <GpUnitIds>downtown-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-mayor-orbit-city</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-mayor-orbit-city</ContestId>
-                    <OrderedContestSelectionIds>candidate-cosmo-spacely candidate-jane-jetson</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
             <OrderedContent xsi:type="OrderedHeader">
@@ -36,9 +35,9 @@
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-control-board-spaceport</ContestId>
                 </OrderedContent>
-                <OrderedContent xsi:type="OrderedHeader">
-                    <HeaderId>header-ballot-measures</HeaderId>
-                </OrderedContent>
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>header-ballot-measures</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 </OrderedContent>
@@ -50,38 +49,38 @@
                 <HeaderId>header-control-board-spaceport</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-control-board-spaceport</ContestId>
-                </OrderedContent>
-                <OrderedContent xsi:type="OrderedHeader">
-                    <HeaderId>header-ballot-measures</HeaderId>
-                    <OrderedContent xsi:type="OrderedContest">
-                        <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
-                    </OrderedContent>
+                </OrderedContent>           
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>header-ballot-measures</HeaderId>
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
-
+        
         <BallotStyle>
             <GpUnitIds>spacetown-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-mayor-orbit-city</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-mayor-orbit-city</ContestId>
-                    <OrderedContestSelectionIds>candidate-cosmo-spacely candidate-spencer-cogswell</OrderedContestSelectionIds>
                 </OrderedContent>
-                <OrderedContent xsi:type="OrderedHeader">
-                    <HeaderId>header-control-board-spaceport</HeaderId>
-                    <OrderedContent xsi:type="OrderedContest">
-                        <ContestId>contest-control-board-spaceport</ContestId>
-                    </OrderedContent>
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>header-control-board-spaceport</HeaderId>
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>contest-control-board-spaceport</ContestId>
                 </OrderedContent>
-                <OrderedContent xsi:type="OrderedHeader">
-                    <HeaderId>header-ballot-measures</HeaderId>
-                    <OrderedContent xsi:type="OrderedContest">
-                        <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
-                    </OrderedContent>
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>header-ballot-measures</HeaderId>
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
+        
         <Candidate ObjectId="candidate-cosmo-spacely">
             <BallotName>
                 <Text Language="en">Cosmo Spacely</Text>
