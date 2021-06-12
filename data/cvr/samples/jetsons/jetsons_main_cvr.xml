@@ -66,8 +66,8 @@
         <Candidate ObjectId="candidate-harlan-ellis">
             <Name>Harlan Ellis</Name>
         </Candidate>
-        <Candidate ObjectId="candidate-rudy-indexer">
-            <Name>Rudy Indexer</Name>
+        <Candidate ObjectId="candidate-rudi-indexer">
+            <Name>Rudi Indexer</Name>
         </Candidate>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             <ContestSelection xsi:type="CandidateSelection"
@@ -96,7 +96,7 @@
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board-selection-rudy-indexer">
-                <CandidateIds>candidate-rudy-indexer</CandidateIds>
+                <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board-write-in-1">

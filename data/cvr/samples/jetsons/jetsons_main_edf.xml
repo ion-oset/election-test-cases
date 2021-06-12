@@ -18,6 +18,10 @@
         </BallotStyle>
 
         <BallotStyle>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>downtown-precinct-ballot</Value>
+            </ExternalIdentifier>
             <GpUnitIds>downtown-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-mayor-orbit-city</HeaderId>
@@ -91,13 +95,17 @@
             </BallotName>
             <ExternalIdentifier>
                 <Type>local-level</Type>
-                <Value>cosmo_spacely</Value>
+                <Value>candidate-cosmo-spacely-id</Value>
             </ExternalIdentifier>
         </Candidate>
         <Candidate ObjectId="candidate-spencer-cogswell">
             <BallotName>
                 <Text Language="en">Spencer Cogswell</Text>
             </BallotName>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>candidate-spencer-cogswell-id</Value>
+            </ExternalIdentifier>
         </Candidate>
         <Candidate ObjectId="candidate-jane-jetson">
             <BallotName>
@@ -115,7 +123,7 @@
             </BallotName>
         </Candidate>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
-
+            
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-mayor-selection-cosmo-spacely">
                 <SequenceOrder>1</SequenceOrder>
