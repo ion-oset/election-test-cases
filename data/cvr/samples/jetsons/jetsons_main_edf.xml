@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 ../../../edf/schemas/nist-edf-v2_xmlschema.xml"
- xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 ../../../edf/schemas/nist-edf-v2_xmlschema.xml"
+    xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
     <Election>
         <BallotStyle>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>bedrock-precinct-ballot</Value>
+            </ExternalIdentifier>
             <GpUnitIds>bedrock-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-ballot-measures</HeaderId>
@@ -12,7 +16,7 @@
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
-        
+
         <BallotStyle>
             <GpUnitIds>downtown-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
@@ -49,7 +53,7 @@
                 <HeaderId>header-control-board-spaceport</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-control-board-spaceport</ContestId>
-                </OrderedContent>           
+                </OrderedContent>
             </OrderedContent>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-ballot-measures</HeaderId>
@@ -58,7 +62,7 @@
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
-        
+
         <BallotStyle>
             <GpUnitIds>spacetown-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
@@ -80,11 +84,15 @@
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
-        
+
         <Candidate ObjectId="candidate-cosmo-spacely">
             <BallotName>
                 <Text Language="en">Cosmo Spacely</Text>
             </BallotName>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>cosmo_spacely</Value>
+            </ExternalIdentifier>
         </Candidate>
         <Candidate ObjectId="candidate-spencer-cogswell">
             <BallotName>
@@ -106,74 +114,93 @@
                 <Text Language="en">Rudi Indexer</Text>
             </BallotName>
         </Candidate>
-
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
-            
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-cosmo-spacely">
+
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-mayor-selection-cosmo-spacely">
                 <SequenceOrder>1</SequenceOrder>
                 <CandidateIds>candidate-cosmo-spacely</CandidateIds>
                 <EndorsementPartyIds>party-lepton</EndorsementPartyIds>
             </ContestSelection>
-            
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-spencer-cogswell">
+
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-mayor-selection-spencer-cogswell">
                 <SequenceOrder>2</SequenceOrder>
                 <CandidateIds>candidate-spencer-cogswell</CandidateIds>
                 <EndorsementPartyIds>party-hadron</EndorsementPartyIds>
             </ContestSelection>
-            
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-write-in">
+
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-mayor-selection-write-in">
                 <SequenceOrder>3</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
-            </ContestSelection>      
-            
+            </ContestSelection>
+
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>gc-mayor-orbit-city</Value>
+            </ExternalIdentifier>
             <Name>Mayor of Orbit City</Name>
             <VoteVariation>plurality</VoteVariation>
             <VotesAllowed>1</VotesAllowed>
         </Contest>
-        
+
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-jane-jetson">
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-control-board-spaceport-selection-jane-jetson">
                 <SequenceOrder>1</SequenceOrder>
                 <CandidateIds>candidate-jane-jetson</CandidateIds>
             </ContestSelection>
-            
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-harlan-ellis">
+
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-control-board-spaceport-selection-harlan-ellis">
                 <SequenceOrder>2</SequenceOrder>
                 <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
-            
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-rudi-indexer">
+
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-control-board-spaceport-selection-rudi-indexer">
                 <SequenceOrder>3</SequenceOrder>
                 <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
-            
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-write-in-1">
+
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-control-board-spaceport-selection-write-in-1">
                 <SequenceOrder>4</SequenceOrder>
                 <CandidateIds> contest-control-board-spaceport-selection-write-in-1</CandidateIds>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-            
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-control-board-spaceport-selection-write-in-2">
+
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-control-board-spaceport-selection-write-in-2">
                 <SequenceOrder>5</SequenceOrder>
                 <CandidateIds> contest-control-board-spaceport-selection-write-in-2</CandidateIds>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-            
-            
-            
+
+
+
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
             <Name>Spaceport Control Board</Name>
             <VoteVariation>n-of-m</VoteVariation>
             <VotesAllowed>2</VotesAllowed>
         </Contest>
-        
+
         <Contest xsi:type="BallotMeasureContest" ObjectId="contest-ballot-measure-gadget-county-1">
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>contest-gadget-county-ballot-measure-1</Value>
+            </ExternalIdentifier>
             <Name>Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Name>
         </Contest>
 
         <ElectionScopeId>gadget-county</ElectionScopeId>
+        <ExternalIdentifier>
+            <Type>local-level</Type>
+            <Value>gadget_county_election</Value>
+        </ExternalIdentifier>
         <Name>
             <Text Language="en">Gadget County Elections</Text>
         </Name>

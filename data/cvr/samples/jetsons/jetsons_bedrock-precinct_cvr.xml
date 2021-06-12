@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
+    <CVR>
+        <BallotImage>
+            <Image FileName="bedrock_ballot_1" MimeType="application/pdf" />
+        </BallotImage>
+        <BallotStyleId>bedrock-precinct-ballot</BallotStyleId>
+        <CurrentSnapshotId>sn_2</CurrentSnapshotId>
+        <CVRSnapshot ObjectId="sn_2">
+            <CVRContest>
+                <ContestId>ballot measure 1</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>contest_selection_yes</ContestSelectionId>
+                    <TotalNumberVotes>1</TotalNumberVotes>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>interpreted</Type>
+        </CVRSnapshot>
+        <CVRSnapshot ObjectId="sn_1">
+            <CVRContest>
+                <ContestId>ballot measure 1</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>contest_selection_yes</ContestSelectionId>
+                    <SelectionPosition>
+                        <HasIndication>yes</HasIndication>
+                        <IsAllocable>yes</IsAllocable>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>interpreted</Type>
+        </CVRSnapshot>
+
+        <!-- Base snapshot is derived from the output from the mobile app -->
+        <CVRSnapshot ObjectId="sn_0">
+            <CVRContest>
+                <ContestId>ballot measure 1</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>contest_selection_yes</ContestSelectionId>
+                    <SelectionPosition>
+                        <HasIndication>yes</HasIndication>
+                        <IsAllocable>unknown</IsAllocable>
+                    </SelectionPosition>
+                </CVRContestSelection>
+                <CVRContestSelection>
+                    <ContestSelectionId>contest_selection_no</ContestSelectionId>
+                    <SelectionPosition>
+                        <HasIndication>no</HasIndication>
+                        <IsAllocable>no</IsAllocable>
+                    </SelectionPosition>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>original</Type>
+        </CVRSnapshot>
+        <ElectionId>gadget_county_election</ElectionId>
+    </CVR>
+    <Election ObjectId="gadget-county-2021-06">
+        <Contest ObjectId="ballot_measure_1" xsi:type="BallotMeasureContest">
+            <Code>
+                <Type>local-level</Type>
+                <Value>contest-gadget-county-ballot-measure-1</Value>
+            </Code>
+            <Abbreviation>Ballot Measure 1</Abbreviation>
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_selection_yes">
+                <Code>
+                    <Type>local-level</Type>
+                    <Value>yes</Value>
+                </Code>
+            </ContestSelection>
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_selection_no">
+                <Code>
+                    <Type>local-level</Type>
+                    <Value>no</Value>
+                </Code>
+            </ContestSelection>
+        </Contest>
+        <Code>
+            <Type>local-level</Type>
+            <Value>gadget_county_election</Value>
+        </Code>
+        <ElectionScopeId>bedrock-precinct</ElectionScopeId>
+    </Election>
+    <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
+    <GpUnit ObjectId="bedrock-precinct">
+        <Name>bedrock precinct</Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <ReportGeneratingDeviceIds>_RD1</ReportGeneratingDeviceIds>
+    <ReportingDevice ObjectId="_RD1">
+        <Application>Trust the Vote application</Application>
+    </ReportingDevice>
+    <Version>1.2.2</Version>
+</CastVoteRecordReport>
