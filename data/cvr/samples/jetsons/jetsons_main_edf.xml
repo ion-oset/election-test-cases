@@ -125,21 +125,21 @@
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor-selection-cosmo-spacely">
+                ObjectId="contest-mayor--selection-cosmo-spacely">
                 <SequenceOrder>1</SequenceOrder>
                 <CandidateIds>candidate-cosmo-spacely</CandidateIds>
                 <EndorsementPartyIds>party-lepton</EndorsementPartyIds>
             </ContestSelection>
 
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor-selection-spencer-cogswell">
+                ObjectId="contest-mayor--selection-spencer-cogswell">
                 <SequenceOrder>2</SequenceOrder>
                 <CandidateIds>candidate-spencer-cogswell</CandidateIds>
                 <EndorsementPartyIds>party-hadron</EndorsementPartyIds>
             </ContestSelection>
 
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor-selection-write-in">
+                ObjectId="contest-mayor--selection-write-in">
                 <SequenceOrder>3</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
@@ -147,7 +147,7 @@
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
             <ExternalIdentifier>
                 <Type>local-level</Type>
-                <Value>gc-mayor-orbit-city</Value>
+                <Value>gadget-county-mayor-orbit-city</Value>
             </ExternalIdentifier>
             <Name>Mayor of Orbit City</Name>
             <VoteVariation>plurality</VoteVariation>
@@ -156,34 +156,34 @@
 
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-spaceport-selection-jane-jetson">
+                ObjectId="contest-control-board-spaceport--selection-jane-jetson">
                 <SequenceOrder>1</SequenceOrder>
                 <CandidateIds>candidate-jane-jetson</CandidateIds>
             </ContestSelection>
 
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-spaceport-selection-harlan-ellis">
+                ObjectId="contest-control-board-spaceport--selection-harlan-ellis">
                 <SequenceOrder>2</SequenceOrder>
                 <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
 
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-spaceport-selection-rudi-indexer">
+                ObjectId="contest-control-board-spaceport--selection-rudi-indexer">
                 <SequenceOrder>3</SequenceOrder>
                 <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
 
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-spaceport-selection-write-in-1">
+                ObjectId="contest-control-board-spaceport--selection-write-in-1">
                 <SequenceOrder>4</SequenceOrder>
-                <CandidateIds> contest-control-board-spaceport-selection-write-in-1</CandidateIds>
+                <CandidateIds> contest-control-board-spaceport--selection-write-in-1</CandidateIds>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
 
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-spaceport-selection-write-in-2">
+                ObjectId="contest-control-board-spaceport--selection-write-in-2">
                 <SequenceOrder>5</SequenceOrder>
-                <CandidateIds> contest-control-board-spaceport-selection-write-in-2</CandidateIds>
+                <CandidateIds> contest-control-board-spaceport--selection-write-in-2</CandidateIds>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
 
@@ -207,7 +207,7 @@
         <ElectionScopeId>gadget-county</ElectionScopeId>
         <ExternalIdentifier>
             <Type>local-level</Type>
-            <Value>gadget_county_election</Value>
+            <Value>election-gadget-county</Value>
         </ExternalIdentifier>
         <Name>
             <Text Language="en">Gadget County Elections</Text>
