@@ -5,7 +5,6 @@
     <CVR>
         <BallotStyleId>downtown-precinct-ballot</BallotStyleId>
         <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
-        
         <!-- Base snapshot is derived from the output from the mobile app -->
         <CVRSnapshot ObjectId="snapshot-01">
             <CVRContest>
@@ -22,7 +21,6 @@
                 <Undervotes>0</Undervotes>
                 <WriteIns>0</WriteIns>
             </CVRContest>
-                
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 <CVRContestSelection>
@@ -53,7 +51,6 @@
             </Code>
             <Name>Spencer Cogswell</Name>
         </Candidate>
-        
         <Code>
             <Type>local-level</Type>
             <Value>downtown-precinct</Value>
@@ -79,23 +76,21 @@
                     <Type>local-level</Type>
                     <Value>yes</Value>
                 </Code>
-                <Selection>yes</Selection>
+                <Selection>Yes</Selection>
             </ContestSelection>
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_selection_no">
                 <Code>
                     <Type>local-level</Type>
                     <Value>no</Value>
                 </Code>
-                <Selection>no</Selection>
+                <Selection>No</Selection>
             </ContestSelection>
         </Contest>
-        
         <ElectionScopeId>downtown-precinct</ElectionScopeId>
     </Election>
-    
     <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
     <GpUnit ObjectId="downtown-precinct">
-        <Name>downtown precinct</Name>
+        <Name>Downtown Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
     <ReportGeneratingDeviceIds>_RD1</ReportGeneratingDeviceIds>
