@@ -36,6 +36,10 @@
             </OrderedContent>
         </BallotStyle>
         <BallotStyle>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>ballot-style-port-precinct</Value>
+            </ExternalIdentifier>
             <GpUnitIds>port-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-control-board-spaceport</HeaderId>
@@ -66,6 +70,10 @@
             </OrderedContent>
         </BallotStyle>
         <BallotStyle>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>ballot-style-spacetown-precinct</Value>
+            </ExternalIdentifier>
             <GpUnitIds>spacetown-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-mayor-orbit-city</HeaderId>
@@ -92,7 +100,7 @@
             </BallotName>
             <ExternalIdentifier>
                 <Type>local-level</Type>
-                <Value>candidate-cosmo-spacely-id</Value>
+                <Value>candidate-cosmo-spacely</Value>
             </ExternalIdentifier>
         </Candidate>
         <Candidate ObjectId="candidate-spencer-cogswell">
@@ -101,23 +109,35 @@
             </BallotName>
             <ExternalIdentifier>
                 <Type>local-level</Type>
-                <Value>candidate-spencer-cogswell-id</Value>
+                <Value>candidate-spencer-cogswell</Value>
             </ExternalIdentifier>
         </Candidate>
         <Candidate ObjectId="candidate-jane-jetson">
             <BallotName>
                 <Text Language="en">Jane Jetson</Text>
             </BallotName>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>candidate-jane-jetson</Value>
+            </ExternalIdentifier>
         </Candidate>
         <Candidate ObjectId="candidate-harlan-ellis">
             <BallotName>
                 <Text Language="en">Harlan Ellis</Text>
             </BallotName>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>candidate-harlan-ellis</Value>
+            </ExternalIdentifier>
         </Candidate>
         <Candidate ObjectId="candidate-rudi-indexer">
             <BallotName>
                 <Text Language="en">Rudi Indexer</Text>
             </BallotName>
+            <ExternalIdentifier>
+                <Type>local-level</Type>
+                <Value>candidate-rudi-indexer</Value>
+            </ExternalIdentifier>
         </Candidate>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             <ContestSelection xsi:type="CandidateSelection"
@@ -140,7 +160,7 @@
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
             <ExternalIdentifier>
                 <Type>local-level</Type>
-                <Value>gadget-county-mayor-orbit-city</Value>
+                <Value>contest-mayor-orbit-city</Value>
             </ExternalIdentifier>
             <Name>Mayor of Orbit City</Name>
             <VoteVariation>plurality</VoteVariation>
@@ -190,7 +210,7 @@
         <ElectionScopeId>gadget-county</ElectionScopeId>
         <ExternalIdentifier>
             <Type>local-level</Type>
-            <Value>election-gadget-county</Value>
+            <Value>contest-ballot-measure-gadget-county-1</Value>
         </ExternalIdentifier>
         <Name>
             <Text Language="en">Gadget County Elections</Text>
