@@ -25,9 +25,6 @@
                     </SelectionPosition>
                     <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
-                <Overvotes>0</Overvotes>
-                <Selections>2</Selections>
-                <Undervotes>0</Undervotes>
             </CVRContest>
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
