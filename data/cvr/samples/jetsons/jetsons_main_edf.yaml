@@ -123,16 +123,15 @@ Election:
       ElectionDistrictId: gadget-county
   # NOTE: BallotStyle doesn't use '@id'.
   # - It supports 'ExternalIdentifier' but those are formally defined.
-  # - We mock up an external ID as a regular '@id' with the prefix 'adhoc:'.
+  # - Use 'Type: local-level'.
   # NOTE: The structure describes nested sections with each 'OrderedContent'
   # being a section and each 'HeaderId' being a header shown on the ballot.
   BallotStyle:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: 'adhoc:ballot-style/bedrock-precinct'
-      Type: other
-      OtherType: ad hoc namespace
+      Value: ballot-style/bedrock-precinct
+      Type: local-level
     GpUnitIds:
     - bedrock-precinct
     OrderedContent:
@@ -144,9 +143,8 @@ Election:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: 'adhoc:ballot-style/downtown-precinct'
-      Type: other
-      OtherType: ad hoc namespace
+      Value: ballot-style/downtown-precinct
+      Type: local-level
     GpUnitIds:
     - downtown-precinct
     OrderedContent:
@@ -163,9 +161,8 @@ Election:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: 'adhoc:ballot-style/port-precinct'
-      Type: other
-      OtherType: ad hoc namespace
+      Value: ballot-style/port-precinct
+      Type: local-level
     GpUnitIds:
     - port-precinct
     OrderedContent:
@@ -182,9 +179,8 @@ Election:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: 'adhoc:ballot-style/spacetown-precinct'
-      Type: other
-      OtherType: ad hoc namespace
+      Value: ballot-style/spacetown-precinct
+      Type: local-level
     GpUnitIds:
     - spacetown-precinct
     OrderedContent:

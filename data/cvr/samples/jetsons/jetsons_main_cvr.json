@@ -6,7 +6,7 @@
             {
                 "@id": "snapshot-01---bedrock-precinct",
                 "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "adhoc:ballot-style/bedrock-precinct",
+                "BallotStyleId": "ballot-style/bedrock-precinct",
                 "CVRContest": [
                     {
                         "@type": "CVR.CVRContest",
@@ -29,7 +29,7 @@
             {
                 "@id": "snapshot-01---port-precinct",
                 "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "adhoc:ballot-style/port-precinct",
+                "BallotStyleId": "ballot-style/port-precinct",
                 "CVRContest": [
                     {
                         "@type": "CVR.CVRContest",
@@ -82,7 +82,7 @@
             {
                 "@id": "snapshot-01---downtown-precinct",
                 "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "adhoc:ballot-style/downtown-precinct",
+                "BallotStyleId": "ballot-style/downtown-precinct",
                 "CVRContest": [
                     {
                         "@type": "CVR.CVRContest",
@@ -121,7 +121,7 @@
             {
                 "@id": "snapshot-01---spacetown-precinct",
                 "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "adhoc:ballot-style/spacetown-precinct",
+                "BallotStyleId": "ballot-style/spacetown-precinct",
                 "CVRContest": [
                     {
                         "@type": "CVR.CVRContest",

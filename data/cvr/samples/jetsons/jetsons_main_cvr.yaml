@@ -14,7 +14,7 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: 'adhoc:ballot-style/bedrock-precinct'
+    BallotStyleId: ballot-style/bedrock-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-ballot-measure-gadget-county-1
@@ -31,7 +31,7 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: 'adhoc:ballot-style/port-precinct'
+    BallotStyleId: ballot-style/port-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-control-board-spaceport
@@ -68,7 +68,7 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: 'adhoc:ballot-style/downtown-precinct'
+    BallotStyleId: ballot-style/downtown-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-mayor-orbit-city
@@ -95,7 +95,7 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: 'adhoc:ballot-style/spacetown-precinct'
+    BallotStyleId: ballot-style/spacetown-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-mayor-orbit-city
