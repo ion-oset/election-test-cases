@@ -225,28 +225,28 @@ GpUnit:
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: GC-1-BRP
+      Value: bedrock-precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': downtown-precinct
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: GC-4-DPP
+      Value: downtown-precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': port-precinct
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: GC-2-SPP
+      Value: port-precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': spacetown-precinct
   Code:
     - '@type': CVR.Code
       Type: local-level
-      Value: GC-3-STP
+      Value: spacetown-precinct
   Type: precinct
 Party:
 - '@type': CVR.Party
