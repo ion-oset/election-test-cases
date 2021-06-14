@@ -3,8 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 ../../schemas/NIST_V0_cast_vote_records.xsd">
     <CVR>
-        <CurrentSnapshotId>snapshot_1</CurrentSnapshotId>
-        <CVRSnapshot ObjectId="snapshot_1">
+        <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
+        <CVRSnapshot ObjectId="snapshot-01">
             <CVRContest>
                 <ContestId>contest-mayor-orbit-city</ContestId>
                 <CVRContestSelection>
@@ -39,7 +39,7 @@
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-ballot-measure-1-selection-yes</ContestSelectionId>
+                    <ContestSelectionId>contest-ballot-measure-1--selection-yes</ContestSelectionId>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
@@ -71,15 +71,15 @@
         </Candidate>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor-selection-cosmo-spacely">
+                ObjectId="contest-mayor--selection-cosmo-spacely">
                 <CandidateIds>candidate-cosmo-spacely</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor-selection-spencer-cogswell">
+                ObjectId="contest-mayor--selection-spencer-cogswell">
                 <CandidateIds>candidate-spencer-cogswell</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor-selection-write-in">
+                ObjectId="contest-mayor--selection-write-in">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
             <Name>Mayor of Orbit City</Name>
@@ -87,15 +87,15 @@
         </Contest>
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-selection-jane-jetson">
+                ObjectId="contest-control-board--selection-jane-jetson">
                 <CandidateIds>candidate-jane-jetson</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-selection-harlan-ellis">
+                ObjectId="contest-control-board--selection-harlan-ellis">
                 <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-selection-rudy-indexer">
+                ObjectId="contest-control-board--selection-rudy-indexer">
                 <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
@@ -113,11 +113,11 @@
         </Contest>
         <Contest xsi:type="BallotMeasureContest" ObjectId="contest-ballot-measure-gadget-county-1">
             <ContestSelection xsi:type="BallotMeasureSelection"
-                ObjectId="contest-ballot-measure-1-selection-yes">
+                ObjectId="contest-ballot-measure-1--selection-yes">
                 <Selection>Yes</Selection>
             </ContestSelection>
             <ContestSelection xsi:type="BallotMeasureSelection"
-                ObjectId="contest-ballot-measure-1-selection-no">
+                ObjectId="contest-ballot-measure-1--selection-no">
                 <Selection>No</Selection>
             </ContestSelection>
             <Name>Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Name>

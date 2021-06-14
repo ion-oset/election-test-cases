@@ -3,7 +3,7 @@
  xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 ../../../../../CastVoteRecords/NIST_V0_cast_vote_records.xsd"
  xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
     <CVR>
-        <BallotStyleId>bedrock-precinct-ballot</BallotStyleId>
+        <BallotStyleId>ballot-style-bedrock-precinct</BallotStyleId>
         <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
         <!-- Base snapshot is derived from the output from the mobile app -->
         <CVRSnapshot ObjectId="snapshot-01">
