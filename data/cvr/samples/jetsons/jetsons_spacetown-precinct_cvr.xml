@@ -3,14 +3,14 @@
     xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 ../../../../../CastVoteRecords/NIST_V0_cast_vote_records.xsd"
     xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
     <CVR>
-        <BallotStyleId>port-precinct-ballot</BallotStyleId>
+        <BallotStyleId>ballot-style-port-precinct</BallotStyleId>
         <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
         <!-- Base snapshot is derived from the output from the mobile app -->
         <CVRSnapshot ObjectId="snapshot-01">
             <CVRContest>
                 <ContestId>contest-mayor-orbit-city</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-mayor-selection-spencer-cogswell</ContestSelectionId>
+                    <ContestSelectionId>contest-mayor--selection-spencer-cogswell</ContestSelectionId>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <IsAllocable>yes</IsAllocable>
@@ -24,7 +24,7 @@
             <CVRContest>
                 <ContestId>contest-control-board-spaceport</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-control-board-selection-jane-jetson</ContestSelectionId>
+                    <ContestSelectionId>contest-control-board--selection-jane-jetson</ContestSelectionId>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
@@ -32,7 +32,7 @@
                     <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-control-board-selection-rudi-indexer</ContestSelectionId>
+                    <ContestSelectionId>contest-control-board--selection-rudi-indexer</ContestSelectionId>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
@@ -46,7 +46,7 @@
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest_selection_no</ContestSelectionId>
+                    <ContestSelectionId>contest-ballot-measure-1--selection-no</ContestSelectionId>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <IsAllocable>yes</IsAllocable>
@@ -102,31 +102,31 @@
             <Value>port-precinct</Value>
         </Code>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-cosmo-spacely">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-cosmo-spacely">
                 <CandidateIds>contest-mayor-candidate-cosmo-spacely</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-spencer-cogswell">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-spencer-cogswell">
                 <CandidateIds>contest-mayor-candidate-spencer-cogswell</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-writein">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-write-in">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
         </Contest>
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-selection-jane-jetson">
+                ObjectId="contest-control-board--selection-jane-jetson">
                 <CandidateIds>contest-control-board-spaceport-candidate-jane-jetson</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-selection-harlan-ellis">
+                ObjectId="contest-control-board--selection-harlan-ellis">
                 <CandidateIds>contest-control-board-spaceport-candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-selection-rudi-indexer">
+                ObjectId="contest-control-board--selection-rudi-indexer">
                 <CandidateIds>contest-control-board-spaceport-candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-selection-writein">
+                ObjectId="contest-control-board--selection-write-in">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
         </Contest>
@@ -135,14 +135,14 @@
                 <Type>local-level</Type>
                 <Value>contest-gadget-county-ballot-measure-1</Value>
             </Code>
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_selection_yes">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-yes">
                 <Code>
                     <Type>local-level</Type>
                     <Value>yes</Value>
                 </Code>
                 <Selection>Yes</Selection>
             </ContestSelection>
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_selection_no">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-no">
                 <Code>
                     <Type>local-level</Type>
                     <Value>no</Value>
@@ -157,8 +157,8 @@
         <Name>Spacetown Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
-    <ReportGeneratingDeviceIds>_RD1</ReportGeneratingDeviceIds>
-    <ReportingDevice ObjectId="_RD1">
+    <ReportGeneratingDeviceIds>ballot-marker-1</ReportGeneratingDeviceIds>
+    <ReportingDevice ObjectId="ballot-marker-1">
         <Application>Trust the Vote application</Application>
     </ReportingDevice>
     <Version>1.0.0</Version>

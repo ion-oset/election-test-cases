@@ -6,7 +6,7 @@
         <BallotStyle>
             <ExternalIdentifier>
                 <Type>local-level</Type>
-                <Value>bedrock-precinct-ballot</Value>
+                <Value>ballot-style-bedrock-precinct</Value>
             </ExternalIdentifier>
             <GpUnitIds>bedrock-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
@@ -19,7 +19,7 @@
         <BallotStyle>
             <ExternalIdentifier>
                 <Type>local-level</Type>
-                <Value>downtown-precinct-ballot</Value>
+                <Value>ballot-style-downtown-precinct</Value>
             </ExternalIdentifier>
             <GpUnitIds>downtown-precinct</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
