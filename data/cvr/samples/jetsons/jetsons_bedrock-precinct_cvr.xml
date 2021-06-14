@@ -12,7 +12,7 @@
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest_selection_yes</ContestSelectionId>
+                    <ContestSelectionId>contest-ballot-measure-1--selection-yes</ContestSelectionId>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <IsAllocable>unknown</IsAllocable>

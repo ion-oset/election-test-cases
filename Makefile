@@ -27,7 +27,7 @@ CVR_JSON_PORTED_ext := -ported_cvr.json
 CVR_JSON_CONVERTED_ext := -converted_cvr.json
 
 JSONSCHEMA_ext := jsonschema.json
-XMLSCHEMA_ext := xmlschema.xml
+XMLSCHEMA_ext := xmlschema.xsd
 
 NOTES_MARKDOWN_ext := .md
 NOTES_HTML_ext := .html
@@ -62,8 +62,9 @@ NY_1912_CVR_JSON_files := $(NY_1912_CVR_YAML_files:%$(YAML_ext)=%$(JSON_ext))
 
 JETSONS_CVR_path := $(CVR_SAMPLES_path)/jetsons
 
-JETSONS_CVR_YAML_files := $(wildcard $(JETSONS_CVR_path)/*$(YAML_ext))
-JETSONS_CVR_JSON_files := $(JETSONS_CVR_YAML_files:%$(YAML_ext)=%$(JSON_ext))
+JETSONS_CVR_XML_files := $(wildcard $(JETSONS_CVR_path)/*$(CVR_XML_ext))
+JETSONS_CVR_YAML_files := $(wildcard $(JETSONS_CVR_path)/*$(CVR_YAML_ext))
+JETSONS_CVR_JSON_files := $(JETSONS_CVR_YAML_files:%$(CVR_YAML_ext)=%$(CVR_JSON_ext))
 
 # Schemas
 
@@ -435,7 +436,15 @@ validate-jetsons-cvr-json: $(JETSONS_CVR_JSON_files)
 validate-xml: validate-cvr-xml
 
 
-validate-cvr-xml: validate-nist-cvr-xml
+validate-cvr-xml: \
+	validate-jetsons-cvr-xml \
+	validate-nist-cvr-xml
+
+
+validate-jetsons-cvr-xml: $(JETSONS_CVR_XML_files)
+	@for file in $^; do \
+		$(VALIDATE_XML) --schema $(CVR_XMLSCHEMA_file) $$file; \
+	done
 
 
 validate-nist-cvr-xml: $(NIST_CVR_XML_files)
