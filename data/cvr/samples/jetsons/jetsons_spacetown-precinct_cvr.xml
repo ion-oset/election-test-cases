@@ -5,7 +5,6 @@
     <CVR>
         <BallotStyleId>port-precinct-ballot</BallotStyleId>
         <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
-
         <!-- Base snapshot is derived from the output from the mobile app -->
         <CVRSnapshot ObjectId="snapshot-01">
             <CVRContest>
@@ -22,10 +21,8 @@
                 <Undervotes>0</Undervotes>
                 <WriteIns>0</WriteIns>
             </CVRContest>
-
             <CVRContest>
                 <ContestId>contest-control-board-spaceport</ContestId>
-                
                 <CVRContestSelection>
                     <ContestSelectionId>contest-control-board-selection-jane-jetson</ContestSelectionId>
                     <SelectionPosition>
@@ -34,7 +31,6 @@
                     </SelectionPosition>
                     <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
-                
                 <CVRContestSelection>
                     <ContestSelectionId>contest-control-board-selection-rudi-indexer</ContestSelectionId>
                     <SelectionPosition>
@@ -43,12 +39,10 @@
                     </SelectionPosition>
                     <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
-                
                 <Overvotes>0</Overvotes>
                 <Selections>2</Selections>
                 <Undervotes>0</Undervotes>
             </CVRContest>
-
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 <CVRContestSelection>
@@ -62,9 +56,7 @@
                 <Overvotes>0</Overvotes>
                 <Selections>1</Selections>
                 <Undervotes>0</Undervotes>
-                    
             </CVRContest>
-            
             <Type>original</Type>
         </CVRSnapshot>
         <ElectionId>gadget-county-2021-06</ElectionId>
@@ -84,7 +76,6 @@
             </Code>
             <Name>Spencer Cogswell</Name>
         </Candidate>
-        
         <Candidate ObjectId="contest-control-board-spaceport-candidate-jane-jetson">
             <Code>
                 <Type>local-level</Type>
@@ -106,12 +97,10 @@
             </Code>
             <Name>Rudi Indexer</Name>
         </Candidate>
-
         <Code>
             <Type>local-level</Type>
             <Value>port-precinct</Value>
         </Code>
-        
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor-selection-cosmo-spacely">
                 <CandidateIds>contest-mayor-candidate-cosmo-spacely</CandidateIds>
@@ -123,11 +112,10 @@
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
         </Contest>
-
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board-selection-jane-jetson">
-                <CandidateIds> contest-control-board-spaceport-candidate-jane-jetson</CandidateIds>
+                <CandidateIds>contest-control-board-spaceport-candidate-jane-jetson</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board-selection-harlan-ellis">
@@ -142,7 +130,6 @@
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
         </Contest>
-
         <Contest ObjectId="contest-ballot-measure-gadget-county-1" xsi:type="BallotMeasureContest">
             <Code>
                 <Type>local-level</Type>
@@ -153,23 +140,21 @@
                     <Type>local-level</Type>
                     <Value>yes</Value>
                 </Code>
-                <Selection>yes</Selection>
+                <Selection>Yes</Selection>
             </ContestSelection>
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_selection_no">
                 <Code>
                     <Type>local-level</Type>
                     <Value>no</Value>
                 </Code>
-                <Selection>no</Selection>
+                <Selection>No</Selection>
             </ContestSelection>
         </Contest>
-
-        <ElectionScopeId>downtown-precinct</ElectionScopeId>
+        <ElectionScopeId>spacetown-precinct</ElectionScopeId>
     </Election>
-
     <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
-    <GpUnit ObjectId="downtown-precinct">
-        <Name>downtown precinct</Name>
+    <GpUnit ObjectId="spacetown-precinct">
+        <Name>Spacetown Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
     <ReportGeneratingDeviceIds>_RD1</ReportGeneratingDeviceIds>
