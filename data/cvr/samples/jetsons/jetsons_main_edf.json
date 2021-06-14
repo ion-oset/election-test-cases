@@ -187,9 +187,8 @@
                     "ExternalIdentifier": [
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
-                            "Value": "adhoc:ballot-style/bedrock-precinct",
-                            "Type": "other",
-                            "OtherType": "ad hoc namespace"
+                            "Value": "ballot-style/bedrock-precinct",
+                            "Type": "local-level"
                         }
                     ],
                     "GpUnitIds": [
@@ -213,9 +212,8 @@
                     "ExternalIdentifier": [
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
-                            "Value": "adhoc:ballot-style/downtown-precinct",
-                            "Type": "other",
-                            "OtherType": "ad hoc namespace"
+                            "Value": "ballot-style/downtown-precinct",
+                            "Type": "local-level"
                         }
                     ],
                     "GpUnitIds": [
@@ -249,9 +247,8 @@
                     "ExternalIdentifier": [
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
-                            "Value": "adhoc:ballot-style/port-precinct",
-                            "Type": "other",
-                            "OtherType": "ad hoc namespace"
+                            "Value": "ballot-style/port-precinct",
+                            "Type": "local-level"
                         }
                     ],
                     "GpUnitIds": [
@@ -285,9 +282,8 @@
                     "ExternalIdentifier": [
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
-                            "Value": "adhoc:ballot-style/spacetown-precinct",
-                            "Type": "other",
-                            "OtherType": "ad hoc namespace"
+                            "Value": "ballot-style/spacetown-precinct",
+                            "Type": "local-level"
                         }
                     ],
                     "GpUnitIds": [
