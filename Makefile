@@ -10,6 +10,11 @@ DOCS_path := $(ROOT_path)/docs
 CVR_SAMPLES_path := $(DATA_path)/cvr/samples
 CVR_SCHEMAS_path := $(DATA_path)/cvr/schemas
 
+# Note: EDF samples are currently all in the CVR samples
+# EDF_SAMPLES_path := $(DATA_path)/edf/samples
+EDF_SAMPLES_path := $(DATA_path)/cvr/samples
+EDF_SCHEMAS_path := $(DATA_path)/edf/schemas
+
 NOTES_DOCS_path := $(DOCS_path)/notes
 ANNOTATIONS_DOCS_path := $(DOCS_path)/annotated
 
@@ -25,6 +30,8 @@ CVR_YAML_ext := _cvr.yaml
 
 CVR_JSON_PORTED_ext := -ported_cvr.json
 CVR_JSON_CONVERTED_ext := -converted_cvr.json
+
+EDF_XML_ext := _edf.xml
 
 JSONSCHEMA_ext := jsonschema.json
 XMLSCHEMA_ext := xmlschema.xsd
@@ -61,15 +68,20 @@ NY_1912_CVR_JSON_files := $(NY_1912_CVR_YAML_files:%$(YAML_ext)=%$(JSON_ext))
 # Samples - Jetsons
 
 JETSONS_CVR_path := $(CVR_SAMPLES_path)/jetsons
+JETSONS_EDF_path := $(EDF_SAMPLES_path)/jetsons
 
 JETSONS_CVR_XML_files := $(wildcard $(JETSONS_CVR_path)/*$(CVR_XML_ext))
 JETSONS_CVR_YAML_files := $(wildcard $(JETSONS_CVR_path)/*$(CVR_YAML_ext))
 JETSONS_CVR_JSON_files := $(JETSONS_CVR_YAML_files:%$(CVR_YAML_ext)=%$(CVR_JSON_ext))
 
+JETSONS_EDF_XML_files := $(wildcard $(JETSONS_EDF_path)/*$(EDF_XML_ext))
+
 # Schemas
 
 CVR_JSONSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(JSONSCHEMA_ext)
 CVR_XMLSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(XMLSCHEMA_ext)
+
+EDF_XMLSCHEMA_file := $(EDF_SCHEMAS_path)/nist-edf-v2_$(XMLSCHEMA_ext)
 
 # Notes
 
@@ -433,7 +445,9 @@ validate-jetsons-cvr-json: $(JETSONS_CVR_JSON_files)
 	done
 
 
-validate-xml: validate-cvr-xml
+validate-xml: \
+	validate-cvr-xml \
+	validate-edf-xml
 
 
 validate-cvr-xml: \
@@ -450,4 +464,14 @@ validate-jetsons-cvr-xml: $(JETSONS_CVR_XML_files)
 validate-nist-cvr-xml: $(NIST_CVR_XML_files)
 	@for file in $^; do \
 		$(VALIDATE_XML) --schema $(CVR_XMLSCHEMA_file) $$file; \
+	done
+
+
+validate-edf-xml: \
+	validate-jetsons-edf-xml \
+
+
+validate-jetsons-edf-xml: $(JETSONS_EDF_XML_files)
+	@for file in $^; do \
+		$(VALIDATE_XML) --schema $(EDF_XMLSCHEMA_file) $$file; \
 	done
