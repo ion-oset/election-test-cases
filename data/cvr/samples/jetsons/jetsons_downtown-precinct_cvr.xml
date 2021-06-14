@@ -37,17 +37,17 @@
         <ElectionId>gadget-county-2021-06</ElectionId>
     </CVR>
     <Election ObjectId="gadget-county-2021-06">
-        <Candidate ObjectId="contest-mayor-candidate-cosmo-spacely">
+        <Candidate ObjectId="candidate-cosmo-spacely">
             <Code>
                 <Type>local-level</Type>
-                <Value>candidate-cosmo-spacely-id</Value>
+                <Value>candidate-cosmo-spacely</Value>
             </Code>
             <Name>Cosmo Spacely</Name>
         </Candidate>
-        <Candidate ObjectId="contest-mayor-candidate-spencer-cogswell">
+        <Candidate ObjectId="candidate-spencer-cogswell">
             <Code>
                 <Type>local-level</Type>
-                <Value>candidate-spencer-cogswell-id</Value>
+                <Value>candidate-spencer-cogswell</Value>
             </Code>
             <Name>Spencer Cogswell</Name>
         </Candidate>
@@ -57,10 +57,10 @@
         </Code>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-cosmo-spacely">
-                <CandidateIds>contest-mayor-candidate-cosmo-spacely</CandidateIds>
+                <CandidateIds>candidate-cosmo-spacely</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-spencer-cogswell">
-                <CandidateIds>contest-mayor-candidate-spencer-cogswell</CandidateIds>
+                <CandidateIds>candidate-spencer-cogswell</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-write-in">
                 <IsWriteIn>true</IsWriteIn>

@@ -45,24 +45,24 @@
         <ElectionId>gadget-county-2021-06</ElectionId>
     </CVR>
     <Election ObjectId="gadget-county-2021-06">
-        <Candidate ObjectId="contest-control-board-spaceport-candidate-jane-jetson">
+        <Candidate ObjectId="candidate-jane-jetson">
             <Code>
                 <Type>local-level</Type>
-                <Value>candidate-jane-jetson-id</Value>
+                <Value>candidate-jane-jetson</Value>
             </Code>
             <Name>Jane Jetson</Name>
         </Candidate>
-        <Candidate ObjectId="contest-control-board-spaceport-candidate-harlan-ellis">
+        <Candidate ObjectId="candidate-harlan-ellis">
             <Code>
                 <Type>local-level</Type>
-                <Value>candidate-harlan-ellis-id</Value>
+                <Value>candidate-harlan-ellis</Value>
             </Code>
             <Name>Harlan Ellis</Name>
         </Candidate>
-        <Candidate ObjectId="contest-control-board-spaceport-candidate-rudi-indexer">
+        <Candidate ObjectId="candidate-rudi-indexer">
             <Code>
                 <Type>local-level</Type>
-                <Value>candidate-rudi-indexer-id</Value>
+                <Value>candidate-rudi-indexer</Value>
             </Code>
             <Name>Rudi Indexer</Name>
         </Candidate>
@@ -73,15 +73,15 @@
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board--selection-jane-jetson">
-                <CandidateIds>contest-control-board-spaceport-candidate-jane-jetson</CandidateIds>
+                <CandidateIds>candidate-jane-jetson</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board--selection-harlan-ellis">
-                <CandidateIds>contest-control-board-spaceport-candidate-harlan-ellis</CandidateIds>
+                <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board--selection-rudi-indexer">
-                <CandidateIds>contest-control-board-spaceport-candidate-rudi-indexer</CandidateIds>
+                <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
                 ObjectId="contest-control-board--selection-write-in">
