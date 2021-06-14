@@ -133,28 +133,28 @@
     <GpUnit ObjectId="bedrock-precinct">
         <Code>
             <Type>local-level</Type>
-            <Value>GC-1-BRP</Value>
+            <Value>bedrock-precinct</Value>
         </Code>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="downtown-precinct">
         <Code>
             <Type>local-level</Type>
-            <Value>GC-4-DPP</Value>
+            <Value>downtown-precinct</Value>
         </Code>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="port-precinct">
         <Code>
             <Type>local-level</Type>
-            <Value>GC-2-SPP</Value>
+            <Value>port-precinct</Value>
         </Code>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="spacetown-precinct">
         <Code>
             <Type>local-level</Type>
-            <Value>GC-3-STP</Value>
+            <Value>spacetown-precinct</Value>
         </Code>
         <Type>precinct</Type>
     </GpUnit>
