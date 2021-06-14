@@ -131,31 +131,15 @@
         <OtherType>county</OtherType>
     </GpUnit>
     <GpUnit ObjectId="bedrock-precinct">
-        <Code>
-            <Type>local-level</Type>
-            <Value>bedrock-precinct</Value>
-        </Code>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="downtown-precinct">
-        <Code>
-            <Type>local-level</Type>
-            <Value>downtown-precinct</Value>
-        </Code>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="port-precinct">
-        <Code>
-            <Type>local-level</Type>
-            <Value>port-precinct</Value>
-        </Code>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="spacetown-precinct">
-        <Code>
-            <Type>local-level</Type>
-            <Value>spacetown-precinct</Value>
-        </Code>
         <Type>precinct</Type>
     </GpUnit>
     <Party ObjectId="party-lepton">
