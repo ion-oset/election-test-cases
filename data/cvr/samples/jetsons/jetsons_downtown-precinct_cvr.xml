@@ -17,9 +17,6 @@
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>
                 </CVRContestSelection>
-                <Selections>1</Selections>
-                <Undervotes>0</Undervotes>
-                <WriteIns>0</WriteIns>
             </CVRContest>
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
