@@ -222,31 +222,15 @@ GpUnit:
   OtherType: county
 - '@type': CVR.GpUnit
   '@id': bedrock-precinct
-  Code:
-    - '@type': CVR.Code
-      Type: local-level
-      Value: bedrock-precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': downtown-precinct
-  Code:
-    - '@type': CVR.Code
-      Type: local-level
-      Value: downtown-precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': port-precinct
-  Code:
-    - '@type': CVR.Code
-      Type: local-level
-      Value: port-precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': spacetown-precinct
-  Code:
-    - '@type': CVR.Code
-      Type: local-level
-      Value: spacetown-precinct
   Type: precinct
 Party:
 - '@type': CVR.Party

@@ -35,23 +35,11 @@
     </CVR>
     <Election ObjectId="gadget-county-2021-06">
         <Candidate ObjectId="candidate-cosmo-spacely">
-            <Code>
-                <Type>local-level</Type>
-                <Value>candidate-cosmo-spacely</Value>
-            </Code>
             <Name>Cosmo Spacely</Name>
         </Candidate>
         <Candidate ObjectId="candidate-spencer-cogswell">
-            <Code>
-                <Type>local-level</Type>
-                <Value>candidate-spencer-cogswell</Value>
-            </Code>
             <Name>Spencer Cogswell</Name>
         </Candidate>
-        <Code>
-            <Type>local-level</Type>
-            <Value>downtown-precinct</Value>
-        </Code>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-cosmo-spacely">
                 <CandidateIds>candidate-cosmo-spacely</CandidateIds>
@@ -64,22 +52,10 @@
             </ContestSelection>
         </Contest>
         <Contest ObjectId="contest-ballot-measure-gadget-county-1" xsi:type="BallotMeasureContest">
-            <Code>
-                <Type>local-level</Type>
-                <Value>contest-gadget-county-ballot-measure-1</Value>
-            </Code>
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-yes">
-                <Code>
-                    <Type>local-level</Type>
-                    <Value>yes</Value>
-                </Code>
                 <Selection>Yes</Selection>
             </ContestSelection>
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-no">
-                <Code>
-                    <Type>local-level</Type>
-                    <Value>no</Value>
-                </Code>
                 <Selection>No</Selection>
             </ContestSelection>
         </Contest>

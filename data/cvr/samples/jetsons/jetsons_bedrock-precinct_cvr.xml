@@ -23,27 +23,11 @@
         <ElectionId>gadget-county-2021-06</ElectionId>
     </CVR>
     <Election ObjectId="gadget-county-2021-06">
-        <Code>
-            <Type>local-level</Type>
-            <Value>bedrock-precinct</Value>
-        </Code>
         <Contest ObjectId="contest-ballot-measure-gadget-county-1" xsi:type="BallotMeasureContest">
-            <Code>
-                <Type>local-level</Type>
-                <Value>contest-gadget-county-ballot-measure-1</Value>
-            </Code>
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-yes">
-                <Code>
-                    <Type>local-level</Type>
-                    <Value>yes</Value>
-                </Code>
                 <Selection>Yes</Selection>
             </ContestSelection>
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-no">
-                <Code>
-                    <Type>local-level</Type>
-                    <Value>no</Value>
-                </Code>
                 <Selection>No</Selection>
             </ContestSelection>
         </Contest>
