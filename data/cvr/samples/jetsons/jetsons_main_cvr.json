@@ -1,190 +1,220 @@
 {
     "@type": "CVR.CastVoteRecordReport",
-    "CVR": {
-        "CurrentSnapshotId": "snapshot-01",
-        "CVRSnapshot": [
-            {
-                "@id": "snapshot-01---bedrock-precinct",
-                "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "ballot-style/bedrock-precinct",
-                "CVRContest": [
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-ballot-measure-gadget-county-1",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.ContestSelection",
-                                "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
+    "CVR": [
+        {
+            "@type": "CVR.CVR",
+            "CurrentSnapshotId": "snapshot-01---spacetown-precinct",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01---bedrock-precinct",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-ballot-measure-gadget-county-1",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                },
+                {
+                    "@id": "snapshot-01---port-precinct",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-control-board-spaceport",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-control-board-spaceport/selection-rudi-indexer",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
                                 },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    }
-                ],
-                "Type": "original"
-            },
-            {
-                "@id": "snapshot-01---port-precinct",
-                "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "ballot-style/port-precinct",
-                "CVRContest": [
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-control-board-spaceport",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "contest-control-board-spaceport/selection-rudi-indexer",
-                                "OptionPosition": 1,
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-control-board-spaceport/selection-write-in-1",
+                                    "OptionPosition": 2,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "CVRWriteIn": {
+                                                "@type": "CVR.CVRWriteIn",
+                                                "Text": "Fred Flintstone"
+                                            },
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-ballot-measure-gadget-county-1",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                },
+                {
+                    "@id": "snapshot-01---downtown-precinct",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-mayor-orbit-city",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-mayor/selection-spencer-cogswell",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-ballot-measure-gadget-county-1",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-ballot-measure-1/selection-no",
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                },
+                {
+                    "@id": "snapshot-01---spacetown-precinct",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-mayor-orbit-city",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-mayor/selection-cosmo-spacely",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-control-board-spaceport",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-control-board-spaceport/selection-jane-jetson",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
                                 },
-                                "TotalNumberVotes": 1
-                            },
-                            {
-                                "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "contest-control-board-spaceport/selection-write-in-1",
-                                "CVRWriteIn": {
-                                    "@type": "CVR.CVRWriteIn",
-                                    "Text": "Fred Flintstone"
-                                },
-                                "OptionPosition": 2,
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    },
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-ballot-measure-gadget-county-1",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.ContestSelection",
-                                "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    }
-                ],
-                "Type": "original"
-            },
-            {
-                "@id": "snapshot-01---downtown-precinct",
-                "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "ballot-style/downtown-precinct",
-                "CVRContest": [
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-mayor-orbit-city",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "contest-mayor/selection-spencer-cogswell",
-                                "OptionPosition": 1,
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    },
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-ballot-measure-gadget-county-1",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.ContestSelection",
-                                "ContestSelectionId": "contest-ballot-measure-1/selection-no",
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    }
-                ],
-                "Type": "original"
-            },
-            {
-                "@id": "snapshot-01---spacetown-precinct",
-                "@type": "CVR.CVRSnapshot",
-                "BallotStyleId": "ballot-style/spacetown-precinct",
-                "CVRContest": [
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-mayor-orbit-city",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "contest-mayor/selection-cosmo-spacely",
-                                "OptionPosition": 1,
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    },
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-control-board-spaceport",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "contest-control-board-spaceport/selection-jane-jetson",
-                                "OptionPosition": 1,
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            },
-                            {
-                                "@type": "CVR.CVRContestSelection",
-                                "ContestSelectionId": "contest-control-board-spaceport/selection-harlan-ellis",
-                                "OptionPosition": 2,
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    },
-                    {
-                        "@type": "CVR.CVRContest",
-                        "ContestId": "contest-ballot-measure-gadget-county-1",
-                        "CVRContestSelection": [
-                            {
-                                "@type": "CVR.ContestSelection",
-                                "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
-                                "SelectionPosition": {
-                                    "HasIndication": "yes",
-                                    "NumberVotes": 1
-                                },
-                                "TotalNumberVotes": 1
-                            }
-                        ]
-                    }
-                ],
-                "Type": "original"
-            }
-        ]
-    },
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-control-board-spaceport/selection-harlan-ellis",
+                                    "OptionPosition": 2,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-ballot-measure-gadget-county-1",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ],
+            "ElectionId": "gadget-county-2021-06"
+        }
+    ],
     "Election": [
         {
             "@type": "CVR.Election",
@@ -320,49 +350,21 @@
         {
             "@type": "CVR.GpUnit",
             "@id": "bedrock-precinct",
-            "Code": [
-                {
-                    "@type": "CVR.Code",
-                    "Type": "local-level",
-                    "Value": "bedrock-precinct"
-                }
-            ],
             "Type": "precinct"
         },
         {
             "@type": "CVR.GpUnit",
             "@id": "downtown-precinct",
-            "Code": [
-                {
-                    "@type": "CVR.Code",
-                    "Type": "local-level",
-                    "Value": "downtown-precinct"
-                }
-            ],
             "Type": "precinct"
         },
         {
             "@type": "CVR.GpUnit",
             "@id": "port-precinct",
-            "Code": [
-                {
-                    "@type": "CVR.Code",
-                    "Type": "local-level",
-                    "Value": "port-precinct"
-                }
-            ],
             "Type": "precinct"
         },
         {
             "@type": "CVR.GpUnit",
             "@id": "spacetown-precinct",
-            "Code": [
-                {
-                    "@type": "CVR.Code",
-                    "Type": "local-level",
-                    "Value": "spacetown-precinct"
-                }
-            ],
             "Type": "precinct"
         }
     ],

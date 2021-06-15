@@ -7,6 +7,7 @@ CVR:
   #   This is (obviously) NOT VALID. Once we verify the scheme is working they
   #   should each end up in their own CVR file with one snapshot each.
   # - The triple dashes '---' in the snapshot '@id's are on purpose.
+- '@type': CVR.CVR
   CurrentSnapshotId: snapshot-01---spacetown-precinct
   CVRSnapshot:
   # Snapshot with Bedrock Precinct ballot style
@@ -14,14 +15,15 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: ballot-style/bedrock-precinct
+    # BallotStyleId: ballot-style/bedrock-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-ballot-measure-gadget-county-1
       CVRContestSelection:
-      - '@type': CVR.ContestSelection
+      - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-ballot-measure-1/selection-yes
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
@@ -31,7 +33,7 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: ballot-style/port-precinct
+    # BallotStyleId: ballot-style/port-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-control-board-spaceport
@@ -40,25 +42,28 @@ CVR:
         ContestSelectionId: contest-control-board-spaceport/selection-rudi-indexer
         OptionPosition: 1
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-control-board-spaceport/selection-write-in-1
-        CVRWriteIn:
-          '@type': CVR.CVRWriteIn
-          Text: Fred Flintstone
         OptionPosition: 2
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          CVRWriteIn:
+            '@type': CVR.CVRWriteIn
+            Text: Fred Flintstone
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
     - '@type': CVR.CVRContest
       ContestId: contest-ballot-measure-gadget-county-1
       CVRContestSelection:
-      - '@type': CVR.ContestSelection
+      - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-ballot-measure-1/selection-yes
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
@@ -68,7 +73,7 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: ballot-style/downtown-precinct
+    # BallotStyleId: ballot-style/downtown-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-mayor-orbit-city
@@ -77,15 +82,17 @@ CVR:
         ContestSelectionId: contest-mayor/selection-spencer-cogswell
         OptionPosition: 1
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
     - '@type': CVR.CVRContest
       ContestId: contest-ballot-measure-gadget-county-1
       CVRContestSelection:
-      - '@type': CVR.ContestSelection
+      - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-ballot-measure-1/selection-no
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
@@ -95,7 +102,7 @@ CVR:
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    BallotStyleId: ballot-style/spacetown-precinct
+    # BallotStyleId: ballot-style/spacetown-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-mayor-orbit-city
@@ -104,6 +111,7 @@ CVR:
         ContestSelectionId: contest-mayor/selection-cosmo-spacely
         OptionPosition: 1
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
@@ -114,6 +122,7 @@ CVR:
         ContestSelectionId: contest-control-board-spaceport/selection-jane-jetson
         OptionPosition: 1
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
@@ -121,19 +130,22 @@ CVR:
         ContestSelectionId: contest-control-board-spaceport/selection-harlan-ellis
         OptionPosition: 2
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
     - '@type': CVR.CVRContest
       ContestId: contest-ballot-measure-gadget-county-1
       CVRContestSelection:
-      - '@type': CVR.ContestSelection
+      - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-ballot-measure-1/selection-yes
         SelectionPosition:
+        - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
     Type: original
+  ElectionId: gadget-county-2021-06
 Election:
 - '@type': CVR.Election
   '@id': gadget-county-2021-06
