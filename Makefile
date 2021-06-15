@@ -152,16 +152,12 @@ help:
 	@echo "  Build samples:"
 	@echo ""
 	@echo "    build-samples:         Build all JSON samples from YAML"
-	@echo ""
 	@echo "    build-nist-samples:    Build NIST JSON samples from YAML"
-	@echo ""
 	@echo "    build-minimal-samples: Build 'minimal' JSON samples from YAML"
-	@echo ""
 	@echo "    build-ny-1912-samples: Build NY 1912 JSON samples from YAML"
-	@echo ""
 	@echo "    build-jetsons-samples: Build Jetsons JSON samples from YAML"
 	@echo ""
-	@echo "  Converted samples:"
+	@echo "  Converted (XML to JSON) samples:"
 	@echo ""
 	@echo "    build-nist-conversions: Converted NIST examples from XML to JSON"
 	@echo "       Note: The result is NOT valid under the JSON Schema. Use it for comparison."
@@ -175,15 +171,46 @@ help:
 	@echo "      clean-html-notes:    Cleanup generated HTML notes"
 	@echo ""
 	@echo "    annotate:              Generate all annotations from samples"
-	@echo "      annotate-docco:      Generate Docco annotations from all samples"
+	@echo "      docco-annotations:      Generate Docco annotations from all samples"
 	@echo "    clean-annotations:     Cleanup all annotations"
 	@echo "      clean-docco-annotations: Cleanup all Docco annotations"
 	@echo ""
 	@echo "  Validation:"
 	@echo ""
 	@echo "    validate:              Validate all samples"
+	@echo ""
+	@echo "  Validation: by data format"
+	@echo ""
 	@echo "    validate-json:         Validate JSON samples"
 	@echo "    validate-xml:          Validate XML samples"
+	@echo ""
+	@echo "  Validation: by schema"
+	@echo ""
+	@echo "    validate-cvr-json"
+	@echo "    validate-edf-json"
+	@echo "    validate-cvr-xml"
+	@echo "    validate-edf-xml"
+	@echo ""
+	@echo "  Validation: by sample"
+	@echo ""
+	@echo "    validate-nist-samples"
+	@echo "    validate-nist-cvr-json"
+	@echo "    validate-nist-cvr-xml"
+	@echo ""
+	@echo "    validate-minimal-samples"
+	@echo "    validate-minimal-cvr-json"
+	@echo ""
+	@echo "    validate-ny-1912-samples"
+	@echo "    validate-ny-1912-cvr-json"
+	@echo ""
+	@echo "    validate-jetsons-samples"
+	@echo "    validate-jetsons-json"
+	@echo "    validate-jetsons-xml"
+	@echo ""
+	@echo "    validate-jetsons-cvr-json"
+	@echo "    validate-jetsons-edf-json"
+	@echo "    validate-jetsons-cvr-xml"
+	@echo "    validate-jetsons-edf-xml"
 
 
 # Build everything
@@ -197,8 +224,11 @@ clean: clean-samples clean-notes clean-annotations
 # Build JSON samples
 
 build-samples: \
-	build-nist-samples build-nist-conversions build-minimal-samples \
-	build-ny-1912-samples build-jetsons-samples
+	build-nist-samples \
+	build-nist-conversions \
+	build-minimal-samples \
+	build-ny-1912-samples \
+	build-jetsons-samples
 
 
 clean-samples: clean-nist-conversions
@@ -297,17 +327,17 @@ clean-html-notes:
 # Note: docco has unintuitive behavior regarding paths which requires switching
 # to the destination directory and having all sources file in it.
 
-annotate: $(ANNOTATIONS_DOCS_path) annotate-docco
+annotate: $(ANNOTATIONS_DOCS_path) docco-annotations
 
 
-annotate-docco: \
+docco-annotations: \
 	$(NIST_ANNOTATIONS_DOCS_path) \
-	$(MINIMAL_ANNOTATIONS_DOCS_path) \
-	$(NY_1912_ANNOTATIONS_DOCS_path) \
-	$(JETSONS_ANNOTATIONS_DOCS_path) \
 	$(NIST_ANNOTATIONS_DOCS_files) \
+	$(MINIMAL_ANNOTATIONS_DOCS_path) \
 	$(MINIMAL_ANNOTATIONS_DOCS_files) \
+	$(NY_1912_ANNOTATIONS_DOCS_path) \
 	$(NY_1912_ANNOTATIONS_DOCS_files) \
+	$(JETSONS_ANNOTATIONS_DOCS_path) \
 	$(JETSONS_ANNOTATIONS_DOCS_files)
 
 
@@ -360,7 +390,6 @@ $(NY_1912_ANNOTATIONS_DOCS_path)/%$(YAML_ext): $(NY_1912_CVR_path)/%$(YAML_ext)
 	cp -af $< $@
 
 
-
 $(JETSONS_ANNOTATIONS_DOCS_path):
 	mkdir -p $@
 
@@ -404,20 +433,46 @@ clean-jetsons-docco-annotations:
 #
 # Note: JSON converted from NIST XML examples will *not* validate.
 
-
 validate: validate-xml validate-json
 
+
+# Validation by data format
 
 validate-json: \
 	validate-cvr-json \
 	validate-edf-json
 
 
+validate-xml: \
+	validate-cvr-xml \
+	validate-edf-xml
+
+
+# Validation by schema
+
 validate-cvr-json: \
 	validate-nist-cvr-json \
 	validate-minimal-cvr-json \
 	validate-ny-1912-cvr-json \
 	validate-jetsons-cvr-json
+
+
+validate-edf-json: \
+	validate-jetsons-edf-json
+
+
+validate-cvr-xml: \
+	validate-nist-cvr-xml \
+	validate-jetsons-cvr-xml
+
+
+validate-edf-xml: \
+	validate-jetsons-edf-xml \
+
+
+validate-nist-samples: \
+	validate-nist-cvr-json \
+	validate-nist-cvr-xml \
 
 
 validate-nist-cvr-json: $(NIST_CVR_JSON_PORTED_files)
@@ -428,12 +483,28 @@ validate-nist-cvr-json: $(NIST_CVR_JSON_PORTED_files)
 	done
 
 
+validate-nist-cvr-xml: $(NIST_CVR_XML_files)
+	@for file in $^; do \
+		$(VALIDATE_XML) --schema $(CVR_XMLSCHEMA_file) $$file; \
+	done
+
+
+validate-minimal-samples: \
+	build-minimal-samples \
+	validate-minimal-cvr-json
+
+
 validate-minimal-cvr-json: $(MINIMAL_CVR_JSON_files)
 	@for file in $^; do \
 		echo "Validating: $$file..."; \
 		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
 		if [ $$? -eq 0 ]; then echo "Valid schema."; else echo "Invalid schema."; fi; \
 	done
+
+
+validate-ny-1912-samples: \
+	build-ny-1912-samples \
+	validate-ny-1912-cvr-json
 
 
 validate-ny-1912-cvr-json: $(NY_1912_CVR_JSON_files)
@@ -444,16 +515,27 @@ validate-ny-1912-cvr-json: $(NY_1912_CVR_JSON_files)
 	done
 
 
+validate-jetsons-samples: \
+	validate-jetsons-json \
+	validate-jetsons-xml
+
+
+validate-jetsons-json: \
+	validate-jetsons-cvr-json \
+	validate-jetsons-edf-json \
+
+
+validate-jetsons-xml: \
+	validate-jetsons-cvr-xml \
+	validate-jetsons-edf-xml
+
+
 validate-jetsons-cvr-json: $(JETSONS_CVR_JSON_files)
 	@for file in $^; do \
 		echo "Validating: $$file..."; \
 		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
 		if [ $$? -eq 0 ]; then echo "Valid schema."; else echo "Invalid schema."; fi; \
 	done
-
-
-validate-edf-json: \
-	validate-jetsons-edf-json
 
 
 validate-jetsons-edf-json: $(JETSONS_EDF_JSON_files)
@@ -464,30 +546,10 @@ validate-jetsons-edf-json: $(JETSONS_EDF_JSON_files)
 	done
 
 
-validate-xml: \
-	validate-cvr-xml \
-	validate-edf-xml
-
-
-validate-cvr-xml: \
-	validate-jetsons-cvr-xml \
-	validate-nist-cvr-xml
-
-
 validate-jetsons-cvr-xml: $(JETSONS_CVR_XML_files)
 	@for file in $^; do \
 		$(VALIDATE_XML) --schema $(CVR_XMLSCHEMA_file) $$file; \
 	done
-
-
-validate-nist-cvr-xml: $(NIST_CVR_XML_files)
-	@for file in $^; do \
-		$(VALIDATE_XML) --schema $(CVR_XMLSCHEMA_file) $$file; \
-	done
-
-
-validate-edf-xml: \
-	validate-jetsons-edf-xml \
 
 
 validate-jetsons-edf-xml: $(JETSONS_EDF_XML_files)
