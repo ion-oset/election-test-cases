@@ -32,6 +32,8 @@ CVR_JSON_PORTED_ext := -ported_cvr.json
 CVR_JSON_CONVERTED_ext := -converted_cvr.json
 
 EDF_XML_ext := _edf.xml
+EDF_JSON_ext := _edf.json
+EDF_YAML_ext := _edf.yaml
 
 JSONSCHEMA_ext := jsonschema.json
 XMLSCHEMA_ext := xmlschema.xsd
@@ -75,12 +77,15 @@ JETSONS_CVR_YAML_files := $(wildcard $(JETSONS_CVR_path)/*$(CVR_YAML_ext))
 JETSONS_CVR_JSON_files := $(JETSONS_CVR_YAML_files:%$(CVR_YAML_ext)=%$(CVR_JSON_ext))
 
 JETSONS_EDF_XML_files := $(wildcard $(JETSONS_EDF_path)/*$(EDF_XML_ext))
+JETSONS_EDF_YAML_files := $(wildcard $(JETSONS_EDF_path)/*$(EDF_YAML_ext))
+JETSONS_EDF_JSON_files := $(JETSONS_EDF_YAML_files:%$(EDF_YAML_ext)=%$(EDF_JSON_ext))
 
 # Schemas
 
 CVR_JSONSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(JSONSCHEMA_ext)
 CVR_XMLSCHEMA_file := $(CVR_SCHEMAS_path)/nist-cvr-v1_$(XMLSCHEMA_ext)
 
+EDF_JSONSCHEMA_file := $(EDF_SCHEMAS_path)/nist-edf-v2_$(JSONSCHEMA_ext)
 EDF_XMLSCHEMA_file := $(EDF_SCHEMAS_path)/nist-edf-v2_$(XMLSCHEMA_ext)
 
 # Notes
@@ -258,7 +263,7 @@ $(NY_1912_CVR_path)/%$(JSON_ext): $(NY_1912_CVR_path)/%$(YAML_ext)
 
 # Build Jetsons sample from YAML
 
-build-jetsons-samples: $(JETSONS_CVR_JSON_files)
+build-jetsons-samples: $(JETSONS_CVR_JSON_files) $(JETSONS_EDF_JSON_files)
 
 
 $(JETSONS_CVR_path)/%$(JSON_ext): $(JETSONS_CVR_path)/%$(YAML_ext)
@@ -403,7 +408,9 @@ clean-jetsons-docco-annotations:
 validate: validate-xml validate-json
 
 
-validate-json: validate-cvr-json
+validate-json: \
+	validate-cvr-json \
+	validate-edf-json
 
 
 validate-cvr-json: \
@@ -441,6 +448,18 @@ validate-jetsons-cvr-json: $(JETSONS_CVR_JSON_files)
 	@for file in $^; do \
 		echo "Validating: $$file..."; \
 		$(VALIDATE_JSON) $(CVR_JSONSCHEMA_file) -i $$file; \
+		if [ $$? -eq 0 ]; then echo "Valid schema."; else echo "Invalid schema."; fi; \
+	done
+
+
+validate-edf-json: \
+	validate-jetsons-edf-json
+
+
+validate-jetsons-edf-json: $(JETSONS_EDF_JSON_files)
+	@for file in $^; do \
+		echo "Validating: $$file..."; \
+		$(VALIDATE_JSON) $(EDF_JSONSCHEMA_file) -i $$file; \
 		if [ $$? -eq 0 ]; then echo "Valid schema."; else echo "Invalid schema."; fi; \
 	done
 
