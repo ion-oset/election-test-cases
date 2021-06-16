@@ -1,0 +1,168 @@
+{
+    "@type": "CVR.CastVoteRecordReport",
+    "CVR": [
+        {
+            "@type": "CVR.CVR",
+            "BallotStyleId": "ballot-style/downtown-precinct",
+            "CurrentSnapshotId": "snapshot-01",
+            "ElectionId": "gadget-county-2021-06",
+            "CVRSnapshot": [
+                {
+                    "@id": "snapshot-01",
+                    "@type": "CVR.CVRSnapshot",
+                    "CVRContest": [
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-mayor-orbit-city",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-mayor/selection-spencer-cogswell",
+                                    "OptionPosition": 1,
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CVRContest",
+                            "ContestId": "contest-ballot-measure-gadget-county-1",
+                            "CVRContestSelection": [
+                                {
+                                    "@type": "CVR.CVRContestSelection",
+                                    "ContestSelectionId": "contest-ballot-measure-1/selection-no",
+                                    "SelectionPosition": [
+                                        {
+                                            "@type": "CVR.SelectionPosition",
+                                            "HasIndication": "yes",
+                                            "NumberVotes": 1
+                                        }
+                                    ],
+                                    "TotalNumberVotes": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "Type": "original"
+                }
+            ]
+        }
+    ],
+    "Election": [
+        {
+            "@type": "CVR.Election",
+            "@id": "gadget-county-2021-06",
+            "Candidate": [
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-cosmo-spacely",
+                    "Name": "Cosmo Spacely",
+                    "PartyId": "party-lepton"
+                },
+                {
+                    "@type": "CVR.Candidate",
+                    "@id": "candidate-spencer-cogswell",
+                    "Name": "Spencer Cogswell",
+                    "PartyId": "party-hadron"
+                }
+            ],
+            "Contest": [
+                {
+                    "@type": "CVR.CandidateContest",
+                    "@id": "contest-mayor-orbit-city",
+                    "Name": "Mayor of Orbit City",
+                    "VoteVariation": "plurality",
+                    "ContestSelection": [
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-mayor/selection-cosmo-spacely",
+                            "CandidateIds": [
+                                "candidate-cosmo-spacely"
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-mayor/selection-spencer-cogswell",
+                            "CandidateIds": [
+                                "candidate-spencer-cogswell"
+                            ]
+                        },
+                        {
+                            "@type": "CVR.CandidateSelection",
+                            "@id": "contest-mayor/selection-write-in",
+                            "IsWriteIn": true
+                        }
+                    ]
+                },
+                {
+                    "@type": "CVR.BallotMeasureContest",
+                    "@id": "contest-ballot-measure-gadget-county-1",
+                    "Name": "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?",
+                    "VoteVariation": "plurality",
+                    "ContestSelection": [
+                        {
+                            "@type": "CVR.BallotMeasureSelection",
+                            "@id": "contest-ballot-measure-1/selection-yes",
+                            "Selection": "Yes"
+                        },
+                        {
+                            "@type": "CVR.BallotMeasureSelection",
+                            "@id": "contest-ballot-measure-1/selection-no",
+                            "Selection": "No"
+                        }
+                    ]
+                }
+            ],
+            "ElectionScopeId": "gadget-county"
+        }
+    ],
+    "GeneratedDate": "2021-06-01",
+    "GpUnit": [
+        {
+            "@type": "CVR.GpUnit",
+            "@id": "gadget-county",
+            "Type": "other",
+            "OtherType": "county"
+        },
+        {
+            "@type": "CVR.GpUnit",
+            "@id": "downtown-precinct",
+            "Type": "precinct"
+        }
+    ],
+    "Party": [
+        {
+            "@type": "CVR.Party",
+            "@id": "party-hadron",
+            "Name": "Hadron Party"
+        },
+        {
+            "@type": "CVR.Party",
+            "@id": "party-lepton",
+            "Name": "Lepton Party"
+        }
+    ],
+    "ReportGeneratingDeviceIds": [
+        "ballot-marker-1"
+    ],
+    "ReportingDevice": [
+        {
+            "@type": "CVR.ReportingDevice",
+            "@id": "ballot-marker-1",
+            "Application": "Ballot marking app",
+            "Manufacturer": "Trust the Vote",
+            "Model": "git-c3cd6f4f-20210601",
+            "SerialNumber": "AB:CD:EF:12:34:56"
+        }
+    ],
+    "ReportType": [
+        "originating-device-export"
+    ],
+    "Version": "1.0.0"
+}

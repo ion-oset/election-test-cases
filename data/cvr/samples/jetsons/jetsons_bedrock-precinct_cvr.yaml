@@ -1,0 +1,69 @@
+'@type': CVR.CastVoteRecordReport
+CVR:
+- '@type': CVR.CVR
+  BallotStyleId: ballot-style/bedrock-precinct
+  CurrentSnapshotId: snapshot-01
+  ElectionId: gadget-county-2021-06
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    # NOTE: 'CVRContestSelection.OptionPosition' should match
+    # 'ContestSelection.SequenceOrder' in the EDF.
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-ballot-measure-gadget-county-1
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-ballot-measure-1/selection-yes
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    Type: original
+Election:
+- '@type': CVR.Election
+  '@id': gadget-county-2021-06
+  Contest:
+  - '@type': CVR.BallotMeasureContest
+    '@id': contest-ballot-measure-gadget-county-1
+    Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
+    # Is this the correct voting method?
+    VoteVariation: plurality
+    ContestSelection:
+    - '@type': CVR.BallotMeasureSelection
+      '@id': contest-ballot-measure-1/selection-yes
+      Selection: "Yes"
+    - '@type': CVR.BallotMeasureSelection
+      '@id': contest-ballot-measure-1/selection-no
+      Selection: "No"
+  # NOTE: This has to be the county.
+  ElectionScopeId: gadget-county
+GeneratedDate: '2021-06-01'
+GpUnit:
+- '@type': CVR.GpUnit
+  '@id': gadget-county
+  Type: other
+  OtherType: county
+- '@type': CVR.GpUnit
+  '@id': bedrock-precinct
+  Type: precinct
+ReportGeneratingDeviceIds:
+# NOTE: Use the '@id' of the appropriate 'ReportingDevice'.
+- ballot-marker-1
+ReportingDevice:
+- '@type': CVR.ReportingDevice
+  '@id': ballot-marker-1
+  # NOTE: The name of the software that is generating the ballot
+  Application: Ballot marking app
+  Manufacturer: Trust the Vote
+  # NOTE: Should be a released version, but for testing is working revision.
+  Model: git-c3cd6f4f-20210601
+  # NOTE: Use the MAC Address of the hardware the software runs on.
+  SerialNumber: 'AB:CD:EF:12:34:56'
+# A ballot generating/marking device is always of this report type.
+# A scanner would be also. Other types are further along the processing stages.
+ReportType:
+- originating-device-export
+# CVR standard version is mandatory and currently only has one legal value.
+Version: 1.0.0
