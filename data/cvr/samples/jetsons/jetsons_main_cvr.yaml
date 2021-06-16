@@ -1,39 +1,36 @@
 '@type': CVR.CastVoteRecordReport
 CVR:
-  # NOTE: This file should only have one snapshot:
-  # The one generated when the ballot is marked by the voter.
-  # - The votes are chosen to use as many ContestSelections as possible.
-  # - Right now it has 4: one for each ballot style.
-  #   This is (obviously) NOT VALID. Once we verify the scheme is working they
-  #   should each end up in their own CVR file with one snapshot each.
-  # - The triple dashes '---' in the snapshot '@id's are on purpose.
 - '@type': CVR.CVR
-  CurrentSnapshotId: snapshot-01---spacetown-precinct
+  BallotStyleId: ballot-style/bedrock-precinct
+  CurrentSnapshotId: snapshot-01
+  ElectionId: gadget-county-2021-06
   CVRSnapshot:
-  # Snapshot with Bedrock Precinct ballot style
-  - '@id': snapshot-01---bedrock-precinct
+  - '@id': snapshot-01
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    # BallotStyleId: ballot-style/bedrock-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-ballot-measure-gadget-county-1
       CVRContestSelection:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-ballot-measure-1/selection-yes
+        OptionPosition: 1
         SelectionPosition:
         - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
           NumberVotes: 1
         TotalNumberVotes: 1
     Type: original
-  # Snapshot with Port Precinct ballot style
-  - '@id': snapshot-01---port-precinct
+- '@type': CVR.CVR
+  BallotStyleId: ballot-style/port-precinct
+  CurrentSnapshotId: snapshot-01
+  ElectionId: gadget-county-2021-06
+  CVRSnapshot:
+  - '@id': snapshot-01
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    # BallotStyleId: ballot-style/port-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-control-board-spaceport
@@ -68,12 +65,15 @@ CVR:
           NumberVotes: 1
         TotalNumberVotes: 1
     Type: original
-  # Snapshot with DownTown Precinct ballot style
-  - '@id': snapshot-01---downtown-precinct
+- '@type': CVR.CVR
+  BallotStyleId: ballot-style/downtown-precinct
+  CurrentSnapshotId: snapshot-01
+  ElectionId: gadget-county-2021-06
+  CVRSnapshot:
+  - '@id': snapshot-01
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    # BallotStyleId: ballot-style/downtown-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-mayor-orbit-city
@@ -97,12 +97,15 @@ CVR:
           NumberVotes: 1
         TotalNumberVotes: 1
     Type: original
-  # Snapshot with SpaceTown Precinct ballot style
-  - '@id': snapshot-01---spacetown-precinct
+- '@type': CVR.CVR
+  BallotStyleId: ballot-style/spacetown-precinct
+  CurrentSnapshotId: snapshot-01
+  ElectionId: gadget-county-2021-06
+  CVRSnapshot:
+  - '@id': snapshot-01
     '@type': CVR.CVRSnapshot
     # NOTE: 'CVRContestSelection.OptionPosition' should match
     # 'ContestSelection.SequenceOrder' in the EDF.
-    # BallotStyleId: ballot-style/spacetown-precinct
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-mayor-orbit-city
@@ -145,7 +148,6 @@ CVR:
           NumberVotes: 1
         TotalNumberVotes: 1
     Type: original
-  ElectionId: gadget-county-2021-06
 Election:
 - '@type': CVR.Election
   '@id': gadget-county-2021-06

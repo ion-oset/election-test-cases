@@ -3,10 +3,12 @@
     "CVR": [
         {
             "@type": "CVR.CVR",
-            "CurrentSnapshotId": "snapshot-01---spacetown-precinct",
+            "BallotStyleId": "ballot-style/bedrock-precinct",
+            "CurrentSnapshotId": "snapshot-01",
+            "ElectionId": "gadget-county-2021-06",
             "CVRSnapshot": [
                 {
-                    "@id": "snapshot-01---bedrock-precinct",
+                    "@id": "snapshot-01",
                     "@type": "CVR.CVRSnapshot",
                     "CVRContest": [
                         {
@@ -29,9 +31,17 @@
                         }
                     ],
                     "Type": "original"
-                },
+                }
+            ]
+        },
+        {
+            "@type": "CVR.CVR",
+            "BallotStyleId": "ballot-style/port-precinct",
+            "CurrentSnapshotId": "snapshot-01",
+            "ElectionId": "gadget-county-2021-06",
+            "CVRSnapshot": [
                 {
-                    "@id": "snapshot-01---port-precinct",
+                    "@id": "snapshot-01",
                     "@type": "CVR.CVRSnapshot",
                     "CVRContest": [
                         {
@@ -90,9 +100,17 @@
                         }
                     ],
                     "Type": "original"
-                },
+                }
+            ]
+        },
+        {
+            "@type": "CVR.CVR",
+            "BallotStyleId": "ballot-style/downtown-precinct",
+            "CurrentSnapshotId": "snapshot-01",
+            "ElectionId": "gadget-county-2021-06",
+            "CVRSnapshot": [
                 {
-                    "@id": "snapshot-01---downtown-precinct",
+                    "@id": "snapshot-01",
                     "@type": "CVR.CVRSnapshot",
                     "CVRContest": [
                         {
@@ -134,9 +152,17 @@
                         }
                     ],
                     "Type": "original"
-                },
+                }
+            ]
+        },
+        {
+            "@type": "CVR.CVR",
+            "BallotStyleId": "ballot-style/spacetown-precinct",
+            "CurrentSnapshotId": "snapshot-01",
+            "ElectionId": "gadget-county-2021-06",
+            "CVRSnapshot": [
                 {
-                    "@id": "snapshot-01---spacetown-precinct",
+                    "@id": "snapshot-01",
                     "@type": "CVR.CVRSnapshot",
                     "CVRContest": [
                         {
@@ -211,8 +237,7 @@
                     ],
                     "Type": "original"
                 }
-            ],
-            "ElectionId": "gadget-county-2021-06"
+            ]
         }
     ],
     "Election": [
