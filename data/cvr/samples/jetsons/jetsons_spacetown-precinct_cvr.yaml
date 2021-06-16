@@ -1,0 +1,168 @@
+'@type': CVR.CastVoteRecordReport
+CVR:
+- '@type': CVR.CVR
+  BallotStyleId: ballot-style/spacetown-precinct
+  CurrentSnapshotId: snapshot-01
+  ElectionId: gadget-county-2021-06
+  CVRSnapshot:
+  - '@id': snapshot-01
+    '@type': CVR.CVRSnapshot
+    # NOTE: 'CVRContestSelection.OptionPosition' should match
+    # 'ContestSelection.SequenceOrder' in the EDF.
+    CVRContest:
+    - '@type': CVR.CVRContest
+      ContestId: contest-mayor-orbit-city
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-mayor/selection-cosmo-spacely
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: contest-control-board-spaceport
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-control-board-spaceport/selection-jane-jetson
+        OptionPosition: 1
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-control-board-spaceport/selection-harlan-ellis
+        OptionPosition: 2
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    - '@type': CVR.CVRContest
+      ContestId: contest-ballot-measure-gadget-county-1
+      CVRContestSelection:
+      - '@type': CVR.CVRContestSelection
+        ContestSelectionId: contest-ballot-measure-1/selection-yes
+        SelectionPosition:
+        - '@type': CVR.SelectionPosition
+          HasIndication: 'yes'
+          NumberVotes: 1
+        TotalNumberVotes: 1
+    Type: original
+Election:
+- '@type': CVR.Election
+  '@id': gadget-county-2021-06
+  Candidate:
+  - '@type': CVR.Candidate
+    '@id': candidate-cosmo-spacely
+    Name: Cosmo Spacely
+    PartyId: party-lepton
+  - '@type': CVR.Candidate
+    '@id': candidate-spencer-cogswell
+    Name: Spencer Cogswell
+    PartyId: party-hadron
+  - '@type': CVR.Candidate
+    '@id': candidate-jane-jetson
+    Name: Jane Jetson
+  - '@type': CVR.Candidate
+    '@id': candidate-harlan-ellis
+    Name: Harlan Ellis
+  - '@type': CVR.Candidate
+    '@id': candidate-rudi-indexer
+    Name: Rudi Indexer
+  Contest:
+  - '@type': CVR.CandidateContest
+    '@id': contest-mayor-orbit-city
+    Name: Mayor of Orbit City
+    VoteVariation: plurality
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': contest-mayor/selection-cosmo-spacely
+      CandidateIds:
+      - candidate-cosmo-spacely
+    - '@type': CVR.CandidateSelection
+      '@id': contest-mayor/selection-spencer-cogswell
+      CandidateIds:
+      - candidate-spencer-cogswell
+    - '@type': CVR.CandidateSelection
+      '@id': contest-mayor/selection-write-in
+      IsWriteIn: true
+  - '@type': CVR.CandidateContest
+    '@id': contest-control-board-spaceport
+    Name: SpacePort Control Board
+    VoteVariation: n-of-m
+    # NOTE: Maximum number of candidates a voter can select.
+    VotesAllowed: 2
+    # NOTE: Total number of seats to fill (possibly optional).
+    NumberElected: 2
+    ContestSelection:
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board-spaceport/selection-jane-jetson
+      CandidateIds:
+      - candidate-jane-jetson
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board-spaceport/selection-harlan-ellis
+      CandidateIds:
+      - candidate-harlan-ellis
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board-spaceport/selection-rudi-indexer
+      CandidateIds:
+      - candidate-rudi-indexer
+    # NOTE: Write-in slot count has to match 'VotesAllowed'
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board-spaceport/selection-write-in-1
+      IsWriteIn: true
+    - '@type': CVR.CandidateSelection
+      '@id': contest-control-board-spaceport/selection-write-in-2
+      IsWriteIn: true
+  - '@type': CVR.BallotMeasureContest
+    '@id': contest-ballot-measure-gadget-county-1
+    Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
+    # Is this the correct voting method?
+    VoteVariation: plurality
+    ContestSelection:
+    - '@type': CVR.BallotMeasureSelection
+      '@id': contest-ballot-measure-1/selection-yes
+      Selection: "Yes"
+    - '@type': CVR.BallotMeasureSelection
+      '@id': contest-ballot-measure-1/selection-no
+      Selection: "No"
+  # NOTE: This has to be the county.
+  ElectionScopeId: gadget-county
+GeneratedDate: '2021-06-01'
+GpUnit:
+- '@type': CVR.GpUnit
+  '@id': gadget-county
+  Type: other
+  OtherType: county
+- '@type': CVR.GpUnit
+  '@id': spacetown-precinct
+  Type: precinct
+Party:
+- '@type': CVR.Party
+  '@id': party-hadron
+  Name: Hadron Party
+- '@type': CVR.Party
+  '@id': party-lepton
+  Name: Lepton Party
+ReportGeneratingDeviceIds:
+# NOTE: Use the '@id' of the appropriate 'ReportingDevice'.
+- ballot-marker-1
+ReportingDevice:
+- '@type': CVR.ReportingDevice
+  '@id': ballot-marker-1
+  # NOTE: The name of the software that is generating the ballot
+  Application: Ballot marking app
+  Manufacturer: Trust the Vote
+  # NOTE: Should be a released version, but for testing is working revision.
+  Model: git-c3cd6f4f-20210601
+  # NOTE: Use the MAC Address of the hardware the software runs on.
+  SerialNumber: 'AB:CD:EF:12:34:56'
+# A ballot generating/marking device is always of this report type.
+# A scanner would be also. Other types are further along the processing stages.
+ReportType:
+- originating-device-export
+# CVR standard version is mandatory and currently only has one legal value.
+Version: 1.0.0
