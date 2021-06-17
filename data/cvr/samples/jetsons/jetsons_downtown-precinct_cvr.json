@@ -17,8 +17,8 @@
                             "CVRContestSelection": [
                                 {
                                     "@type": "CVR.CVRContestSelection",
-                                    "ContestSelectionId": "contest-mayor/selection-spencer-cogswell",
-                                    "OptionPosition": 1,
+                                    "ContestSelectionId": "contest-mayor--selection-spencer-cogswell",
+                                    "OptionPosition": 2,
                                     "SelectionPosition": [
                                         {
                                             "@type": "CVR.SelectionPosition",
@@ -36,7 +36,8 @@
                             "CVRContestSelection": [
                                 {
                                     "@type": "CVR.CVRContestSelection",
-                                    "ContestSelectionId": "contest-ballot-measure-1/selection-no",
+                                    "ContestSelectionId": "contest-ballot-measure-1--selection-no",
+                                    "OptionPosition": 2,
                                     "SelectionPosition": [
                                         {
                                             "@type": "CVR.SelectionPosition",
@@ -81,21 +82,21 @@
                     "ContestSelection": [
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-mayor/selection-cosmo-spacely",
+                            "@id": "contest-mayor--selection-cosmo-spacely",
                             "CandidateIds": [
                                 "candidate-cosmo-spacely"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-mayor/selection-spencer-cogswell",
+                            "@id": "contest-mayor--selection-spencer-cogswell",
                             "CandidateIds": [
                                 "candidate-spencer-cogswell"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-mayor/selection-write-in",
+                            "@id": "contest-mayor--selection-write-in",
                             "IsWriteIn": true
                         }
                     ]
@@ -108,12 +109,12 @@
                     "ContestSelection": [
                         {
                             "@type": "CVR.BallotMeasureSelection",
-                            "@id": "contest-ballot-measure-1/selection-yes",
+                            "@id": "contest-ballot-measure-1--selection-yes",
                             "Selection": "Yes"
                         },
                         {
                             "@type": "CVR.BallotMeasureSelection",
-                            "@id": "contest-ballot-measure-1/selection-no",
+                            "@id": "contest-ballot-measure-1--selection-no",
                             "Selection": "No"
                         }
                     ]
@@ -122,17 +123,19 @@
             "ElectionScopeId": "gadget-county"
         }
     ],
-    "GeneratedDate": "2021-06-01",
+    "GeneratedDate": "2021-06-01T12:00:00-08:00",
     "GpUnit": [
         {
             "@type": "CVR.GpUnit",
             "@id": "gadget-county",
+            "Name": "Gadget County",
             "Type": "other",
             "OtherType": "county"
         },
         {
             "@type": "CVR.GpUnit",
             "@id": "downtown-precinct",
+            "Name": "Downtown Precinct",
             "Type": "precinct"
         }
     ],
@@ -155,7 +158,7 @@
         {
             "@type": "CVR.ReportingDevice",
             "@id": "ballot-marker-1",
-            "Application": "Ballot marking app",
+            "Application": "Ballot marking application",
             "Manufacturer": "Trust the Vote",
             "Model": "git-c3cd6f4f-20210601",
             "SerialNumber": "AB:CD:EF:12:34:56"

@@ -10,18 +10,20 @@
             <CVRContest>
                 <ContestId>contest-mayor-orbit-city</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-mayor--selection-spencer-cogswell</ContestSelectionId>
+                    <ContestSelectionId>contest-mayor--selection-cosmo-spacely</ContestSelectionId>
+                    <OptionPosition>1</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
-                        <IsAllocable>yes</IsAllocable>
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
             </CVRContest>
             <CVRContest>
                 <ContestId>contest-control-board-spaceport</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-control-board--selection-jane-jetson</ContestSelectionId>
+                    <ContestSelectionId>contest-control-board-spaceport--selection-jane-jetson</ContestSelectionId>
+                    <OptionPosition>1</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
@@ -29,7 +31,8 @@
                     <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-control-board--selection-rudi-indexer</ContestSelectionId>
+                    <ContestSelectionId>contest-control-board-spaceport--selection-harlan-ellis</ContestSelectionId>
+                    <OptionPosition>2</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
@@ -40,12 +43,14 @@
             <CVRContest>
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>contest-ballot-measure-1--selection-no</ContestSelectionId>
+                    <ContestSelectionId>contest-ballot-measure-1--selection-yes</ContestSelectionId>
+                    <OptionPosition>1</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <IsAllocable>yes</IsAllocable>
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
             </CVRContest>
             <Type>original</Type>
@@ -81,19 +86,19 @@
         </Contest>
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board--selection-jane-jetson">
+                ObjectId="contest-control-board-spaceport--selection-jane-jetson">
                 <CandidateIds>candidate-jane-jetson</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board--selection-harlan-ellis">
+                ObjectId="contest-control-board-spaceport--selection-harlan-ellis">
                 <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board--selection-rudi-indexer">
+                ObjectId="contest-control-board-spaceport--selection-rudi-indexer">
                 <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board--selection-write-in">
+                ObjectId="contest-control-board-spaceport--selection-write-in">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
         </Contest>
@@ -105,16 +110,25 @@
                 <Selection>No</Selection>
             </ContestSelection>
         </Contest>
-        <ElectionScopeId>spacetown-precinct</ElectionScopeId>
+        <ElectionScopeId>gadget-county</ElectionScopeId>
     </Election>
     <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
+    <GpUnit ObjectId="gadget-county">
+        <Name>Gadget County</Name>
+        <Type>other</Type>
+        <OtherType>county</OtherType>
+    </GpUnit>
     <GpUnit ObjectId="spacetown-precinct">
         <Name>Spacetown Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
     <ReportGeneratingDeviceIds>ballot-marker-1</ReportGeneratingDeviceIds>
     <ReportingDevice ObjectId="ballot-marker-1">
-        <Application>Trust the Vote application</Application>
+        <Application>Ballot marking application</Application>
+        <Manufacturer>Trust the Vote</Manufacturer>
+        <Model>git-c3cd6f4f-20210601</Model>
+        <SerialNumber>AB:CD:EF:12:34:56</SerialNumber>
     </ReportingDevice>
+    <ReportType>originating-device-export</ReportType>
     <Version>1.0.0</Version>
 </CastVoteRecordReport>

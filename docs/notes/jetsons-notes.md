@@ -41,7 +41,7 @@ Still left to do:
 - IDs are named as follows:
     - Candidates: `candidate-{firstname}-{lastname}`
     - Contests: `contest-{office}-{location}`
-    - Contest selections: `contest-{office}/selection-{name}`
+    - Contest selections: `contest-{office}--selection-{name}`
 
 - Every write-in slot needs a `ContestSelection` with `IsWriteIn = true`.
   - There should be as many slots as there are `VotesAllowed` in the contest.
