@@ -7,6 +7,10 @@ Election:
       - '@type': ElectionResults.LanguageString
         Content: Gadget County Elections
         Language: en
+  ExternalIdentifier:
+  - '@type': ElectionResults.ExternalIdentifier
+    Type: local-level
+    Value: election-gadget-county
   ElectionScopeId: gadget-county
   StartDate: '2021-06-01'
   EndDate: '2021-06-15'
@@ -23,6 +27,10 @@ Election:
       - '@type': ElectionResults.LanguageString
         Content: Cosmo Spacely
         Language: en
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: candidate-cosmo-spacely
   - '@type': ElectionResults.Candidate
     '@id': candidate-spencer-cogswell
     BallotName:
@@ -31,6 +39,10 @@ Election:
       - '@type': ElectionResults.LanguageString
         Content: Spencer Cogswell
         Language: en
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: candidate-spencer-cogswell
   - '@type': ElectionResults.Candidate
     '@id': candidate-jane-jetson
     BallotName:
@@ -39,6 +51,10 @@ Election:
       - '@type': ElectionResults.LanguageString
         Content: Jane Jetson
         Language: en
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: candidate-jane-jetson
   - '@type': ElectionResults.Candidate
     '@id': candidate-harlan-ellis
     BallotName:
@@ -47,6 +63,10 @@ Election:
       - '@type': ElectionResults.LanguageString
         Content: Harlan Ellis
         Language: en
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: candidate-harlan-ellis
   - '@type': ElectionResults.Candidate
     '@id': candidate-rudi-indexer
     BallotName:
@@ -55,6 +75,10 @@ Election:
       - '@type': ElectionResults.LanguageString
         Content: Rudi Indexer
         Language: en
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: candidate-rudi-indexer
   # An EDF 'Contest' is more complex than a CVR 'Contest'.
   # - 'Name' is required. A non-minimal 'Contest' would require 'BallotTitle'
   #    in addition to support internationalization.
@@ -70,21 +94,21 @@ Election:
       VotesAllowed: 1
       ContestSelection:
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-mayor/selection-cosmo-spacely
+        '@id': contest-mayor--selection-cosmo-spacely
         SequenceOrder: 1
         CandidateIds:
         - candidate-cosmo-spacely
         EndorsementPartyIds:
         - party-lepton
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-mayor/selection-spencer-cogswell
+        '@id': contest-mayor--selection-spencer-cogswell
         SequenceOrder: 2
         CandidateIds:
         - candidate-spencer-cogswell
         EndorsementPartyIds:
         - party-hadron
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-mayor/selection-write-in
+        '@id': contest-mayor--selection-write-in
         SequenceOrder: 3
         IsWriteIn: true
     - '@type': ElectionResults.CandidateContest
@@ -95,26 +119,26 @@ Election:
       VotesAllowed: 2
       ContestSelection:
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board-spaceport/selection-jane-jetson
+        '@id': contest-control-board-spaceport--selection-jane-jetson
         SequenceOrder: 1
         CandidateIds:
         - candidate-jane-jetson
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board-spaceport/selection-harlan-ellis
+        '@id': contest-control-board-spaceport--selection-harlan-ellis
         SequenceOrder: 2
         CandidateIds:
         - candidate-harlan-ellis
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board-spaceport/selection-rudi-indexer
+        '@id': contest-control-board-spaceport--selection-rudi-indexer
         SequenceOrder: 3
         CandidateIds:
         - candidate-rudi-indexer
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board-spaceport/selection-write-in-1
+        '@id': contest-control-board-spaceport--selection-write-in-1
         SequenceOrder: 4
         IsWriteIn: true
       - '@type': ElectionResults.CandidateSelection
-        '@id': contest-control-board-spaceport/selection-write-in-2
+        '@id': contest-control-board-spaceport--selection-write-in-2
         SequenceOrder: 5
         IsWriteIn: true
     - '@type': ElectionResults.BallotMeasureContest
@@ -130,8 +154,8 @@ Election:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: ballot-style/bedrock-precinct
       Type: local-level
+      Value: ballot-style-bedrock-precinct
     GpUnitIds:
     - bedrock-precinct
     OrderedContent:
@@ -143,8 +167,8 @@ Election:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: ballot-style/downtown-precinct
       Type: local-level
+      Value: ballot-style-downtown-precinct
     GpUnitIds:
     - downtown-precinct
     OrderedContent:
@@ -161,8 +185,8 @@ Election:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: ballot-style/port-precinct
       Type: local-level
+      Value: ballot-style-port-precinct
     GpUnitIds:
     - port-precinct
     OrderedContent:
@@ -179,8 +203,8 @@ Election:
   - '@type': ElectionResults.BallotStyle
     ExternalIdentifier:
     - '@type': ElectionResults.ExternalIdentifier
-      Value: ballot-style/spacetown-precinct
       Type: local-level
+      Value: ballot-style-spacetown-precinct
     GpUnitIds:
     - spacetown-precinct
     OrderedContent:
@@ -200,7 +224,6 @@ Election:
       - '@type': ElectionResults.OrderedContest
         ContestId: contest-ballot-measure-gadget-county-1
 Format: summary-contest
-# GeneratedDate: '2021-06-01T12:00:00Z'
 GeneratedDate: '2021-06-01T12:00:00-08:00'
 GpUnit:
 - '@type': ElectionResults.ReportingUnit

@@ -87,15 +87,15 @@
         </Contest>
         <Contest xsi:type="CandidateContest" ObjectId="contest-control-board-spaceport">
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board--selection-jane-jetson">
+                ObjectId="contest-control-board-spaceport--selection-jane-jetson">
                 <CandidateIds>candidate-jane-jetson</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board--selection-harlan-ellis">
+                ObjectId="contest-control-board-spaceport--selection-harlan-ellis">
                 <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board--selection-rudy-indexer">
+                ObjectId="contest-control-board-spaceport--selection-rudy-indexer">
                 <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
@@ -125,7 +125,7 @@
         </Contest>
         <ElectionScopeId>gadget-county</ElectionScopeId>
     </Election>
-    <GeneratedDate>2021-06-01T09:00:00</GeneratedDate>
+    <GeneratedDate>2021-06-01T12:00:00</GeneratedDate>
     <GpUnit ObjectId="gadget-county">
         <Type>other</Type>
         <OtherType>county</OtherType>

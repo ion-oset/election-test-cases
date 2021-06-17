@@ -55,21 +55,6 @@
             </OrderedContent>
         </BallotStyle>
         <BallotStyle>
-            <GpUnitIds>port-precinct</GpUnitIds>
-            <OrderedContent xsi:type="OrderedHeader">
-                <HeaderId>header-control-board-spaceport</HeaderId>
-                <OrderedContent xsi:type="OrderedContest">
-                    <ContestId>contest-control-board-spaceport</ContestId>
-                </OrderedContent>
-            </OrderedContent>
-            <OrderedContent xsi:type="OrderedHeader">
-                <HeaderId>header-ballot-measures</HeaderId>
-                <OrderedContent xsi:type="OrderedContest">
-                    <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
-                </OrderedContent>
-            </OrderedContent>
-        </BallotStyle>
-        <BallotStyle>
             <ExternalIdentifier>
                 <Type>local-level</Type>
                 <Value>ballot-style-spacetown-precinct</Value>
