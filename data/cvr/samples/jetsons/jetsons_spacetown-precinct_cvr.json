@@ -17,7 +17,7 @@
                             "CVRContestSelection": [
                                 {
                                     "@type": "CVR.CVRContestSelection",
-                                    "ContestSelectionId": "contest-mayor/selection-cosmo-spacely",
+                                    "ContestSelectionId": "contest-mayor--selection-cosmo-spacely",
                                     "OptionPosition": 1,
                                     "SelectionPosition": [
                                         {
@@ -36,7 +36,7 @@
                             "CVRContestSelection": [
                                 {
                                     "@type": "CVR.CVRContestSelection",
-                                    "ContestSelectionId": "contest-control-board-spaceport/selection-jane-jetson",
+                                    "ContestSelectionId": "contest-control-board-spaceport--selection-jane-jetson",
                                     "OptionPosition": 1,
                                     "SelectionPosition": [
                                         {
@@ -49,7 +49,7 @@
                                 },
                                 {
                                     "@type": "CVR.CVRContestSelection",
-                                    "ContestSelectionId": "contest-control-board-spaceport/selection-harlan-ellis",
+                                    "ContestSelectionId": "contest-control-board-spaceport--selection-harlan-ellis",
                                     "OptionPosition": 2,
                                     "SelectionPosition": [
                                         {
@@ -68,7 +68,8 @@
                             "CVRContestSelection": [
                                 {
                                     "@type": "CVR.CVRContestSelection",
-                                    "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
+                                    "ContestSelectionId": "contest-ballot-measure-1--selection-yes",
+                                    "OptionPosition": 1,
                                     "SelectionPosition": [
                                         {
                                             "@type": "CVR.SelectionPosition",
@@ -128,21 +129,21 @@
                     "ContestSelection": [
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-mayor/selection-cosmo-spacely",
+                            "@id": "contest-mayor--selection-cosmo-spacely",
                             "CandidateIds": [
                                 "candidate-cosmo-spacely"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-mayor/selection-spencer-cogswell",
+                            "@id": "contest-mayor--selection-spencer-cogswell",
                             "CandidateIds": [
                                 "candidate-spencer-cogswell"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-mayor/selection-write-in",
+                            "@id": "contest-mayor--selection-write-in",
                             "IsWriteIn": true
                         }
                     ]
@@ -157,33 +158,33 @@
                     "ContestSelection": [
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board-spaceport/selection-jane-jetson",
+                            "@id": "contest-control-board-spaceport--selection-jane-jetson",
                             "CandidateIds": [
                                 "candidate-jane-jetson"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board-spaceport/selection-harlan-ellis",
+                            "@id": "contest-control-board-spaceport--selection-harlan-ellis",
                             "CandidateIds": [
                                 "candidate-harlan-ellis"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board-spaceport/selection-rudi-indexer",
+                            "@id": "contest-control-board-spaceport--selection-rudi-indexer",
                             "CandidateIds": [
                                 "candidate-rudi-indexer"
                             ]
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board-spaceport/selection-write-in-1",
+                            "@id": "contest-control-board-spaceport--selection-write-in-1",
                             "IsWriteIn": true
                         },
                         {
                             "@type": "CVR.CandidateSelection",
-                            "@id": "contest-control-board-spaceport/selection-write-in-2",
+                            "@id": "contest-control-board-spaceport--selection-write-in-2",
                             "IsWriteIn": true
                         }
                     ]
@@ -196,12 +197,12 @@
                     "ContestSelection": [
                         {
                             "@type": "CVR.BallotMeasureSelection",
-                            "@id": "contest-ballot-measure-1/selection-yes",
+                            "@id": "contest-ballot-measure-1--selection-yes",
                             "Selection": "Yes"
                         },
                         {
                             "@type": "CVR.BallotMeasureSelection",
-                            "@id": "contest-ballot-measure-1/selection-no",
+                            "@id": "contest-ballot-measure-1--selection-no",
                             "Selection": "No"
                         }
                     ]
@@ -210,17 +211,19 @@
             "ElectionScopeId": "gadget-county"
         }
     ],
-    "GeneratedDate": "2021-06-01",
+    "GeneratedDate": "2021-06-01T12:00:00-08:00",
     "GpUnit": [
         {
             "@type": "CVR.GpUnit",
             "@id": "gadget-county",
+            "Name": "Gadget County",
             "Type": "other",
             "OtherType": "county"
         },
         {
             "@type": "CVR.GpUnit",
             "@id": "spacetown-precinct",
+            "Name": "SpaceTown Precinct",
             "Type": "precinct"
         }
     ],
@@ -243,7 +246,7 @@
         {
             "@type": "CVR.ReportingDevice",
             "@id": "ballot-marker-1",
-            "Application": "Ballot marking app",
+            "Application": "Ballot marking application",
             "Manufacturer": "Trust the Vote",
             "Model": "git-c3cd6f4f-20210601",
             "SerialNumber": "AB:CD:EF:12:34:56"

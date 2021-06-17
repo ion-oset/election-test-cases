@@ -18,6 +18,7 @@
                                 {
                                     "@type": "CVR.CVRContestSelection",
                                     "ContestSelectionId": "contest-ballot-measure-1/selection-yes",
+                                    "OptionPosition": 1,
                                     "SelectionPosition": [
                                         {
                                             "@type": "CVR.SelectionPosition",
