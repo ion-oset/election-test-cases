@@ -15,6 +15,84 @@ Election:
   StartDate: '2021-06-01'
   EndDate: '2021-06-15'
   Type: general
+  # NOTE: BallotStyle doesn't use '@id'.
+  # - It supports 'ExternalIdentifier' but those are formally defined.
+  # - Use 'Type: local-level'.
+  # NOTE: The structure describes nested sections with each 'OrderedContent'
+  # being a section and each 'HeaderId' being a header shown on the ballot.
+  BallotStyle:
+  - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: ballot-style-bedrock-precinct
+    GpUnitIds:
+    - bedrock-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-ballot-measures
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-ballot-measure-gadget-county-1
+  - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: ballot-style-downtown-precinct
+    GpUnitIds:
+    - downtown-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-mayor-orbit-city
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-mayor-orbit-city
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-ballot-measures
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-ballot-measure-gadget-county-1
+  - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: ballot-style-port-precinct
+    GpUnitIds:
+    - port-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-control-board-spaceport
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-control-board-spaceport
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-ballot-measures
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-ballot-measure-gadget-county-1
+  - '@type': ElectionResults.BallotStyle
+    ExternalIdentifier:
+    - '@type': ElectionResults.ExternalIdentifier
+      Type: local-level
+      Value: ballot-style-spacetown-precinct
+    GpUnitIds:
+    - spacetown-precinct
+    OrderedContent:
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-mayor-orbit-city
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-mayor-orbit-city
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-control-board-spaceport
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-control-board-spaceport
+    - '@type': ElectionResults.OrderedHeader
+      HeaderId: header-ballot-measures
+      OrderedContent:
+      - '@type': ElectionResults.OrderedContest
+        ContestId: contest-ballot-measure-gadget-county-1
   # An EDF 'Candidate' has the same information as a CVR 'Candidate' except:
   # - 'Name' in the CVR is 'BallotName' in the EDF.
   # - Internationalization is *required* for 'BallotName'.
@@ -145,84 +223,6 @@ Election:
       '@id': contest-ballot-measure-gadget-county-1
       Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
       ElectionDistrictId: gadget-county
-  # NOTE: BallotStyle doesn't use '@id'.
-  # - It supports 'ExternalIdentifier' but those are formally defined.
-  # - Use 'Type: local-level'.
-  # NOTE: The structure describes nested sections with each 'OrderedContent'
-  # being a section and each 'HeaderId' being a header shown on the ballot.
-  BallotStyle:
-  - '@type': ElectionResults.BallotStyle
-    ExternalIdentifier:
-    - '@type': ElectionResults.ExternalIdentifier
-      Type: local-level
-      Value: ballot-style-bedrock-precinct
-    GpUnitIds:
-    - bedrock-precinct
-    OrderedContent:
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-ballot-measures
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-ballot-measure-gadget-county-1
-  - '@type': ElectionResults.BallotStyle
-    ExternalIdentifier:
-    - '@type': ElectionResults.ExternalIdentifier
-      Type: local-level
-      Value: ballot-style-downtown-precinct
-    GpUnitIds:
-    - downtown-precinct
-    OrderedContent:
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-mayor-orbit-city
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-mayor-orbit-city
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-ballot-measures
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-ballot-measure-gadget-county-1
-  - '@type': ElectionResults.BallotStyle
-    ExternalIdentifier:
-    - '@type': ElectionResults.ExternalIdentifier
-      Type: local-level
-      Value: ballot-style-port-precinct
-    GpUnitIds:
-    - port-precinct
-    OrderedContent:
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-control-board-spaceport
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-control-board-spaceport
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-ballot-measures
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-ballot-measure-gadget-county-1
-  - '@type': ElectionResults.BallotStyle
-    ExternalIdentifier:
-    - '@type': ElectionResults.ExternalIdentifier
-      Type: local-level
-      Value: ballot-style-spacetown-precinct
-    GpUnitIds:
-    - spacetown-precinct
-    OrderedContent:
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-mayor-orbit-city
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-mayor-orbit-city
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-control-board-spaceport
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-control-board-spaceport
-    - '@type': ElectionResults.OrderedHeader
-      HeaderId: header-ballot-measures
-      OrderedContent:
-      - '@type': ElectionResults.OrderedContest
-        ContestId: contest-ballot-measure-gadget-county-1
 Format: summary-contest
 GeneratedDate: '2021-06-01T12:00:00-08:00'
 GpUnit:
