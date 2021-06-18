@@ -1,3 +1,4 @@
+# CVR for Downtown Precinct
 '@type': CVR.CastVoteRecordReport
 CVR:
 - '@type': CVR.CVR
@@ -7,14 +8,13 @@ CVR:
   CVRSnapshot:
   - '@id': snapshot-01
     '@type': CVR.CVRSnapshot
-    # NOTE: 'CVRContestSelection.OptionPosition' should match
-    # 'ContestSelection.SequenceOrder' in the EDF.
     CVRContest:
     - '@type': CVR.CVRContest
       ContestId: contest-mayor-orbit-city
       CVRContestSelection:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-mayor--selection-cosmo-spacely
+        # Should match 'ContestSelection.SequenceOrder' in the EDF.
         OptionPosition: 1
         SelectionPosition:
         - '@type': CVR.SelectionPosition
@@ -26,6 +26,7 @@ CVR:
       CVRContestSelection:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-control-board-spaceport--selection-jane-jetson
+        # Should match 'ContestSelection.SequenceOrder' in the EDF.
         OptionPosition: 1
         SelectionPosition:
         - '@type': CVR.SelectionPosition
@@ -34,6 +35,7 @@ CVR:
         TotalNumberVotes: 1
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-control-board-spaceport--selection-harlan-ellis
+        # Should match 'ContestSelection.SequenceOrder' in the EDF.
         OptionPosition: 2
         SelectionPosition:
         - '@type': CVR.SelectionPosition
@@ -45,6 +47,7 @@ CVR:
       CVRContestSelection:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-ballot-measure-1--selection-yes
+        # Should match 'ContestSelection.SequenceOrder' in the EDF.
         OptionPosition: 1
         SelectionPosition:
         - '@type': CVR.SelectionPosition
@@ -94,9 +97,9 @@ Election:
     '@id': contest-control-board-spaceport
     Name: SpacePort Control Board
     VoteVariation: n-of-m
-    # NOTE: Maximum number of candidates a voter can select.
+    # Maximum number of candidates a voter can select.
     VotesAllowed: 2
-    # NOTE: Total number of seats to fill (possibly optional).
+    # Total number of seats to fill (possibly optional).
     NumberElected: 2
     ContestSelection:
     - '@type': CVR.CandidateSelection
@@ -111,7 +114,7 @@ Election:
       '@id': contest-control-board-spaceport--selection-rudi-indexer
       CandidateIds:
       - candidate-rudi-indexer
-    # NOTE: Write-in slot count has to match 'VotesAllowed'
+    # Write-in slot count has to match 'VotesAllowed'.
     - '@type': CVR.CandidateSelection
       '@id': contest-control-board-spaceport--selection-write-in-1
       IsWriteIn: true
@@ -121,7 +124,6 @@ Election:
   - '@type': CVR.BallotMeasureContest
     '@id': contest-ballot-measure-gadget-county-1
     Name: "Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?"
-    # Is this the correct voting method?
     VoteVariation: plurality
     ContestSelection:
     - '@type': CVR.BallotMeasureSelection
@@ -130,7 +132,8 @@ Election:
     - '@type': CVR.BallotMeasureSelection
       '@id': contest-ballot-measure-1--selection-no
       Selection: "No"
-  # NOTE: This has to be the county.
+  # The entity administering the election.
+  # The precinct is tracked by 'GpUnit' and the 'BallotStyleId'.
   ElectionScopeId: gadget-county
 GeneratedDate: '2021-06-01T12:00:00-08:00'
 GpUnit:
@@ -151,17 +154,17 @@ Party:
   '@id': party-lepton
   Name: Lepton Party
 ReportGeneratingDeviceIds:
-# NOTE: Use the '@id' of the appropriate 'ReportingDevice'.
+# Use the '@id' of the appropriate 'ReportingDevice'.
 - ballot-marker-1
 ReportingDevice:
 - '@type': CVR.ReportingDevice
   '@id': ballot-marker-1
-  # NOTE: The name of the software that is generating the ballot
+  # The name of the software that is generating the ballot.
   Application: Ballot marking application
   Manufacturer: Trust the Vote
-  # NOTE: Should be a released version, but for testing is working revision.
+  # Should be a released version, but for testing is working revision.
   Model: git-c3cd6f4f-20210601
-  # NOTE: Use the MAC Address of the hardware the software runs on.
+  # Use the MAC Address of the hardware the software runs on.
   SerialNumber: 'AB:CD:EF:12:34:56'
 # A ballot generating/marking device is always of this report type.
 # A scanner would be also. Other types are further along the processing stages.
