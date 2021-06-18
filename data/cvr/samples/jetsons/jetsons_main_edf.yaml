@@ -15,10 +15,10 @@ Election:
   StartDate: '2021-06-01'
   EndDate: '2021-06-15'
   Type: general
-  # NOTE: BallotStyle doesn't use '@id'.
+  # BallotStyle doesn't use '@id'.
   # - It supports 'ExternalIdentifier' but those are formally defined.
   # - Use 'Type: local-level'.
-  # NOTE: The structure describes nested sections with each 'OrderedContent'
+  # The structure describes nested sections with each 'OrderedContent'
   # being a section and each 'HeaderId' being a header shown on the ballot.
   BallotStyle:
   - '@type': ElectionResults.BallotStyle
@@ -271,18 +271,18 @@ GpUnit:
       Content: SpaceTown Precinct
       Language: en
   Type: precinct
-# NOTE: Values are chosen to match CVR. Is this correct?
-# NOTE: Reporting device is considered a GpUnit
+# Values are chosen to match CVR. Is this correct?
+# Reporting device is considered a GpUnit
 - '@type': ElectionResults.ReportingDevice
   '@id': ballot-marker-1
   DeviceClass:
     '@type': ElectionResults.DeviceClass
     Manufacturer: Trust the Vote
-    # NOTE: Should be a released version, but for testing is working revision.
+    # Should be a released version, but for testing is working revision.
     Model: git-c3cd6f4f-20210601
     # QUESTION: Is this correct?
     Type: bmd
-  # NOTE: Use the MAC Address of the hardware
+  # Use the MAC Address of the hardware
   SerialNumber: 'AB:CD:EF:12:34:56'
 # Headers are used by ballot styles
 Header:
