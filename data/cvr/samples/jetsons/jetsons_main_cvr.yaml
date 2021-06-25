@@ -35,7 +35,7 @@ CVR:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-control-board-spaceport--selection-rudi-indexer
         # Should match 'ContestSelection.SequenceOrder' in the EDF.
-        OptionPosition: 1
+        OptionPosition: 3
         SelectionPosition:
         - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
@@ -44,7 +44,7 @@ CVR:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-control-board-spaceport--selection-write-in-1
         # Should match 'ContestSelection.SequenceOrder' in the EDF.
-        OptionPosition: 2
+        OptionPosition: 4
         SelectionPosition:
         - '@type': CVR.SelectionPosition
           CVRWriteIn:
@@ -78,7 +78,7 @@ CVR:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-mayor--selection-spencer-cogswell
         # Should match 'ContestSelection.SequenceOrder' in the EDF.
-        OptionPosition: 1
+        OptionPosition: 2
         SelectionPosition:
         - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
@@ -141,6 +141,8 @@ CVR:
       CVRContestSelection:
       - '@type': CVR.CVRContestSelection
         ContestSelectionId: contest-ballot-measure-1--selection-yes
+        # Should match 'ContestSelection.SequenceOrder' in the EDF.
+        OptionPosition: 1
         SelectionPosition:
         - '@type': CVR.SelectionPosition
           HasIndication: 'yes'
@@ -206,7 +208,7 @@ Election:
       '@id': contest-control-board-spaceport--selection-rudi-indexer
       CandidateIds:
       - candidate-rudi-indexer
-    # Write-in slot count has to match 'VotesAllowed'
+    # Write-in slot count has to match 'VotesAllowed'.
     - '@type': CVR.CandidateSelection
       '@id': contest-control-board-spaceport--selection-write-in-1
       IsWriteIn: true
@@ -227,23 +229,28 @@ Election:
   # The entity administering the election.
   # The precinct is tracked by 'GpUnit' and the 'BallotStyleId'.
   ElectionScopeId: gadget-county
-GeneratedDate: 'T12:00:00-08:00T12:00:00-08:00'
+GeneratedDate: '2021-06-01T12:00:00-08:00'
 GpUnit:
 - '@type': CVR.GpUnit
   '@id': gadget-county
+  Name: Gadget County
   Type: other
   OtherType: county
 - '@type': CVR.GpUnit
   '@id': bedrock-precinct
+  Name: Bedrock Precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': downtown-precinct
+  Name: Downtown Precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': port-precinct
+  Name: Port Precinct
   Type: precinct
 - '@type': CVR.GpUnit
   '@id': spacetown-precinct
+  Name: SpaceTown Precinct
   Type: precinct
 Party:
 - '@type': CVR.Party
@@ -258,8 +265,8 @@ ReportGeneratingDeviceIds:
 ReportingDevice:
 - '@type': CVR.ReportingDevice
   '@id': ballot-marker-1
-  # The name of the software that is generating the ballot
-  Application: Ballot marking app
+  # The name of the software that is generating the ballot.
+  Application: Ballot marking application
   Manufacturer: Trust the Vote
   # Should be a released version, but for testing is working revision.
   Model: git-c3cd6f4f-20210601

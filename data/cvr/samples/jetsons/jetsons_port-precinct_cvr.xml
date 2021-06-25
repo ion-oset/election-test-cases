@@ -35,6 +35,7 @@
                 <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
                 <CVRContestSelection>
                     <ContestSelectionId>contest-ballot-measure-1--selection-yes</ContestSelectionId>
+                    <OptionPosition>1</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <IsAllocable>yes</IsAllocable>
@@ -74,6 +75,14 @@
                 ObjectId="contest-control-board-spaceport--selection-write-in-1">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection"
+                ObjectId="contest-control-board-spaceport--selection-write-in-2">
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <Name>SpacePort Control Board</Name>
+            <VoteVariation>n-of-m</VoteVariation>
+            <NumberElected>2</NumberElected>
+            <VotesAllowed>2</VotesAllowed>
         </Contest>
         <Contest ObjectId="contest-ballot-measure-gadget-county-1" xsi:type="BallotMeasureContest">
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-yes">
@@ -82,6 +91,8 @@
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-no">
                 <Selection>No</Selection>
             </ContestSelection>
+            <Name>Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Name>
+            <VoteVariation>plurality</VoteVariation>
         </Contest>
         <ElectionScopeId>gadget-county</ElectionScopeId>
     </Election>

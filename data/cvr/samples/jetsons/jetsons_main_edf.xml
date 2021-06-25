@@ -232,7 +232,7 @@
     </GpUnit>
     <GpUnit xsi:type="ReportingUnit" ObjectId="spacetown-precinct">
         <Name>
-            <Text Language="en">Spacetown Precinct</Text>
+            <Text Language="en">SpaceTown Precinct</Text>
         </Name>
         <Type>precinct</Type>
     </GpUnit>
