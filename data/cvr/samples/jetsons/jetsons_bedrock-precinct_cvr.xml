@@ -31,6 +31,8 @@
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-no">
                 <Selection>No</Selection>
             </ContestSelection>
+            <Name>Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Name>
+            <VoteVariation>plurality</VoteVariation>
         </Contest>
         <ElectionScopeId>gadget-county</ElectionScopeId>
     </Election>

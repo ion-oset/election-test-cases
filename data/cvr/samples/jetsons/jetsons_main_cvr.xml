@@ -3,17 +3,18 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 ../../schemas/NIST_V0_cast_vote_records.xsd">
     <CVR>
+        <BallotStyleId>ballot-style-spacetown-precinct</BallotStyleId>
         <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
+        <!-- Base snapshot is derived from the output from the mobile app -->
         <CVRSnapshot ObjectId="snapshot-01">
             <CVRContest>
                 <ContestId>contest-mayor-orbit-city</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>candidate-cosmo-spacely</ContestSelectionId>
+                    <ContestSelectionId>contest-mayor--selection-cosmo-spacely</ContestSelectionId>
                     <OptionPosition>1</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
-                        <Position>1</Position>
                     </SelectionPosition>
                     <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
@@ -21,25 +22,17 @@
             <CVRContest>
                 <ContestId>contest-control-board-spaceport</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>candidate-jane-jetson</ContestSelectionId>
+                    <ContestSelectionId>contest-control-board-spaceport--selection-jane-jetson</ContestSelectionId>
+                    <OptionPosition>1</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
                 <CVRContestSelection>
-                    <ContestSelectionId>candidate-harlan-ellis</ContestSelectionId>
-                    <SelectionPosition>
-                        <HasIndication>yes</HasIndication>
-                        <NumberVotes>1</NumberVotes>
-                    </SelectionPosition>
-                    <TotalNumberVotes>2</TotalNumberVotes>
-                </CVRContestSelection>
-            </CVRContest>
-            <CVRContest>
-                <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
-                <CVRContestSelection>
-                    <ContestSelectionId>contest-ballot-measure-1--selection-yes</ContestSelectionId>
+                    <ContestSelectionId>contest-control-board-spaceport--selection-harlan-ellis</ContestSelectionId>
+                    <OptionPosition>2</OptionPosition>
                     <SelectionPosition>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
@@ -47,7 +40,19 @@
                     <TotalNumberVotes>1</TotalNumberVotes>
                 </CVRContestSelection>
             </CVRContest>
-            <Type>interpreted</Type>
+            <CVRContest>
+                <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>contest-ballot-measure-1--selection-yes</ContestSelectionId>
+                    <OptionPosition>1</OptionPosition>
+                    <SelectionPosition>
+                        <HasIndication>yes</HasIndication>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>original</Type>
         </CVRSnapshot>
         <ElectionId>gadget-county-2021-06</ElectionId>
     </CVR>
@@ -70,16 +75,13 @@
             <Name>Rudi Indexer</Name>
         </Candidate>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
-            <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor--selection-cosmo-spacely">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-cosmo-spacely">
                 <CandidateIds>candidate-cosmo-spacely</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor--selection-spencer-cogswell">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-spencer-cogswell">
                 <CandidateIds>candidate-spencer-cogswell</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-mayor--selection-write-in">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-write-in">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
             <Name>Mayor of Orbit City</Name>
@@ -95,15 +97,15 @@
                 <CandidateIds>candidate-harlan-ellis</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-spaceport--selection-rudy-indexer">
+                ObjectId="contest-control-board-spaceport--selection-rudi-indexer">
                 <CandidateIds>candidate-rudi-indexer</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-write-in-1">
+                ObjectId="contest-control-board-spaceport--selection-write-in-1">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection"
-                ObjectId="contest-control-board-write-in-2">
+                ObjectId="contest-control-board-spaceport--selection-write-in-2">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
             <Name>SpacePort Control Board</Name>
@@ -111,13 +113,11 @@
             <NumberElected>2</NumberElected>
             <VotesAllowed>2</VotesAllowed>
         </Contest>
-        <Contest xsi:type="BallotMeasureContest" ObjectId="contest-ballot-measure-gadget-county-1">
-            <ContestSelection xsi:type="BallotMeasureSelection"
-                ObjectId="contest-ballot-measure-1--selection-yes">
+        <Contest ObjectId="contest-ballot-measure-gadget-county-1" xsi:type="BallotMeasureContest">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-yes">
                 <Selection>Yes</Selection>
             </ContestSelection>
-            <ContestSelection xsi:type="BallotMeasureSelection"
-                ObjectId="contest-ballot-measure-1--selection-no">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-no">
                 <Selection>No</Selection>
             </ContestSelection>
             <Name>Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Name>
@@ -125,21 +125,26 @@
         </Contest>
         <ElectionScopeId>gadget-county</ElectionScopeId>
     </Election>
-    <GeneratedDate>2021-06-01T12:00:00</GeneratedDate>
+    <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
     <GpUnit ObjectId="gadget-county">
+        <Name>Gadget County</Name>
         <Type>other</Type>
         <OtherType>county</OtherType>
     </GpUnit>
     <GpUnit ObjectId="bedrock-precinct">
+        <Name>Bedrock Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="downtown-precinct">
+        <Name>Downtown Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="port-precinct">
+        <Name>Port Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit ObjectId="spacetown-precinct">
+        <Name>SpaceTown Precinct</Name>
         <Type>precinct</Type>
     </GpUnit>
     <Party ObjectId="party-lepton">
@@ -150,7 +155,7 @@
     </Party>
     <ReportGeneratingDeviceIds>ballot-marker-1</ReportGeneratingDeviceIds>
     <ReportingDevice ObjectId="ballot-marker-1">
-        <Application>Ballot marking app</Application>
+        <Application>Ballot marking application</Application>
         <Manufacturer>Trust the Vote</Manufacturer>
         <Model>git-c3cd6f4f-20210601</Model>
         <SerialNumber>AB:CD:EF:12:34:56</SerialNumber>

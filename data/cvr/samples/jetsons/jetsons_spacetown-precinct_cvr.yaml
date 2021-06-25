@@ -1,4 +1,4 @@
-# CVR for Downtown Precinct
+# CVR for SpaceTown Precinct
 '@type': CVR.CastVoteRecordReport
 CVR:
 - '@type': CVR.CVR
