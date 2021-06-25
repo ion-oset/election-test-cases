@@ -4,6 +4,8 @@
 
 ### Schemas
 
+#### NIST Schemas
+
 `cvr/schemas`
 : Cast Vote Records schema: NIST SP 1500-103, version 1
 
@@ -51,8 +53,10 @@
 
     Samples are grouped by their origin (e.g. NIST) or the election they are modelling.
 
+#### NIST Samples
+
 `cvr/samples/nist`:
-: NIST examples (from the CastVoteRecords repository.)
+: Official NIST examples, from the [CastVoteRecords][nist-cvr-source] and [ElectionReportResults][nist-edf-source] repositories.
 
     The original examples are in XML. They JSON examples were converted from the XML ones by us - they are not part of the spec.
 
@@ -84,33 +88,48 @@
         - Converted using `xmlschema_xml2json`.
         - These are a 1:1 translation from XML and does *not* validate with the JSON schema. Initially they were used as the basis for generating the manual `_ported.json` versions. They remain for the sake of comparison with the manual versions.
 
+#### Minimal Samples
 
 `cvr/samples/minimal`:
 : An absolutely minimal skeleton CVR.
 
     This is the minimum document that passes JSON schema validation. It doesn't have any CVR records or even define a useful election. 
 
+#### NY-1912 Samples
 
 `cvr/samples/ny-1912`
 : A complex example based on the 1912 Presidential and Governor's races in New York state.
 
     This sample contains a series of CVRs, each adding another common variation on an actual vote.
 
-    - They are heavily annotated. Use `make annotate` to generate the annotations in readable form, or look at the source YAML.
+    They are heavily annotated. Use `make annotate` to generate the annotations in readable form, or look at the source YAML.
 
+#### Jetsons Samples
 
 `cvr/samples/jetsons`:
-: CVRs for the Jetson's election.
+: CVRs for the Jetsons demo election.
 
-    Samples for the Jetson's election used in the ABC.
+    Samples for the Jetsons election used in the ABC.
 
-    The current specification is described on the [Jetsons Elections wiki page][ttv-jetsons-wiki].
+    The current specification is described on the [Jetsons Elections wiki page][ttv-jetsons-wiki]. Documentation about the use and meaning of various fields is in `doc/notes/jetsons.notes.md`.
 
-    `jetsons_main_cvr.yaml`
-    : Cast Vote Record for Jetsons election.
+    All files have an XML and a JSON version, which validate using their respective schemas. The JSON version is generated from the YAML version. The YAML versions are annotated.
 
-    `jetsons_ballot-styles_edf.yaml`
-    : Election Definition File for Jetsons elections ballot styles.
+    The `main` CVR file has all the CVR records for every precinct. There is also a *standalone* CVR file (in each data format) for each of the precincts, limited to the CVR records, candidates and contests for each precinct. The standalone CVRs should be proper subsets of the main one. Inconsistencies are errors.
+
+    `jetsons_main_edf.{xml,json,yaml}`
+    : Election Definition File for Jetsons elections.
+
+    `jetsons_main_cvr.{xml,json,yaml}`
+    : Full Cast Vote Record for Jetsons elections, with all precincts.
+
+    `jetsons_{bedrock,downtown,port,spacetown}-precinct_cvr.{xml,json,yaml}`
+    : Standalone Cast Vote Records for each precinct in the Jetsons elections.
+
+        - `bedrock` for Bedrock Precinct.
+        - `downtown` for Downtown Precinct.
+        - `port` for Port Precinct.
+        - `spacetown` for SpaceTown Precinct (the 'T' is capitalized).
 
 [nist-cvr-html]: https://pages.nist.gov/CastVoteRecords/
 [nist-cvr-source]: https://github.com/usnistgov/CastVoteRecords
