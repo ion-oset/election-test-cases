@@ -105,6 +105,7 @@
                 <Type>local-level</Type>
                 <Value>candidate-jane-jetson</Value>
             </ExternalIdentifier>
+            <PersonId>person-jane-jetson</PersonId>
         </Candidate>
         <Candidate ObjectId="candidate-harlan-ellis">
             <BallotName>
@@ -114,6 +115,7 @@
                 <Type>local-level</Type>
                 <Value>candidate-harlan-ellis</Value>
             </ExternalIdentifier>
+            <PersonId>person-harlan-ellis</PersonId>
         </Candidate>
         <Candidate ObjectId="candidate-rudi-indexer">
             <BallotName>
@@ -123,6 +125,7 @@
                 <Type>local-level</Type>
                 <Value>candidate-rudi-indexer</Value>
             </ExternalIdentifier>
+            <PersonId>person-rudi-indexer</PersonId>
         </Candidate>
         <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
             <ContestSelection xsi:type="CandidateSelection"
@@ -271,6 +274,30 @@
             <Text Language="en">Lepton Party</Text>
         </Name>
     </Party>
+    <Person ObjectId="person-jane-jetson">
+        <FullName>
+            <Text Language="en">Jane Jetson</Text>
+        </FullName>
+        <Profession>
+            <Text Language="en">Independent Consultant</Text>
+        </Profession>
+    </Person>
+    <Person ObjectId="person-harlan-ellis">
+        <FullName>
+            <Text Language="en">Harlan Ellis</Text>
+        </FullName>
+        <Profession>
+            <Text Language="en">Author</Text>
+        </Profession>
+    </Person>
+    <Person ObjectId="person-rudi-indexer">
+        <FullName>
+            <Text Language="en">Rudi Indexer</Text>
+        </FullName>
+        <Profession>
+            <Text Language="en">Sentient Search Engine</Text>
+        </Profession>
+    </Person>
     <SequenceStart>1</SequenceStart>
     <SequenceEnd>1</SequenceEnd>
     <Status>pre-election</Status>

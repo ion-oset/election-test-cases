@@ -123,6 +123,7 @@ Election:
       Value: candidate-spencer-cogswell
   - '@type': ElectionResults.Candidate
     '@id': candidate-jane-jetson
+    PersonId: person-jane-jetson
     BallotName:
       '@type': ElectionResults.InternationalizedText
       Text:
@@ -135,6 +136,7 @@ Election:
       Value: candidate-jane-jetson
   - '@type': ElectionResults.Candidate
     '@id': candidate-harlan-ellis
+    PersonId: person-harlan-ellis
     BallotName:
       '@type': ElectionResults.InternationalizedText
       Text:
@@ -147,6 +149,7 @@ Election:
       Value: candidate-harlan-ellis
   - '@type': ElectionResults.Candidate
     '@id': candidate-rudi-indexer
+    PersonId: person-rudi-indexer
     BallotName:
       '@type': ElectionResults.InternationalizedText
       Text:
@@ -312,6 +315,7 @@ Header:
       Language: en
 Issuer: State
 IssuerAbbreviation: US
+# Used only in partisan contests.
 Party:
 - '@type': ElectionResults.Party
   '@id': party-hadron
@@ -328,6 +332,52 @@ Party:
     Text:
     - '@type': ElectionResults.LanguageString
       Content: Lepton Party
+      Language: en
+# Used only in non-partisan contests.
+# A lot of other information can go here.
+# We use only what's necessary for the contest.
+Person:
+- '@type': ElectionResults.Person
+  '@id': person-jane-jetson
+  FullName:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Jane Jetson
+      Language: en
+  Profession:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Indepenent Consultant
+      Language: en
+- '@type': ElectionResults.Person
+  '@id': person-harlan-ellis
+  FullName:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Harlan Ellis
+      Language: en
+  Profession:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Author
+      Language: en
+- '@type': ElectionResults.Person
+  '@id': person-rudy-indexer
+  FullName:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Rudi Indexer
+      Language: en
+  Profession:
+    '@type': ElectionResults.InternationalizedText
+    Text:
+    - '@type': ElectionResults.LanguageString
+      Content: Sentient Search Engine
       Language: en
 SequenceEnd: 1
 SequenceStart: 1

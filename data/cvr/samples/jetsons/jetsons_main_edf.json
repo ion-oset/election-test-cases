@@ -212,6 +212,7 @@
                 {
                     "@type": "ElectionResults.Candidate",
                     "@id": "candidate-jane-jetson",
+                    "PersonId": "person-jane-jetson",
                     "BallotName": {
                         "@type": "ElectionResults.InternationalizedText",
                         "Text": [
@@ -233,6 +234,7 @@
                 {
                     "@type": "ElectionResults.Candidate",
                     "@id": "candidate-harlan-ellis",
+                    "PersonId": "person-harlan-ellis",
                     "BallotName": {
                         "@type": "ElectionResults.InternationalizedText",
                         "Text": [
@@ -254,6 +256,7 @@
                 {
                     "@type": "ElectionResults.Candidate",
                     "@id": "candidate-rudi-indexer",
+                    "PersonId": "person-rudi-indexer",
                     "BallotName": {
                         "@type": "ElectionResults.InternationalizedText",
                         "Text": [
@@ -527,6 +530,80 @@
                     {
                         "@type": "ElectionResults.LanguageString",
                         "Content": "Lepton Party",
+                        "Language": "en"
+                    }
+                ]
+            }
+        }
+    ],
+    "Person": [
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "person-jane-jetson",
+            "FullName": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Jane Jetson",
+                        "Language": "en"
+                    }
+                ]
+            },
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Indepenent Consultant",
+                        "Language": "en"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "person-harlan-ellis",
+            "FullName": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Harlan Ellis",
+                        "Language": "en"
+                    }
+                ]
+            },
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Author",
+                        "Language": "en"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "person-rudy-indexer",
+            "FullName": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Rudi Indexer",
+                        "Language": "en"
+                    }
+                ]
+            },
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Content": "Sentient Search Engine",
                         "Language": "en"
                     }
                 ]
