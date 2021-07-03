@@ -1,16 +1,18 @@
 # NIST: Data Files
 
-## CVR: Cast Vote Records
-
 ### Schemas
 
 #### NIST Schemas
 
-`cvr/schemas`
-: Cast Vote Records schema: NIST SP 1500-103, version 1
+`schemas`
+: NIST SP 1500 schemas for election data:
 
-    - [HTML (nist.gov)][nist-cvr-html]
-    - [Source (github.com)][nist-cvr-source]
+    - Cast Vote Records: `NIST SP 1500-103, version 1`
+        - [HTML (nist.gov)][nist-cvr-html]
+        - [Source (github.com)][nist-cvr-source]
+    - Election Report Results: `NIST SP 1500-103, version 2`
+        - [HTML (nist.gov)][nist-edf-html]
+        - [Source (github.com)][nist-edf-source]
 
     `nist-cvr-v1_jsonschema.json`
     : JSON Schema for Cast Vote Records
@@ -25,12 +27,6 @@
         - Currently (May 2021) at revision 1.0.3
         - Last changed in version 1.0.3
         - Validates against [XML Schema, 1.0][xml-schema-spec-2001]
-
-`edf/schemas`
-: Election Report Results (aka Election Definition Files) schema: NIST SP 1500-103, version 2
-
-    - [HTML (nist.gov)][nist-edf-html]
-    - [Source (github.com)][nist-edf-source]
 
     `nist-cvr-v1_jsonschema.json`
     : JSON Schema for Election Report Results
@@ -48,14 +44,14 @@
 
 ### Samples
 
-`cvr/samples`:
+`samples`:
 : All samples.
 
     Samples are grouped by their origin (e.g. NIST) or the election they are modelling.
 
 #### NIST Samples
 
-`cvr/samples/nist`:
+`samples/nist`:
 : Official NIST examples, from the [CastVoteRecords][nist-cvr-source] and [ElectionReportResults][nist-edf-source] repositories.
 
     The original examples are in XML. They JSON examples were converted from the XML ones by us - they are not part of the spec.
@@ -90,14 +86,14 @@
 
 #### Minimal Samples
 
-`cvr/samples/minimal`:
+`samples/minimal`:
 : An absolutely minimal skeleton CVR.
 
     This is the minimum document that passes JSON schema validation. It doesn't have any CVR records or even define a useful election. 
 
 #### NY-1912 Samples
 
-`cvr/samples/ny-1912`
+`samples/ny-1912`
 : A complex example based on the 1912 Presidential and Governor's races in New York state.
 
     This sample contains a series of CVRs, each adding another common variation on an actual vote.
@@ -106,7 +102,7 @@
 
 #### Jetsons Samples
 
-`cvr/samples/jetsons`:
+`samples/jetsons`:
 : CVRs for the Jetsons demo election.
 
     Samples for the Jetsons election used in the ABC.
