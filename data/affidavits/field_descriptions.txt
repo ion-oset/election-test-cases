@@ -1,0 +1,19 @@
+The following are the fields in the affidavit template:
+
+| Name             | Type     |
+|------------------+----------|
+| FirstName        | TextBox  |
+| StreetAddress    | TextBox  |
+| Apt              | TextBox  |
+| City             | TextBox  |
+| Zip              | TextBox  |
+| No_ID            | CheckBox |
+| No_SSN           | CheckBox |
+| LastName         | TextBox  |
+| VoterSignature   | TextBox  |
+| WitnessSignature | TextBox  |
+| VoterSigDate     | TextBox  |
+| WitnessSigDate   | TextBox  |
+| LicenseNumber    | TextBox  |
+| SSN              | TextBox  |
+
